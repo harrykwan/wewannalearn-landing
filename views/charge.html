@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+  <meta property="og:image:secure_url" content="https://i.ibb.co/Ws78dSR/linkbanner.jpg">
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="423" />
+  <meta property="og:image:height" content="221" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" rel="stylesheet" />
+  <title></title>
+
+  <style>
+    html {
+      background: white;
+      color: black;
+    }
+
+    body {
+      background: white;
+      color: black;
+      padding: 40px;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    img {
+      filter: invert(100%);
+    }
+
+    .submitbutton {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .myunderline {
+      border-bottom: 4px solid #fd5e34;
+      padding-bottom: 4px;
+      display: inline-block;
+      /* border-radius: 10px; */
+    }
+  </style>
+</head>
+
+<body class="">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 50px; z-index: 999">
+    <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+        src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
+
+
+  </nav>
+  <nav class="h-20 flex justify-center">
+    <h1 style="color: #fd5e34;" class="text-4xl">您正在訂購</h1>
+  </nav>
+  <nav class="h-20 flex justify-center">
+    <h1 style="color: #fd5e34;" class="text-4xl"><span class="myunderline">好想學手寫小巴牌課程</span></h1>
+  </nav>
+  <div class="flex justify-center mt-12">
+    <h2 style="color: #fd5e34;" class="text-2xl"><span>Total: <span style="margin-left: 40px;">HKD <b><span
+              id="pricetag" class="text-2xl">1000</span></b></span></span></h2>
+  </div>
+
+  <div class="flex justify-center mt-16">
+
+    <form action="http://localhost:3000/charge" method="POST" class="flex flex-col w-1/3">
+      <input class="bg-transparent p-2 h-10 mb-4" type="text" name="name" placeholder="Name">
+      <input class="bg-transparent p-2 h-10 mb-4" type="text" name="phone" placeholder="Phone">
+      <input type="email" class="bg-transparent p-2 h-10 mb-4" name="email" placeholder="Email">
+      <input class="bg-transparent p-2 h-10 mb-4" type="text" name="address" placeholder="Address">
+
+      <div style="margin-top: 50px; margin-bottom: 50px;">
+
+        <div id="card-element" class="bg-transparent p-2 h-10 mb-4"></div>
+        <div id="card-errors" role="alert"></div>
+
+      </div>
+
+      <button class="submitbutton p-4 rounded">完成付款
+      </button>
+    </form>
+  </div>
+</body>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="card.js"></script>
+
+</html>
