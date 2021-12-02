@@ -34,17 +34,18 @@ app.post("/charge", (req, res) => {
         address: req.body.address,
         source: req.body.stripeToken,
       })
-      .then((customer) =>
-        stripe.charges
-          .create({
+      .then(
+        (customer) =>
+          stripe.charges.create({
             amount: 100,
             currency: "hkd",
             customer: customer.id,
           })
-          .then(() =>
-            res.render(req.body.url.split("charge.html").join("completed.html"))
-          )
+        // .then(() =>
+        //   res.render(req.body.url.split("charge.html").join("completed.html"))
+        // )
       )
+      .then(() => res.render("completed.html"))
 
       .catch((err) => console.log(err));
   } catch (err) {
