@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const stripe = require("stripe")(process.env.stripe_sk); // Add your Secret Key Here
-
+console.log(process.env.stripe_sk);
+console.log(process.env.port);
 const app = express();
 app.use(cors());
 
@@ -16,6 +17,12 @@ app.set("view engine", "ejs");
 app.engine("html", require("ejs").renderFile);
 
 app.use(express.static(path.join(__dirname, "./views")));
+
+app.get("/", (req, res, next) => {
+  return res.status(200).json({
+    message: "Hello from root!",
+  });
+});
 
 app.post("/charge", (req, res) => {
   try {
