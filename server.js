@@ -28,10 +28,10 @@ app.post("/charge", (req, res) => {
   try {
     stripe.customers
       .create({
-        name: req.body.name,
-        email: req.body.email,
-        phone: req.body.phone,
-        address: req.body.address,
+        name: req.body.name ? req.body.name : "",
+        email: req.body.email ? req.body.email : "",
+        phone: req.body.phone ? req.body.phone : "",
+        address: req.body.address ? req.body.address : "",
         source: req.body.stripeToken,
       })
       .then(
@@ -48,7 +48,10 @@ app.post("/charge", (req, res) => {
         // )
       )
       // .then(() => res.render("./completed.html"))
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        res.send(err);
+      });
   } catch (err) {
     res.send(err);
   }
