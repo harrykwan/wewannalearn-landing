@@ -45,7 +45,7 @@ app.post("/charge", (req, res) => {
         //   res.render(req.body.url.split("charge.html").join("completed.html"))
         // )
       )
-      .then(() => res.render("completed.html"))
+      .then(() => res.render("./completed.html"))
 
       .catch((err) => console.log(err));
   } catch (err) {
