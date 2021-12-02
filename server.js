@@ -36,17 +36,18 @@ app.post("/charge", (req, res) => {
       })
       .then(
         (customer) =>
-          stripe.charges.create({
-            amount: 100,
-            currency: "hkd",
-            customer: customer.id,
-          })
+          stripe.charges
+            .create({
+              amount: 100,
+              currency: "hkd",
+              customer: customer.id,
+            })
+            .then(() => res.render("./completed.html"))
         // .then(() =>
         //   res.render(req.body.url.split("charge.html").join("completed.html"))
         // )
       )
-      .then(() => res.render("./completed.html"))
-
+      // .then(() => res.render("./completed.html"))
       .catch((err) => console.log(err));
   } catch (err) {
     res.send(err);
