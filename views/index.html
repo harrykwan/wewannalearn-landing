@@ -401,18 +401,19 @@
 
         <div class="d-none d-md-block" style="width: 50%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
             <h1>聯絡我們</h1>
-            <form style="margin-top: 30px;">
+            <div style="margin-top: 30px;">
                 <div class="form-group ">
-                    <input type="email" class="form-control contactusinput " id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Name">
+                    <input type="text" class="form-control contactusinput " aria-describedby="nameHelp"
+                        placeholder="Name">
                 </div>
                 <div class="form-group ">
                     <input type="email" class="form-control contactusinput" id="exampleInputEmail1"
                         aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <textarea class="form-control contactusinput" id="exampleFormControlTextarea1" rows="10"></textarea>
-                <button style="margin-top: 20px;" type="submit" class="btn btn-primary">傳送</button>
-            </form>
+                <button onclick="contactus(this)" style="margin-top: 20px;" type="submit"
+                    class="btn btn-primary">傳送</button>
+            </div>
         </div>
 
         <div class="d-none d-md-block ">
@@ -424,18 +425,19 @@
         <div class="d-xs-block d-md-none "
             style="width: 100%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
             <h1>聯絡我們</h1>
-            <form style="margin-top: 30px;">
+            <div style="margin-top: 30px;">
                 <div class="form-group ">
-                    <input type="email" class="form-control contactusinput " id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Name">
+                    <input type="text" class="form-control contactusinput " aria-describedby="nameHelp"
+                        placeholder="Name">
                 </div>
                 <div class="form-group ">
                     <input type="email" class="form-control contactusinput" id="exampleInputEmail1"
                         aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <textarea class="form-control contactusinput" id="exampleFormControlTextarea1" rows="10"></textarea>
-                <button style="margin-top: 20px;" type="submit" class="btn btn-primary">傳送</button>
-            </form>
+                <button onclick="contactus(this)" style="margin-top: 20px;" type="submit"
+                    class="btn btn-primary">傳送</button>
+            </div>
         </div>
         <div class="d-xs-block d-md-none">
             <img style="width: 200px; position: absolute; left: -100px; top: -80px" src="img/slash.png" />
@@ -459,6 +461,31 @@
             if (x.src.indexOf("after") != -1) {
                 x.src = x.src.split("after").join("before");
             }
+        }
+
+        function contactus(button) {
+            var form = button.parentNode;
+            var data = JSON.stringify({
+                "subject": form.getElementsByTagName('input')[0].value,
+                "text": form.getElementsByTagName('textarea')[0].value + ' from ' + form.getElementsByTagName('input')[1].value
+            });
+
+            console.log(data)
+
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    console.log(this.responseText);
+                    alert('ok')
+                }
+            });
+
+            xhr.open("POST", "/contactus");
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.send(data);
         }
     </script>
     <script src="https://player.vimeo.com/api/player.js"></script>

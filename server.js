@@ -81,6 +81,27 @@ app.post("/charge", (req, res) => {
   }
 });
 
+app.use(bodyParser.json());
+
+app.post("/contactus", (req, res) => {
+  var options = {
+    method: "POST",
+    url: "https://irq3jumapc.execute-api.us-east-1.amazonaws.com/dev/contactus",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      subject: req.body.subject,
+      text: req.body.text,
+    }),
+  };
+  request(options, function (error, response) {
+    if (error) throw new Error(error);
+    console.log(response.body);
+    res.send(response.body);
+  });
+});
+
 // Future Code Goes Here
 
 const port = 80;
