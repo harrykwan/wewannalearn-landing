@@ -1,0 +1,493 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta property="og:image:secure_url" content="https://i.ibb.co/Ws78dSR/linkbanner.jpg">
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="423" />
+    <meta property="og:image:height" content="221" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        html {
+            background: #fd5e34;
+            color: #fff;
+        }
+
+        body {
+            background: #fd5e34;
+            color: #fff;
+            padding: 40px;
+            overflow-x: hidden;
+        }
+
+        nav.indicators {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 50%;
+            height: 20px;
+            margin-top: -150px;
+            margin-left: -20px;
+            text-align: center;
+        }
+
+        nav.indicators ul {
+            display: inline-block;
+            text-align: center;
+            position: relative;
+        }
+
+        nav.indicators ul li.current {
+            background-color: #ffffff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            -webkit-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            -moz-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            -o-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            /* custom */
+
+            -webkit-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            -moz-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            -o-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
+            /* custom */
+        }
+
+        nav.indicators ul li {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            margin: 0 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .myunderline {
+            border-bottom: 4px solid white;
+            padding-bottom: 4px;
+            display: inline-block;
+            /* border-radius: 10px; */
+        }
+
+        .myaccording-focus {
+            opacity: 1;
+        }
+
+        .myaccording-nofocus {
+            opacity: 0.5;
+        }
+
+        .myaccording-nofocus:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+
+        .contactusinput {
+            border-radius: 0;
+            background: none;
+            color: white;
+            border: none;
+            border-bottom: 6px solid white;
+            font-size: 30px;
+            margin-top: 10px;
+            width: 70%;
+        }
+
+
+        .next {
+            color: #fd5e34;
+            background: #FFF;
+            padding: 5px 20px;
+            font-size: 30px;
+            position: absolute;
+            top: 200px;
+            right: 0;
+            opacity: .5;
+        }
+
+        .next:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+        .questiondiv {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+    </style>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 50px; z-index: 999">
+        <a class="navbar-brand" href="#"><img src="logo.png" class="" style="width: 250px" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">有關我們 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">導師介紹</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="height: 600px">
+        <img style="width: 350px; position: absolute; right: -100px; top: 10px" src="img/slash.png" />
+
+        <img style="width: 350px; position: absolute; left: 50px; top: 150px" src="img/oepntag.png" />
+        <div
+            style="font-size: 40px; text-align: center; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 120px;">
+            您有一技之長<br>想透過教學跟大家分享嗎？</div>
+        <img style="width: 350px; position: absolute; right: 50px; top: 300px" src="img/closetag.png" />
+
+        <img style="width: 350px; position: absolute; left: -50px; top: 350px" src="img/bubble.png" />
+
+        <img style="width: 350px; position: absolute; right: 50px; top: 480px" src="img/homepage/wewannalearn.png" />
+        <img style="width: 100px; position: absolute; left: 30px; top: 580px" src="img/homepage/lighteningicon.png" />
+    </div>
+
+    <div class="container" style="height: 400px; text-align: center" data-aos="fade-up" data-aos-duration="2000">
+        <h1 style="margin-bottom: 50px">無論你是</h1>
+        <div class="myunderline" style="border-width: 10px; margin-bottom: 20px;">
+            <!-- 有教學經驗的導師 -->
+        </div>
+        <div>如果你是任何行內領域的專家，亦擁有教學的熱情，<br>好想感染和啟發大眾的話，歡迎你申請成為《好想學》的導師！
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 0" data-aos="fade-up" data-aos-duration="2000">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="img/joinus/joinus.gif" style="
+                position: -webkit-sticky;
+                position: sticky;
+                object-fit: cover;
+              width: 700px;
+              height: 900px;
+              margin-left: -200px;
+              margin-right: auto;
+            " class="d-none d-sm-block" />
+
+            </div>
+            <div class="col-sm-6">
+                <h1>加盟好想學的6大好處</h1>
+                <div class="row" style="margin-top: 60px;">
+                    <div class="col-sm-3"><img style="width: 100px; margin-top: -10px;" src="./img/joinus/icon15.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <h5>轉化知識和技能成教學系統
+                        </h5>
+                        <div>只需要錄製一次性的教學影片，並可創造持續性、可觀的被動收入。</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;" src="./img/joinus/icon16.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <h5>投資成本極低
+                        </h5>
+                        <div>無需租金、運費和存倉費。</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;" src="./img/joinus/icon17.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <h5>助您節省不必要花費的時間和精神
+
+                        </h5>
+                        <div>交給我們團隊處理構建網站、管理平台和收費系統等繁複技術。讓您無牽掛，更專注教學，提升課程質素。
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;" src="./img/joinus/icon18.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <h5>提供課程市場定位及建立個人品牌
+                        </h5>
+                        <div>創造行內絕對優勢, 鎖定目標學員受眾， 盡情釋放導師潛能和影響力。
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;" src="./img/joinus/icon19.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <h5>一站式全方位支援
+
+                        </h5>
+                        <div>由宣傳策略、銷售課程、付費系統、上課系統、導師學員課後支援討論區等，好想學為導師提供一站式支援。
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;" src="./img/joinus/icon19.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <h5>無地域限制錄製教學內容
+                        </h5>
+                        <div>導師拍攝課堂沒有地域限制，換句話說身處任何一個國家都可以成為導師。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 0;" data-aos="fade-up" data-aos-duration="2000">
+        <img style="width: 250px; position:absolute; top: 300px;" src="img/slash.png">
+        <img style="right: 100px; width: 250px; position:absolute;  top: 200px; right: 150px;" src="img/closetag.png">
+        <img style="width: 350px; position:absolute;  top: 200px; left: 200px;" src="img/joinus/photo26.png">
+        <img style="width: 150px; position:absolute;  right: 260px;  top: 100px;" src="img/joinus/photo27.png">
+        <img style="width: 200px; position:absolute;   right: 0;  top: 350px;" src="img/joinus/photo28.png">
+    </div>
+
+
+    <div class="container" style="margin-top: 700px; text-align: center; height: 1000px;" data-aos="fade-up"
+        data-aos-duration="2000">
+        <h1 id="questionairetitle">立即踏出第一步<br>填寫申請表</h1>
+        <div class="next round" onclick="nextquestion(this)">&#8250;</div>
+        <div>
+            <div class="questiondiv" id="questiondiv">導師名字</div>
+            <input class="contactusinput" id="answerinput">
+            <nav class="indicators">
+                <ul id="questionaireindicator">
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </div>
+        <div hidden>
+            <form id="hiddengoogleform"
+                action='https://docs.google.com/forms/u/1/d/e/1FAIpQLScM_puBoc0cSJJdqJFAmJFYLf_MPlJYwI1l78FYETQyNXAftw/formResponse'
+                target="googleformiframe">
+                <input name='entry.443679813'>
+                <input name='entry.289072208'>
+                <input name='entry.1907840282'>
+                <input name='entry.807886533'>
+                <input name='entry.744608460'>
+                <input name='entry.789564202'>
+                <input name='entry.133782575'>
+                <input name='entry.1220758171'>
+                <input name='entry.2117630485'>
+                <input name='entry.2107327057'>
+                <input name='entry.1232239939'>
+                <input name='entry.376253055'>
+            </form>
+            <iframe id='googleformiframe' name='googleformiframe'></iframe>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var index = 1;
+        $("nav.indicators ul li").bind("click", indicator);
+        setCurrentPoject();
+
+        function indicator() {
+            $("nav.indicators ul li").unbind("click");
+
+            index = $(this).index();
+
+            setCurrentPoject();
+        }
+
+        function setCurrentPoject() {
+
+            if (index > $("nav.indicators ul li").length - 1) {
+                index = 1;
+            }
+            if (index < 1) {
+                index = $("nav.indicators ul li").length - 1;
+            }
+
+            var currentItem = $("nav.indicators ul li")[index];
+
+            if (!$(currentItem).hasClass("current")) {
+
+                var parentleft = ($(currentItem).parent().offset().left) + 10;
+
+                var position = $(currentItem).offset().left - parentleft;
+
+                var diff = position - ($("nav.indicators ul li.current").offset().left - parentleft);
+
+                var direction = "left";
+
+                if (diff < 0) {
+                    direction = "left";
+                } else {
+                    direction = "right";
+                }
+
+                slideshow(direction, position, diff);
+
+            }
+        }
+
+
+        $(".indicators ul li").on("click", function () {
+
+
+            if ($(this).hasClass("current")) {
+                return false;
+            } else {
+                var parentleft = ($(this).parent().offset().left) + 10;
+
+                var position = $(this).offset().left - parentleft;
+
+                var diff = position - ($("nav.indicators ul li.current").offset().left - parentleft);
+
+                var direction = "left";
+
+                if (diff < 0) {
+                    direction = "left";
+                } else {
+                    direction = "right";
+                }
+
+                slideshow(direction, position, diff);
+
+            }
+        });
+
+        function slideshow(direction, position, diff) {
+
+            if (direction == "left") {
+                $("nav.indicators ul li.current").css({ "left": position + "px", "width": (Math.abs(diff) + 20) + "px" });
+                setTimeout(function () {
+                    $("nav.indicators ul li.current").css({ "width": "20px" });
+                    bindNavigation();
+                }, 500);
+            } else {
+                $("nav.indicators ul li.current").css({ "width": (Math.abs(diff) + 20) + "px" });
+                setTimeout(function () {
+                    $("nav.indicators ul li.current").css({ "left": position + "px", "width": "20px" });
+                    bindNavigation();
+                }, 400);
+            }
+
+        }
+
+        function bindNavigation() {
+            $("nav.indicators ul li").bind("click", indicator);
+        }
+    </script>
+
+    <script>
+        AOS.init();
+
+        function switchphoto_mousin(x) {
+            x = x.getElementsByTagName("img")[0];
+            if (x.src.indexOf("before") != -1) {
+                x.src = x.src.split("before").join("after");
+            }
+        }
+
+        function switchphoto_mousout(x) {
+            x = x.getElementsByTagName("img")[0];
+            if (x.src.indexOf("after") != -1) {
+                x.src = x.src.split("after").join("before");
+            }
+        }
+
+        var nowquestion = 0
+        var allans = []
+        const allquestions = ["導師名字", "主要經營業務", "電話 (好想學會透過 Whatsapp 跟您聯絡)", "電郵地址", "品牌網址", "社交媒體平台和帳號", "新開業 / 品牌轉型重塑", "主要目標受眾(地區和年紀層等)", "你的品牌故事(為何開設等)", "請提供你的網上課程簡介", "打算什麼時候要推出網上課程", "你在開設課程時面臨的最大困難或挑戰是"]
+
+        function nextquestion(nextbutton) {
+            if (!document.getElementById('answerinput').value) {
+                return
+            }
+            allans[nowquestion] = document.getElementById('answerinput').value
+            if (nowquestion + 1 < allquestions.length) {
+                nowquestion++
+                document.getElementById('questiondiv').innerHTML = allquestions[nowquestion]
+                document.getElementById('answerinput').value = ''
+                document.getElementById('questionaireindicator').getElementsByTagName('li')[nowquestion + 1].click()
+
+            } else {
+                submitquestionaire(allans)
+                document.getElementById('questionairetitle').innerHTML = "Loading..."
+                document.getElementById('questiondiv').innerHTML = ''
+                document.getElementById('answerinput').hidden = true
+                nextbutton.hidden = true
+                setInterval(() => {
+                    try {
+                        document.getElementById('googleformiframe').contentWindow.document
+                    } catch (e) {
+                        document.getElementById('questionairetitle').innerHTML = "謝謝你的申請，資料已收到！"
+                        document.getElementById('questiondiv').innerHTML = '好想學團隊聯絡跟進，並提供一對一免費諮詢。'
+
+                    }
+                }, 500);
+
+            }
+        }
+
+
+        function submitquestionaire(x) {
+            console.log(x)
+            for (var j = 0; j < x.length; j++) {
+                document.getElementById('hiddengoogleform').getElementsByTagName('input')[j].value = x[j]
+            }
+            document.getElementById('hiddengoogleform').submit()
+        }
+    </script>
+
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+</body>
+
+</html>
