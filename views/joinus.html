@@ -141,14 +141,15 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 50px; z-index: 999">
-        <a class="navbar-brand" href="#"><img src="logo.png" class="" style="width: 250px" /></a>
+        <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+                src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto" style="backdrop-filter: blur(200px);">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">有關我們 <span class="sr-only">(current)</span></a>
                 </li>
@@ -159,7 +160,7 @@
         </div>
     </nav>
 
-    <div class="container" style="height: 600px">
+    <div class="container d-none d-md-block" style="height: 600px">
         <img style="width: 350px; position: absolute; right: -100px; top: 10px" src="img/slash.png" />
 
         <img style="width: 350px; position: absolute; left: 50px; top: 150px" src="img/oepntag.png" />
@@ -173,6 +174,30 @@
         <img style="width: 350px; position: absolute; right: 50px; top: 480px" src="img/homepage/wewannalearn.png" />
         <img style="width: 100px; position: absolute; left: 30px; top: 580px" src="img/homepage/lighteningicon.png" />
     </div>
+
+    <div class="container d-xs-block d-md-none" style="height: 600px">
+        <img style="width: 250px; position: absolute; right: -100px; top: 10px" src="img/slash.png" />
+
+        <img style="width: 250px; position: absolute; left: -50px; top: 150px" src="img/oepntag.png" />
+        <div
+            style="font-size: 20px; text-align: center; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 120px;">
+            您有一技之長<br>想透過教學跟大家分享嗎？</div>
+        <img style="width: 200px; position: absolute; right: -50px; top: 300px" src="img/closetag.png" />
+
+        <img style="width: 150px; position: absolute; left: -20px; top: 450px" src="img/bubble.png" />
+        <!-- 
+        <img style="width: 350px; position: absolute; right: 50px; top: 480px" src="img/homepage/wewannalearn.png" />
+        <img style="width: 100px; position: absolute; left: 30px; top: 580px" src="img/homepage/lighteningicon.png" /> -->
+        <!-- <div class="backgroundword" style=" top: 500px; font-size: 50px; right: -20;">
+            薪火相傳
+        </div>
+        <div class="backgroundword" style=" top: 600px; font-size: 50px; left: -20; ">
+            文化傳承
+        </div> -->
+
+    </div>
+
+
 
     <div class="container" style="height: 400px; text-align: center" data-aos="fade-up" data-aos-duration="2000">
         <h1 style="margin-bottom: 50px">無論你是</h1>
