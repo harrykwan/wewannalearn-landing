@@ -19,9 +19,31 @@ app.engine("html", require("ejs").renderFile);
 
 app.use(express.static(path.join(__dirname, "./views")));
 
+// app.get("/", (req, res, next) => {
+//   return res.status(200).json({
+//     message: "Hello from root!",
+//   });
+// });
+
 app.get("/", (req, res, next) => {
-  return res.status(200).json({
-    message: "Hello from root!",
+  return res.render("./index.html");
+});
+
+app.get("/minibus", (req, res, next) => {
+  return res.render("./tutorintro1.html", {
+    warning: "",
+  });
+});
+
+app.get("/joinus", (req, res, next) => {
+  return res.render("./joinus.html", {
+    warning: "",
+  });
+});
+
+app.get("/charge", (req, res, next) => {
+  return res.render("./charge.html", {
+    warning: "",
   });
 });
 
