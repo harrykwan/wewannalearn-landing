@@ -31,10 +31,14 @@
             z-index: 1;
         }
 
+        .backgroundwordimg {
+            position: absolute;
+            z-index: 1;
+        }
+
         body {
             background: #fd5e34;
             color: #fff;
-
         }
 
         .myunderline {
@@ -62,7 +66,6 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
-
 
         .gallery {
             background: none;
@@ -105,15 +108,23 @@
             background: #007bff;
             display: inline-block;
             padding: 5px 10px;
-            border-radius: 4px;
+            /* border-radius: 4px; */
+        }
+
+        .icontitle {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .iconbody {
+            text-align: left;
         }
     </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
-
-
     <div style="position: relative; overflow-x: hidden; overflow-y: hidden;">
         <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 50px; z-index: 999">
             <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
@@ -134,11 +145,12 @@
                 </ul>
             </div>
         </nav>
+
         <div class="container d-none d-md-block" style="height: 600px;">
             <img style="width: 350px; position: absolute; right: -100px; top: 10px" src="img/slash.png" />
 
             <img style="width: 350px; position: absolute; left: 50px; top: 150px" src="img/oepntag.png" />
-            <img style="width: 350px; position: absolute; left: 0px; right: 0; margin-left: auto; margin-right: auto; top: 200px"
+            <img style="width: 850px; position: absolute; left: 0px; right: 0; margin-left: auto; margin-right: auto; top: 150px"
                 src="img/homepage/header.gif" />
             <img style="width: 350px; position: absolute; right: 50px; top: 300px" src="img/closetag.png" />
 
@@ -155,16 +167,18 @@
 
             <img style="width: 250px; position: absolute; left: -50px; top: 150px" src="img/oepntag.png" />
             <img style="width: 200px; position: absolute; left: 0px; right: 0; margin-left: auto; margin-right: auto; top: 220px"
-                src="img/homepage/header.gif" />
+                src="img/homepage/header_mobile.gif" />
             <img style="width: 200px; position: absolute; right: -50px; top: 300px" src="img/closetag.png" />
 
             <img style="width: 150px; position: absolute; left: -20px; top: 450px" src="img/bubble.png" />
             <!-- 
         <img style="width: 350px; position: absolute; right: 50px; top: 480px" src="img/homepage/wewannalearn.png" />
         <img style="width: 100px; position: absolute; left: 30px; top: 580px" src="img/homepage/lighteningicon.png" /> -->
-            <div class="backgroundword" style=" top: 500px; font-size: 50px; right: -20;">
-                薪火相傳
-            </div>
+            <img src="img/word/word1.png" class="backgroundwordimg" style=" top: 500px; right: -20;">
+
+            <!-- <div class="backgroundword" style=" top: 500px; font-size: 50px; right: -20;">
+            薪火相傳
+        </div> -->
             <div class="backgroundword" style=" top: 600px; font-size: 50px; left: -20; ">
                 文化傳承
             </div>
@@ -175,21 +189,25 @@
             <h1 style="margin-bottom: 100px" data-aos="fade-up" data-aos-duration="2000">
                 有關我們
             </h1>
-            <div class="backgroundword  d-none d-md-block" style="right: 0; bottom: -130px;">
-                薪火相傳
-            </div>
-            <div class="backgroundword  d-none d-md-block" style="left: 0; bottom: -220px;">
-                文化傳承
-            </div>
+            <!-- <div class="backgroundword  d-none d-md-block" style="right: 0; bottom: -130px;">
+            薪火相傳
+        </div> -->
+            <img class="d-none d-md-block backgroundwordimg" src="img/word/word1.png"
+                style="width: 450px; right: -50px; top: 640px;">
+            <img class="d-none d-md-block backgroundwordimg" src="img/word/word2.png"
+                style="width: 400px; left: -50px; top: 750px;">
+
+            <!-- <div class="backgroundword  d-none d-md-block" style="left: 0; bottom: -70px;">
+            文化傳承
+        </div> -->
             <img style="
           width: 150px;
           position: absolute;
-          left: 200px;
+          left: 190px;
           right: 700px;
-          bottom: -400px;
-        " class="d-none d-md-block" src="img/oepntag.png" />
+          top: 880px;" class="d-none d-md-block" src="img/oepntag.png" />
 
-            <img style="width: 150px; position: absolute; right: 200px; bottom: -430px" class="d-none d-md-block"
+            <img style="width: 150px; position: absolute; right: 190px; top: 930px" class="d-none d-md-block"
                 src="img/closetag.png" />
 
             <div data-aos="fade-up" data-aos-duration="2000">
@@ -200,11 +218,11 @@
             </div>
         </div>
 
-        <div style="text-align: center; height: 500px; width: 100%; margin-left: 0" data-aos="fade-up"
+        <div style="text-align: center; height: 400px; width: 100%; margin-left: 0" data-aos="fade-up"
             data-aos-duration="2000" class="d-none d-md-block">
-            <h1 style="margin-bottom: 100px" data-aos="fade-up" data-aos-duration="2000">
-                課程概覽
-            </h1>
+            <!-- <h1 style="margin-bottom: 100px" data-aos="fade-up" data-aos-duration="2000">
+            課程概覽
+        </h1> -->
             <div class="gallery js-flickity" style="width: 100%; margin-left: 0; margin-right: 0">
                 <div class="gallery-cell">
                     <img style="width: 100%" src="img/homepage/busvideopreview.jpg" />
@@ -218,17 +236,18 @@
             </div>
 
 
-
-            <div class="backgroundword" style="left: -50px; top: 220px; z-index: -1">
-                匠人精神
-            </div>
+            <img src="img/word/word3.png" style="left: -70px; top: 220px; z-index: -1; width: 400px;"
+                class="backgroundwordimg">
+            <!-- <div class="backgroundword" style="left: -50px; top: 220px; z-index: -1">
+            匠人精神
+        </div> -->
         </div>
 
         <div style="text-align: center; width: 100%; margin-left: 0" data-aos="fade-up" data-aos-duration="2000"
             class=" d-xs-block d-md-none">
-            <h1 style="margin-bottom: 50px; margin-top: 100px;" data-aos="fade-up" data-aos-duration="2000">
-                課程概覽
-            </h1>
+            <!-- <h1 style="margin-bottom: 50px; margin-top: 100px;" data-aos="fade-up" data-aos-duration="2000">
+            課程概覽
+        </h1> -->
             <img style="width: 100%; margin-top: 20px;" src="img/homepage/busvideopreview.jpg" />
             <img style="width: 100%; margin-top: 20px;" src="img/homepage/doublestickvideopreview.jpg" />
             <img style="width: 100%; margin-top: 20px;" src="img/homepage/saurcevideopreview.jpg" />
@@ -238,39 +257,48 @@
         </div>
 
 
-        <div class="container  d-none d-md-block" style="height: 600px; text-align: center" data-aos="fade-up"
+        <div class="container  d-none d-md-block" style="height: 550px; text-align: center" data-aos="fade-up"
             data-aos-duration="2000">
             <h1 style="margin-bottom: 50px">平台特色</h1>
             <div class="row">
                 <div class="col-sm">
-                    <img src="img/homepage/lighteningicon.png" style="width: 100%" />
-                    <div class="bluesubtitle">1. 10分鐘閃電學習系統</div><br /><br />
-                    用享受一杯咖啡的時間令學員「更快、更準」將技能解鎖靈活運用在生活上！
+                    <img src="img/homepage/lighteningicon.png" style="width: 150px" />
+                    <div class="icontitle">10分鐘閃電學習系統</div>
+                    <div class="iconbody">
+                        用享受一杯咖啡的時間令學員「更快、更準」將技能解鎖靈活運用在生活上！<br>
+                    </div>
                 </div>
                 <div class="col-sm">
-                    <img src="img/homepage/mpaicon.png" style="width: 100%" />
-                    <div class="bluesubtitle">2. 打破地域界限上堂模式</div><br /><br />
-                    學員可跟隨自己的學習節奏，隨時隨地無限次永久重溫網上課程。
-                    無論身處任何地方，知識由您一手掌握！
+                    <img src="img/homepage/mpaicon.png" style="width: 150px" />
+                    <div class="icontitle">打破地域界限上堂模式</div>
+                    <div class="iconbody">
+                        學員可跟隨自己的學習節奏，隨時隨地無限次永久重溫網上課程。<br>
+                        無論身處任何地方，知識由您一手掌握！<br>
+                    </div>
                 </div>
                 <div class="col-sm">
-                    <img src="img/homepage/doticon.png" style="width: 100%" />
-                    <div class="bluesubtitle">3. 全天候學員支援討論區</div><br /><br />
-                    遙距課程，零距離支援。
-                    好想學為學員開設討論專區，並由導師親自回答任何問題，令學習更加安心。
+                    <img src="img/homepage/doticon.png" style="width: 150px" />
+                    <div class="icontitle">全天候學員支援討論區</div>
+                    <div class="iconbody">
+                        遙距課程，零距離支援。<br>
+                        好想學為學員開設討論專區，並由導師親自回答任何問題，令學習更加安心。<br>
+                    </div>
                 </div>
                 <div class="col-sm">
-                    <img src="img/homepage/peopleicon.png" style="width: 100%" />
-                    <div class="bluesubtitle">4. 頂尖導師坐陣</div><br /><br />
-                    好想學嚴格精選各個領域的專家。
-                    致力建立最高質素的導師團隊為您教授獨門技巧。
+                    <img src="img/homepage/peopleicon.png" style="width: 150px" />
+                    <div class="icontitle">頂尖導師坐陣</div>
+                    <div class="iconbody">
+                        好想學嚴格精選各個領域的專家。<br>
+                        致力建立最高質素的導師團隊為您教授獨門技巧。<br></div>
                 </div>
                 <div class="col-sm">
-                    <img src="img/homepage/ccicon.png" style="width: 100%" />
-                    <div class="bluesubtitle">5. 雙語教學課程</div> <br /><br />
-                    學習不應該受到語言所限，好想學就一定學得到。
-                    課程教學主要以廣東話配合中、英文字幕，令不同學員圴可充分掌握內容。
-                    英文版面 Coming soon!
+                    <img src="img/homepage/ccicon.png" style="width: 150px" />
+                    <div class="icontitle">雙語教學課程</div>
+                    <div class="iconbody">
+                        學習不應該受到語言所限，好想學就一定學得到。<br>
+                        課程教學主要以廣東話配合中、英文字幕，令不同學員圴可充分掌握內容。<br>
+                        英文版面 Coming soon!<br></div>
+
                 </div>
             </div>
         </div>
@@ -318,7 +346,7 @@
 
         <div class="container  d-none d-md-block " style="height: 800px; text-align: center" data-aos="fade-up"
             data-aos-duration="2000">
-            <img style="width: 350px; position: absolute; right: -250px; top: -280px" src="img/slash.png" />
+            <img style="width: 350px; position: absolute; right: -220px; top: -250px" src="img/slash.png" />
             <h1 style="margin-bottom: 50px">導師介紹</h1>
 
             <div class="row">
@@ -387,17 +415,32 @@
 
         </div>
 
+        <div class="container" style=" text-align: center" data-aos="fade-up" data-aos-duration="2000">
+            <div class="d-none d-md-block ">
+                <img src="img/oepntag.png" style="width: 200px; position: absolute; top: -80px; left: 180px;">
+                <h1 style="margin-bottom: 50px">導師招募</h1>
+                如果你是任何行內領域的專家，<br>
+                好想感染和啟發大眾的話，<br>
+                歡迎你申請成為《好想學》的導師！<br><br>
+                <a href="joinus.html"> <img src="img/homepage/knowmorebutton.png" style="width: 130px;" /></a>
+                <img src="img/closetag.png" style="width: 200px; right: 180px;  position: absolute; top: 120px;">
+            </div>
+        </div>
 
         <div class="container" style="height: 1000px; margin-top: 100px; text-align: center" data-aos="fade-up"
             data-aos-duration="2000">
 
             <div class="d-none d-md-block ">
-                <div class="backgroundword" style=" left: -80px; top: -100;">
+                <!-- <div class="backgroundword" style=" left: -80px; top: -100;">
                     香港人精神
                 </div>
                 <div class="backgroundword" style="right: -80px; top: 100;">
                     能屈能伸
-                </div>
+                </div> -->
+                <img class="backgroundwordimg" src="img/word/word4.png" style="width: 400px; left: -160px; top: -100;">
+                <img class="backgroundwordimg" src="img/word/word5.png" style="width: 400px; right: -160px; top: 100;">
+
+
             </div>
 
             <div class="d-xs-block d-md-none">
@@ -408,8 +451,6 @@
                     能屈能伸
                 </div>
             </div>
-
-
 
             <div class="d-none d-md-block"
                 style="width: 50%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
@@ -424,8 +465,10 @@
                             aria-describedby="emailHelp" placeholder="Email">
                     </div>
                     <textarea class="form-control contactusinput" id="exampleFormControlTextarea1" rows="10"></textarea>
-                    <button onclick="contactus(this)" style="margin-top: 20px;" type="submit"
-                        class="btn btn-primary">傳送</button>
+                    <!-- <button onclick="contactus(this)" style="margin-top: 20px;" type="submit"
+                        class="btn btn-primary">傳送</button> -->
+                    <a href="#" onclick="contactus(this)"><img src="img/homepage/sendbutton.png"
+                            style="width: 150px; margin-top: 20px;"></a>
                 </div>
             </div>
 
@@ -480,8 +523,7 @@
             var form = button.parentNode;
             var data = JSON.stringify({
                 "subject": form.getElementsByTagName('input')[0].value,
-                "text": form.getElementsByTagName('textarea')[0].value + ' from ' + form.getElementsByTagName(
-                    'input')[1].value
+                "text": form.getElementsByTagName('textarea')[0].value + ' from ' + form.getElementsByTagName('input')[1].value
             });
 
             console.log(data)
@@ -505,13 +547,13 @@
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 </body>
 
