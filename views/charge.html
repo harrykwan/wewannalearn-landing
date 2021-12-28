@@ -30,14 +30,19 @@
       overflow-x: hidden;
     }
 
-    img {
-      filter: invert(100%);
-    }
+
 
     .submitbutton {
       color: #fff;
       background-color: #007bff;
       border-color: #007bff;
+      width: 100px;
+      padding: 10px 5px;
+      border-radius: 10px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .myunderline {
@@ -46,15 +51,21 @@
       display: inline-block;
       /* border-radius: 10px; */
     }
+
+    .contactinput {
+      background: #EEE;
+    }
   </style>
 </head>
 
 <body class="">
   <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 50px; z-index: 999">
-    <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
-        src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
-
-
+    <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-none d-md-block"
+        style="width: 250px;" /><img src="./img/logo_orange.png" class=" d-xs-block d-md-none"
+        style="width: 180px;" /></a>
+    <img src="./img/charge/bubble_oragnge.png" style="width: 200px; position: absolute; right: 200px;">
+    <img src="./img/charge/closetag_orange.png" style="width: 300px; top: 200px; position: absolute; left: 0px;">
+    <img src="./img/charge/slack_orange.png" style="width: 250px; position: absolute; right: 0px; top: 400px;">
   </nav>
   <nav class="h-20 flex justify-center">
     <h1 style="color: #fd5e34;" class="text-4xl">您正在訂購</h1>
@@ -70,12 +81,17 @@
   <div class="flex justify-center mt-16">
 
     <form action="/charge" method="POST" class="flex flex-col w-1/3">
-      <input class="bg-transparent p-2 h-10 mb-4" type="text" name="name" placeholder="Name">
-      <input class="bg-transparent p-2 h-10 mb-4" type="text" name="phone" placeholder="Phone">
-      <input type="email" class="bg-transparent p-2 h-10 mb-4" name="email" placeholder="Email">
-      <!-- <input class="bg-transparent p-2 h-10 mb-4" type="text" name="address" placeholder="Address"> -->
 
-      <div style="margin-top: 50px; margin-bottom: 50px;">
+      <h1 style="font-size: 25px; color: #fd5e34;">聯絡資料</h1>
+      <div style="color: #fd5e34; margin-top: 20px;">姓名</div>
+      <input class=" p-2 h-10 mb-4 contactinput " type="text" name="name">
+      <div style="color: #fd5e34;">手提電話</div>
+      <input class=" p-2 h-10 mb-4 contactinput " type="text" name="phone">
+      <div style="color: #fd5e34;">有效常用的電郵地址 <span style="font-size: 12px;">*請確保輸入正確的電郵地</span></div>
+      <input type="email" class=" p-2 h-10 mb-4 contactinput " name="email">
+      <!-- <input class="bg-transparent p-2 h-10 mb-4" type="text" name="address" placeholder="Address"> -->
+      <h1 style="font-size: 25px; color: #fd5e34; margin-top: 20px;">付款資料</h1>
+      <div style="margin-top: 20px; margin-bottom: 50px;">
 
         <div id="card-element" class="bg-transparent p-2 h-10 mb-4"></div>
         <div id="card-errors" role="alert">
@@ -84,9 +100,13 @@
 
       </div>
 
-      <button class="submitbutton p-4 rounded">完成付款
-      </button>
+      <button class="submitbutton ">完成付款</button>
+
     </form>
+  </div>
+  <div style="height: 150px; overflow: hidden;">
+    <img src="./img/charge/bubble_oragnge.png" style="width: 400px; position: absolute; left: -50px; bottom: -400px;">
+    <img src="./img/charge/opentag_orange.png" style="width: 500px; position: absolute; right: 50px; bottom: -700px;">
   </div>
 </body>
 
