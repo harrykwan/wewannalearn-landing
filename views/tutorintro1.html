@@ -17,9 +17,9 @@
         body {
             background: #fd5e34;
             color: #fff;
-            padding: 40px;
+            /* padding: 40px; */
             width: 100%;
-            overflow-x: hidden;
+            /* overflow-x: hidden; */
         }
 
         .myunderline {
@@ -55,7 +55,7 @@
         }
 
         .gallery-cell {
-            width: 500px;
+            width: 300px;
             /* height: 200px; */
             margin-right: 10px;
         }
@@ -93,324 +93,423 @@
             z-index: 1;
         }
 
+
         .bluesubtitle {
             background: #007bff;
             display: inline-block;
             padding: 5px 10px;
-            border-radius: 4px;
+            /* border-radius: 4px; */
+        }
+
+        .boldtitle {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .backgroundwordimg {
+            position: absolute;
+            z-index: 1;
+        }
+
+
+        .gallery {
+            background: none;
+        }
+
+        .gallery-cell {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+        .gallery-cell.dot {
+            background-color: white;
+        }
+
+        .gallery-cell.is-selected {}
+
+        /* cell number */
+        .gallery-cell:before {
+            display: block;
+            text-align: center;
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+        }
+
+        .footerlink_mobile {
+            color: white;
+            margin-right: 10px;
+            margin-top: 0px;
+        }
+
+
+        .footerlink {
+            color: white;
+            margin-right: 50px;
+            margin-top: 50px;
+        }
+
+        .footerlinkicon {
+            margin-top: 50px;
+            width: 50px;
+        }
+
+        .footerlinkicon_mobile {
+            margin-top: 30px;
+            width: 30px;
         }
     </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 50px; z-index: 999">
-        <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
-                src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div style="position: relative; overflow-x: hidden; overflow-y: hidden;">
+        <nav class="navbar navbar-expand-lg navbar-dark" style=" z-index: 999">
+            <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+                    src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto" style="backdrop-filter: blur(200px);">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">有關我們 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">導師介紹</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <img class=" d-xs-block d-md-none " style="width: calc(100% + 150px); margin-left: -90px;  margin-bottom: 50px;"
-        src="./img/bus/header1mobile.png">
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm" style="z-index: 100">
-                <h1>「每個人都應該有一塊屬於自己故事的小巴牌」</h1>
-                <h2 style="margin-top: 100px">
-                    <span class="myunderline">好想學手寫小巴課程</span>
-                </h2>
-                <span>紅藍色、繁體字，充滿香港特色的玩味潮語小巴牌近年成為風潮，更喚起大眾關注這一門獨有文化，但可惜手寫小巴牌正漸漸走向歷史盡頭。麥師傅在課程中會將40年來製作小巴牌的精粹傳授給大家，希望由您薪火相傳這一份香港人精。
-                </span>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto" style="backdrop-filter: blur(200px);">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">有關我們 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">導師介紹</a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-sm">
-                <img src="img/bus/header1.png" style="
+        </nav>
+
+        <div class="container  d-xs-block d-md-none ">
+            <img class=" d-xs-block d-md-none "
+                style="width: calc(100% + 150px); margin-left: -90px;  margin-bottom: 50px;"
+                src="./img/bus/header1mobile.png">
+            <div class="row">
+                <div class="col-sm" style="z-index: 100">
+                    <h1 style="font-size: 25px; font-weight: bold;">「每個人都應該有<br>一塊屬於自己故事的小巴牌」</h1>
+                    <h2 style="margin-top: 30px; font-size: 20px;  font-weight: bold;">
+                        <span class="myunderline">好想學手寫小巴課程</span>
+                    </h2>
+                    <span>紅藍色、繁體字，充滿香港特色的玩味潮語小巴牌近年成為風潮，更喚起大眾關注這一門獨有文化，但可惜手寫小巴牌正漸漸走向歷史盡頭。麥師傅在課程中會將40年來製作小巴牌的精粹傳授給大家，希望由您薪火相傳這一份香港人精。
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container d-none d-md-block" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-sm" style="z-index: 100">
+                    <h1 style="font-size: 50px;">「每個人都應該有<br> 一塊屬於自己故事<br> 的小巴牌」</h1>
+                    <h2 style="margin-top: 100px">
+                        <span class="myunderline">好想學手寫小巴課程</span>
+                    </h2>
+                    <span>紅藍色、繁體字，充滿香港特色的玩味潮語小巴牌近年成為風潮，更喚起大眾關注這一門獨有文化，但可惜手寫小巴牌正漸漸走向歷史盡頭。麥師傅在課程中會將40年來製作小巴牌的精粹傳授給大家，希望由您薪火相傳這一份香港人精。
+                    </span>
+                </div>
+                <div class="col-sm">
+                    <img src="img/bus/header1.png" style="
               width: 1100px;
               position: absolute;
               right: -150px;
               top: -50px;
               z-index: 0;
             " class="d-none d-md-block" />
+                </div>
             </div>
         </div>
-    </div>
-    <img style="width: 450px; position: absolute; left: -50px" class=" d-none d-md-block " src="img/bubble.png" />
 
-    <div data-aos="fade-up" data-aos-duration="2000" class="container  d-none d-md-block "
-        style="max-width: 1000px; margin-top: 50px" data-aos="fade-up" data-aos-duration="2000">
-        <div class="row">
-            <div class="col-sm">
-                <div style="padding: 900px 0 0 0;" class="">
-                    <iframe
-                        src="https://player.vimeo.com/video/624555113?h=e797a3a6a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="
+        <img style="width: 450px; position: absolute; left: -50px" class=" d-none d-md-block " src="img/bubble.png" />
+
+        <div data-aos="fade-up" data-aos-duration="2000" class="container  d-none d-md-block "
+            style="max-width: 1000px; margin-top: 50px; height: 650px;" data-aos="fade-up" data-aos-duration="2000">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="padding: 900px 0 0 0;" class="">
+                        <iframe
+                            src="https://player.vimeo.com/video/624555113?h=e797a3a6a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
               " title="_雙節棍Promo Video（中文）.mp4"></iframe>
+                    </div>
+
+
                 </div>
-
-
             </div>
         </div>
-    </div>
 
-    <div data-aos="fade-up" data-aos-duration="2000" class="container  d-xs-block d-md-none"
-        style="width: 100%; margin-top: 0px; height: 300px;" data-aos="fade-up" data-aos-duration="2000">
-        <div class="row">
-            <div class="col-sm">
-                <div style="padding: 900px 0 0 0; margin-left: 0px;  transform: scale(1.5);" class=" ">
-                    <iframe
-                        src="https://player.vimeo.com/video/624555113?h=e797a3a6a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="
+        <div data-aos="fade-up" data-aos-duration="2000" class="container  d-xs-block d-md-none"
+            style="width: 100%; margin-top: 0px; height: 150px;" data-aos="fade-up" data-aos-duration="2000">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="padding: 900px 0 0 0; margin-left: 0px;  transform: scale(1.5);" class=" ">
+                        <iframe
+                            src="https://player.vimeo.com/video/624555113?h=e797a3a6a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             margin-top: 200px;
           " title="_雙節棍Promo Video（中文）.mp4"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <img style="width: 250px; position: absolute; left: -50px;" src="img/oepntag.png" />
-
-    <div class="container" style="margin-top: 200px" data-aos="fade-up" data-aos-duration="2000">
-        <div class="row justify-content-center">
-            <div class="col-sm" style="max-width: 80%; text-align: center">
-                <h1 style="margin-bottom: 20px">
-                    <span class="myunderline"> 媒體報導 </span>
-                </h1>
-                手寫小巴牌的意義除了是集體回憶和玩味潮流外，更是引領和提醒我們在人生路上前進的座右銘，透過唯一一個官方小巴牌製作網上課程，大家都可以勾劃出屬於自己人生故事的字句，將精神注入獨一無二的手寫小巴牌當中，在人生快樂或迷失的時候都可以陪伴我們左右。
-                <div class="d-none d-md-block" style="margin-bottom: 100px;">
-                    <div class="row">
-                        <div class="col-sm" style="margin-top: 20px;">
-                            <img style="width: 100px;" src="./img/meida/now.png">
-                        </div>
-                        <div class="col-sm" style="margin-top: 20px;">
-                            <img style="width: 100px;" src="./img/meida/tvb.png">
-                        </div>
-                        <div class="col-sm" style="margin-top: 30px;">
-                            <img style="width: 100px;" src="./img/meida/rthk.png">
-                        </div>
-                        <div class="col-sm" style="margin-top: 50px;">
-                            <img style="width: 100px;" src="./img/meida/viu.png">
-                        </div>
-                        <div class="col-sm" style="margin-top: 10px;">
-                            <img style="width: 100px;" src="./img/meida/cable.png">
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="d-xs-block d-md-none">
-            <div class="row" style="width: calc(100% + 150px); margin-left: -75px;">
-                <div class="col-1"></div>
-                <div class="col-2" style="margin-top: 20px;">
-                    <img style="width: 100%;" src="./img/meida/now.png">
+
+
+
+        <div class="container" style="margin-top: 200px" data-aos="fade-up" data-aos-duration="2000">
+            <img style="width: 250px; position: absolute; left: -50px; top: -100px;" src="img/oepntag.png" />
+            <div class="row justify-content-center">
+                <div class="col-sm" style="max-width: 80%; text-align: center">
+                    <h1 style="margin-bottom: 40px">
+                        <span> 媒體報導 <img src="img/underline4.png"
+                                style="position: absolute; top: -10; width: 250px; left: 10; right: 0; margin-left: auto; margin-right: auto;">
+                        </span>
+                    </h1>
+                    手寫小巴牌的意義除了是集體回憶和玩味潮流外，更是引領和提醒我們在人生路上前進的座右銘，透過唯一一個官方小巴牌製作網上課程，大家都可以勾劃出屬於自己人生故事的字句，將精神注入獨一無二的手寫小巴牌當中，在人生快樂或迷失的時候都可以陪伴我們左右。
+                    <div class="d-none d-md-block" style="margin-bottom: 100px;">
+                        <div class="row">
+                            <div class="col-sm" style="margin-top: 50px;">
+                                <img style="width: 130px;" src="./img/meida/viu.png">
+                            </div>
+                            <div class="col-sm" style="margin-top: 10px;">
+                                <img style="width: 130px;" src="./img/meida/now.png">
+                            </div>
+                            <div class="col-sm" style="margin-top: 25px;">
+                                <img style="width: 80px;" src="./img/meida/tvb.png">
+                            </div>
+                            <div class="col-sm" style="margin-top: 40px;">
+                                <img style="width: 70px;" src="./img/meida/rthk.png">
+                            </div>
+                            <div class="col-sm" style="margin-top: 20px;">
+                                <img style="width: 70px;" src="./img/meida/cable.png">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-2" style="margin-top: 20px;">
-                    <img style="width: 100%;" src="./img/meida/tvb.png">
+            </div>
+            <div class="d-xs-block d-md-none">
+                <div class="row" style="width: calc(100% + 150px); margin-left: -75px;">
+                    <div class="col-1"></div>
+                    <div class="col-2" style="margin-top: 50px;">
+                        <img style="width: 80px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/meida/viu.png">
+                    </div>
+                    <div class="col-2" style="margin-top: 10px; text-align: center">
+                        <img style="width: 100px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/meida/now.png">
+                    </div>
+                    <div class="col-2" style="margin-top: 35px; text-align: center">
+                        <img style="width: 50px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/meida/tvb.png">
+                    </div>
+                    <div class="col-2" style="margin-top: 40px; text-align: center">
+                        <img style="width: 50px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/meida/rthk.png">
+                    </div>
+                    <div class="col-2" style="margin-top: 40px; text-align: center">
+                        <img style="width: 40px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/meida/cable.png">
+                    </div>
+                    <div class="col-1"></div>
                 </div>
-                <div class="col-2" style="margin-top: 30px;">
-                    <img style="width: 100%;" src="./img/meida/rthk.png">
-                </div>
-                <div class="col-2" style="margin-top: 50px;">
-                    <img style="width: 100%;" src="./img/meida/viu.png">
-                </div>
-                <div class="col-2" style="margin-top: 10px;">
-                    <img style="width: 100%;" src="./img/meida/cable.png">
-                </div>
-                <div class="col-1"></div>
             </div>
         </div>
-    </div>
 
 
 
 
 
-    <div class="container" style="margin-top: 100px" data-aos="fade-up" data-aos-duration="2000">
-        <img src="img/bus/photo15.png"
-            style="width: calc(100% + 150px); margin-left: -90px; height: 300px; object-fit: cover; margin-bottom: 100px;"
-            class=" d-xs-block d-md-none" />
-        <div class="row">
-            <div class="col-sm-5">
-                <h1>課程簡介</h1>
-                <div style="margin-top: 20px">
-                    手寫小巴牌的意義除了是集體回憶和玩味潮流外，更是引領和提醒我們在人生路上前進的座右銘，透過唯一一個官方小巴牌製作網上課程，大家都可以勾劃出屬於自己人生故事的字句，將精神注入獨一無二的手寫小巴牌當中，在人生快樂或迷失的時候都可以陪伴我們左右。
-                    <br /><br />
-                    在課程中，麥師傅會從小巴牌背後的歷史和理念開始，再帶領學員從不同角度學習小巴牌招牌字體，分享美學和手藝技巧。最後更會用上麥師傅為大家調製好的墨水和製作工具，親自一筆一劃教導大家在小巴牌寫上屬於自己的字句，引領大家輕鬆學懂DIY製作一份充滿意義的「手寫溫暖」小巴牌，揮筆延續香港故事！
-                </div>
+        <div class="container" data-aos="fade-up" data-aos-duration="2000">
+            <img src="img/bus/photo15.png"
+                style="width: calc(100% + 150px); margin-left: -90px; height: 300px; object-fit: cover; margin-bottom: 100px; margin-top: 50px;"
+                class=" d-xs-block d-md-none" />
+            <img src="img/closetag.png" style="width: 200px; position: absolute; right: 0px; top: 300px; z-index: -1;"
+                class=" d-xs-block d-md-none" />
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1>課程簡介 <img src="img/underline4.png"
+                            style="position: absolute; top: -10; width: 250px; left: -24; right: 0; ">
+                    </h1>
+                    <div style="margin-top: 30px">
+                        手寫小巴牌的意義除了是集體回憶和玩味潮流外，更是引領和提醒我們在人生路上前進的座右銘，透過唯一一個官方小巴牌製作網上課程，大家都可以勾劃出屬於自己人生故事的字句，將精神注入獨一無二的手寫小巴牌當中，在人生快樂或迷失的時候都可以陪伴我們左右。
+                        <br /><br />
+                        在課程中，麥師傅會從小巴牌背後的歷史和理念開始，再帶領學員從不同角度學習小巴牌招牌字體，分享美學和手藝技巧。最後更會用上麥師傅為大家調製好的墨水和製作工具，親自一筆一劃教導大家在小巴牌寫上屬於自己的字句，引領大家輕鬆學懂DIY製作一份充滿意義的「手寫溫暖」小巴牌，揮筆延續香港故事！
+                    </div>
 
-                <img src="img/bus/photo14.png" style="
+                    <img src="img/bus/photo14.png" style="
               width: 90%;
               margin-left: auto;
               margin-right: 0px;
               margin-top: 100px;
             " class="d-none d-sm-block" />
-            </div>
-            <div class="col-sm-7">
-                <img src="img/bus/photo15.png" style="width: 100%; position: absolute; right: -100px; top: -100px"
-                    class="d-none d-sm-block" />
+                </div>
+                <div class="col-sm-7">
+                    <img src="img/bus/photo15.png" style="width: 100%; position: absolute; right: -100px; top: -100px"
+                        class="d-none d-sm-block" />
 
-                <img class="d-none d-sm-block" style="
+                    <img class="d-none d-sm-block" style="
               width: 400px;
               position: absolute;
               left: -130px;
-              top: 400px;
+              top: 450px;
               z-index: -1;
             " src="img/closetag.png" />
 
-                <img class="d-none d-sm-block" style="
+                    <img class="d-none d-sm-block" style="
               width: 400px;
               position: absolute;
               right: -200px;
-              top: 420px;
+              top: 520px;
               z-index: -1;
             " src="img/slash.png" />
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container" style="margin-top: 200px" data-aos="fade-up" data-aos-duration="2000">
-        <img src="img/bus/photo22.png"
-            style="width: calc(100% + 150px); margin-left: -90px; height: 300px; object-fit: cover; margin-bottom: 50px;"
-            class=" d-xs-block d-md-none" />
-        <div class="row">
-            <div class="col-sm">
-                <img src="img/bus/photo22.png" style="width: 115%; position: absolute; left: -100px; top: -100px"
-                    class="d-none d-sm-block" />
-                <img class="d-none d-sm-block" style="width: 230px; position: absolute; right: 50px; top: 550px"
-                    src="img/bubble.png" />
-            </div>
-            <div class="col-sm">
-                <h1>課程內容</h1>
-                <div class="row" style="margin-left: 10px; margin-top: 70px">
-                    <div class="col-2">
-                        <div id="accordinggroup-course">
-                            <h3 onclick="choose_according_course(this,0)" class="myaccording-focus">
-                                #01
-                            </h3>
-                            <h3 onclick="choose_according_course(this,1)" class="myaccording-nofocus">
-                                #02
-                            </h3>
-                            <h3 onclick="choose_according_course(this,2)" class="myaccording-nofocus">
-                                #03
-                            </h3>
+        <div class="container" style="margin-top: 100px" data-aos="fade-up" data-aos-duration="2000">
+            <img src="img/bus/photo22.png"
+                style="width: calc(100% + 150px); margin-left: -90px; height: 300px; object-fit: cover; margin-bottom: 50px;"
+                class=" d-xs-block d-md-none" />
+            <div class="row">
+                <div class="col-sm">
+                    <img src="img/bus/photo22.png" style="width: 115%; position: absolute; left: -100px; top: -100px"
+                        class="d-none d-sm-block" />
+                    <img class="d-none d-sm-block" style="width: 230px; position: absolute; right: 50px; top: 550px"
+                        src="img/bubble.png" />
+                </div>
+                <div class="col-sm">
+                    <h1>課程內容 <img src="img/underline4.png"
+                            style="position: absolute; top: -10; width: 250px; left: -24; right: 0; ">
+                    </h1>
+                    <div class="row" style="margin-left: 10px; margin-top: 70px">
+                        <div class="col-2">
+                            <div id="accordinggroup-course">
+                                <h3 onclick="choose_according_course(this,0)" class="myaccording-focus">
+                                    #01
+                                </h3>
+                                <h3 onclick="choose_according_course(this,1)" class="myaccording-nofocus">
+                                    #02
+                                </h3>
+                                <h3 onclick="choose_according_course(this,2)" class="myaccording-nofocus">
+                                    #03
+                                </h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-10">
-                        <div style="margin-left: 20px">
-                            <div id="accordingcontent-course">
-                                <h3>紅Van歷史導賞 (20分鐘）</h3>
-                                <span>窺探麥師傅40年來製作小巴水牌的故事和紅Van的演變，輕鬆了解小巴行內秘史、術語和鮮為人知的小巴暗黑面故事。繼而讓大家融入不同時代中的小巴文化，更細味掌握小巴牌製作理念。</span>
+                        <div class="col-10">
+                            <div style="margin-left: 20px">
+                                <div id="accordingcontent-course">
+                                    <h3>紅Van歷史導賞 (3集）</h3>
+                                    <span>窺探麥師傅40年來製作小巴牌的故事和紅Van的演變，輕鬆了解小巴行內秘史、術語和鮮為人知的小巴暗黑面故事。繼而讓大家融入不同時代中的小巴文化，更細味掌握小巴牌製作理念。</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container d-none d-md-block" style="text-align: center; height: 550px; margin-top: 52%;  padding: 0; ">
-        <img src="img/bus/keygraphic-word.png" data-aos="fade-up" data-aos-duration="3000"
-            style="position: absolute; width: 100%; z-index: 999;  max-width: 900px; left: 0; right: 0; margin-left: auto; margin-right: auto;" />
-        <img src="img/bus/keygraphic.png" data-aos="fade-up" data-aos-duration="2000"
-            style="position: absolute; width: 100%; left: 0;  max-width: 900px;  left: 0; right: 0; margin-left: auto; margin-right: auto;" />
-    </div>
-
-
-    <div class="container d-xs-block d-md-none" style="margin-top: 12%; padding: 0; margin-bottom: 330px">
-        <img src="img/bus/keygraphic-word.png" data-aos="fade-up" data-aos-duration="3000"
-            style="position: absolute; width: 100%; z-index: 999" />
-        <img src="img/bus/keygraphic.png" data-aos="fade-up" data-aos-duration="2000"
-            style="position: absolute; width: 100%; left: 0" />
-    </div>
+        <div class="d-none d-md-block"
+            style="text-align: center; height: 60vw; margin-top: 43vw;  padding: 0; width: 100%;">
+            <img src="img/bus/keygraphic-word.png" data-aos="fade-up" data-aos-duration="3000"
+                style="position: absolute; width: 100%; z-index: 999; left: 0; right: 0; margin-left: auto; margin-right: auto;" />
+            <img src="img/bus/keygraphic.png" data-aos="fade-up" data-aos-duration="2000"
+                style="position: absolute; width: 100%; left: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" />
+        </div>
 
 
-    <div class="container d-none d-md-block" data-aos="fade-up" data-aos-duration="2000">
-        <div class="row">
-            <div class="col-sm-7">
-                <h1>「香港人精神係打不死嘅！」</h1>
-                <div style="margin-top: 20px">
-                    麥錦生師傅自1972年開始製作手寫小巴牌，經歷香港所有高高低低後至今只剩下他一位手寫小巴牌師傅。雖然如今小巴已經式微，麥師傅仍堅持匠人精神，志力傳承手寫小巴牌「水牌」文化，希望令這一種的香港人精神發揚光大！
-                </div>
+        <div class="container d-xs-block d-md-none" style="margin-top: 12%; padding: 0; margin-bottom: 330px">
+            <img src="img/bus/keygraphic-word.png" data-aos="fade-up" data-aos-duration="3000"
+                style="position: absolute; width: 100%; z-index: 999" />
+            <img src="img/bus/keygraphic.png" data-aos="fade-up" data-aos-duration="2000"
+                style="position: absolute; width: 100%; left: 0" />
+        </div>
 
-                <div style="margin-top: 20px" class="bluesubtitle">「關關難關關關過」</div>
-                <div style="margin-top: 20px">
-                    從前投身小巴行業，少不免要與江湖人物打交道，在面對各方面的疑難和為免得罪任何人
-                    ，麥師傅以能屈能申的姿態應變，於夾縫間努力生存養大子女投身社會。麥師傅的故事充分體現了香港人的拚搏辛勤及靈活變通，這份精神跟小巴水牌一樣，值得流傳下去。
-                </div>
-                <img src="img/bus/photo13.png" style="
+
+        <div class="container d-none d-md-block" data-aos="fade-up" data-aos-duration="2000">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h1>「香港人精神係打不死嘅！」</h1>
+                    <div style="margin-top: 20px">
+                        麥錦生師傅自1972年開始製作手寫小巴牌，經歷香港所有高高低低後至今只剩下他一位手寫小巴牌師傅。雖然如今小巴已經式微，麥師傅仍堅持匠人精神，志力傳承手寫小巴牌「水牌」文化，希望令這一種的香港人精神發揚光大！
+                    </div>
+
+                    <div style="margin-top: 20px" class="boldtitle">「關關難關關關過」</div>
+                    <div style="margin-top: 20px">
+                        從前投身小巴行業，少不免要與江湖人物打交道，在面對各方面的疑難和為免得罪任何人
+                        ，麥師傅以能屈能申的姿態應變，於夾縫間努力生存養大子女投身社會。麥師傅的故事充分體現了香港人的拚搏辛勤及靈活變通，這份精神跟小巴水牌一樣，值得流傳下去。
+                    </div>
+                    <img src="img/bus/photo13.png" style="
               width: 90%;
               margin-left: 0;
               margin-right: auto;
               margin-top: 100px;
             " class="d-none d-md-block" />
-            </div>
-            <div class="col-sm-5">
-                <img src="img/bus/photo16.png" style="width: 90%;   margin-left: auto;
+                    <img src="img/word/word3.png" style="left: -70px; top: 670px; z-index: 1; width: 400px;"
+                        class="backgroundwordimg">
+                </div>
+                <div class="col-sm-5">
+                    <img src="img/bus/photo16.png" style="width: 90%;   margin-left: auto;
                margin-right: 0; " class="d-none d-md-block" />
 
-                <div style="margin-top: 60px" class="bluesubtitle">「窮則變，變則通」
-                </div>
-                <div style="margin-top: 20px">
-                    有見小巴近年漸漸式微，越見越少，麥師傅對於沒落的紅Van有種使命感，毅然將小巴牌書法隨時代轉型，注入創新元素將流行潮語加入小巴牌上，例如是深入民心的「前面有樂」和「可以Hea的話不會郁」。抱住靈活變通的態度，麥師傅令小巴「水牌」近年成為特色擺設，由細小的鎖匙扣成為充滿濃厚香港味道的的紀念品，重新帶起小巴牌風潮！
-                </div>
+                    <div style="margin-top: 60px" class="boldtitle">「窮則變，變則通」
+                    </div>
+                    <div style="margin-top: 20px">
+                        有見小巴近年漸漸式微，越見越少，麥師傅對於沒落的紅Van有種使命感，毅然將小巴牌書法隨時代轉型，注入創新元素將流行潮語加入小巴牌上，例如是深入民心的「前面有樂」和「可以Hea的話不會郁」。抱住靈活變通的態度，麥師傅令小巴「水牌」近年成為特色擺設，由細小的鎖匙扣成為充滿濃厚香港味道的的紀念品，重新帶起小巴牌風潮！
+                    </div>
 
-                <img src="img/bus/photo20.png" style="width: 80%;   margin-left: 0;
+                    <img src="img/bus/photo20.png" style="width: 80%;   margin-left: 0;
                 margin-right: auto; margin-top: 50px;" class="d-none d-md-block" />
 
-            </div>
-        </div>
-    </div>
-
-    <div class="container d-xs-block d-md-none" data-aos="fade-up" data-aos-duration="2000">
-        <div class="row">
-            <div class="col-7">
-                <h1 style="font-size: 20px;">「香港人精神係打不死嘅！」</h1>
-                <div style="margin-top: 20px">
-                    麥錦生師傅自1972年開始製作手寫小巴牌，經歷香港所有高高低低後至今只剩下他一位手寫小巴牌師傅。雖然如今小巴已經式微，麥師傅仍堅持匠人精神，志力傳承手寫小巴牌「水牌」文化，希望令這一種的香港人精神發揚光大！
                 </div>
             </div>
-            <div class="col-5">
-                <img src="img/bus/photo16.png" style="width: calc(100% + 50px); height: 300px;  margin-top: 50px; margin-left: auto; object-fit: cover;
+        </div>
+
+        <div class="container d-xs-block d-md-none" data-aos="fade-up" data-aos-duration="2000">
+            <div class="row">
+                <div class="col-7">
+                    <h1 style="font-size: 20px;" class="boldtitle">「香港人精神係打不死嘅！」</h1>
+                    <div style="margin-top: 20px">
+                        麥錦生師傅自1972年開始製作手寫小巴牌，經歷香港所有高高低低後至今只剩下他一位手寫小巴牌師傅。雖然如今小巴已經式微，麥師傅仍堅持匠人精神，志力傳承手寫小巴牌「水牌」文化，希望令這一種的香港人精神發揚光大！
+                    </div>
+                </div>
+                <div class="col-5">
+                    <img src="img/bus/photo16.png" style="width: calc(100% + 50px); height: 300px;  margin-top: 50px; margin-left: auto; object-fit: cover;
                margin-right: 0; " class=" d-xs-block d-md-none" />
-                <!-- 
+                    <!-- 
                 <img src="img/bus/photo20.png" style="width: 80%;   margin-left: 0;
                 margin-right: auto; margin-top: 50px;" class="d-xs-block d-md-none" /> -->
 
+                </div>
             </div>
-        </div>
 
-        <div style="margin-top: 20px" class="bluesubtitle">「關關難關關關過」</div>
-        <div style="margin-top: 20px">
-            從前投身小巴行業，少不免要與江湖人物打交道，在面對各方面的疑難和為免得罪任何人
-            ，麥師傅以能屈能申的姿態應變，於夾縫間努力生存養大子女投身社會。麥師傅的故事充分體現了香港人的拚搏辛勤及靈活變通，這份精神跟小巴水牌一樣，值得流傳下去。
-        </div>
+            <div style="margin-top: 20px" class="boldtitle">「關關難關關關過」</div>
+            <div style="margin-top: 20px">
+                從前投身小巴行業，少不免要與江湖人物打交道，在面對各方面的疑難和為免得罪任何人
+                ，麥師傅以能屈能申的姿態應變，於夾縫間努力生存養大子女投身社會。麥師傅的故事充分體現了香港人的拚搏辛勤及靈活變通，這份精神跟小巴水牌一樣，值得流傳下去。
+            </div>
 
-        <img src="img/bus/photo13.png" style="
+            <img src="img/word/word3.png" style="
+            width: 250px; 
+            position: absolute;
+            left: 0;
+            top: 860px;
+            " class="d-xs-block d-md-none" />
+
+            <img src="img/bus/photo13.png" style="
           width: calc(100% + 150px); 
           margin-left: -90px; 
           margin-right: auto;
@@ -418,223 +517,351 @@
         " class="d-xs-block d-md-none" />
 
 
-        <div class="row">
-            <div class="col-7">
-                <div style="margin-top: 60px" class="bluesubtitle">「窮則變，變則通」
-                </div>
-                <div style="margin-top: 20px">
-                    有見小巴近年漸漸式微，越見越少，麥師傅對於沒落的紅Van有種使命感，毅然將小巴牌書法隨時代轉型，注入創新元素將流行潮語加入小巴牌上，例如是深入民心的「前面有樂」和「可以Hea的話不會郁」。抱住靈活變通的態度，麥師傅令小巴「水牌」近年成為特色擺設，由細小的鎖匙扣成為充滿濃厚香港味道的的紀念品，重新帶起小巴牌風潮！
-                </div>
-            </div>
-            <div class="col-5">
 
-                <img src="img/bus/photo20.png" style="width: calc(100% + 45px); margin-left: 0px; height: 350px; object-fit: cover; 
+
+            <div class="row">
+                <div class="col-7">
+                    <div style="margin-top: 60px" class="boldtitle">「窮則變，變則通」
+                    </div>
+                    <div style="margin-top: 20px">
+                        有見小巴近年漸漸式微，越見越少，麥師傅對於沒落的紅Van有種使命感，毅然將小巴牌書法隨時代轉型，注入創新元素將流行潮語加入小巴牌上，例如是深入民心的「前面有樂」和「可以Hea的話不會郁」。抱住靈活變通的態度，麥師傅令小巴「水牌」近年成為特色擺設，由細小的鎖匙扣成為充滿濃厚香港味道的的紀念品，重新帶起小巴牌風潮！
+                    </div>
+                </div>
+                <div class="col-5">
+
+                    <img src="img/bus/photo20.png" style="width: calc(100% + 45px); margin-left: 0px; height: 350px; object-fit: cover; 
         margin-right: auto; margin-top: 100px; object-fit: cover;" class="d-xs-block d-md-none" />
 
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="container d-none d-md-block" style="margin-top: 130px; margin-bottom: 650px;" data-aos="fade-up"
-        data-aos-duration="2000">
-        <div class=" d-none d-md-block" style="width: 70%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
-            <h1>「每次手寫，都不能做到一式一樣，唯獨這點絕對不會被機器取代。」</h1>
-        </div>
+        <div class="container d-none d-md-block" style="margin-top: 130px; margin-bottom: 650px;" data-aos="fade-up"
+            data-aos-duration="2000">
+            <div class=" d-none d-md-block"
+                style="text-align: center; width: 70%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
+                <h1>「每次手寫，都不能做到一式一樣，<br>唯獨這點絕對不會被機器取代。」</h1>
+                <div style="text-align: right; margin-right: 80px; font-size: 25px; font-weight: bold;">———————————— 麥師傅
+                </div>
+            </div>
 
 
-        <img src="img/bus/photo18.png" style="width: 200px; left: 0;
+            <img src="img/bus/photo18.png" style="width: 200px; left: 0;
       margin-top: 50px; position: absolute;" class="d-none d-md-block" />
-        <img src="img/bus/photo17.png" style="width: 500px; right: 0;
+            <img src="img/bus/photo17.png" style="width: 600px; right: 0;
      margin-top: 150px; position: absolute;" class="d-none d-md-block" />
 
 
-        <div class="backgroundword d-none d-md-block" style=" font-size: 50px; right: 320px;
+            <!-- <div class="backgroundword d-none d-md-block" style="font-size: 50px; right: 320px;
 top: 580px; position: absolute;">
             香港人精神
+        </div> -->
+
+            <img class="backgroundwordimg" src="img/word/word4.png" style="width: 400px;right: 320px;
+        top: 580px; z-index: 1">
+
+
         </div>
 
+        <div class="container d-xs-block d-md-none" style="margin-top: 50px;  margin-bottom: 400px" data-aos="fade-up"
+            data-aos-duration="2000">
+
+            <div class="d-xs-block d-md-none"
+                style="width: 100%; left: 0; right: 0; margin-left: auto; margin-right: auto; ">
+                <h1 style="font-size: 21px;">「每次手寫，都不能做到一式一樣，<br>唯獨這點絕對不會被機器取代。」</h1>
+                <div style="text-align: right; margin-right: 20px; font-size: 16px; font-weight: bold;">———————— 麥師傅
+                </div>
+            </div>
+
+
+            <img src="img/bus/photo18.png" style="width: 120px; left: -20px;
+margin-top: 20px; position: absolute;" class=" d-xs-block d-md-none" />
+            <img src="img/bus/photo17.png" style="width: 250px; right: -20px;
+margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
+
+
+            <img src="./img/word/word4.png" class="backgroundwordimg" class=" d-xs-block d-md-none" style="right: 0px; width: 250px;
+        top: 300px; position: absolute; ">
+
+        </div>
+
+
+        <div class="container" data-aos="fade-up" data-aos-duration="2000" style="text-align: center;">
+            <img class="d-none d-md-block" style="width: 450px; position: absolute; left: -50px; top: -230px"
+                src="img/oepntag.png" />
+
+            <img class="d-xs-block d-md-none" style="width: 250px; position: absolute; left: -50px; top: -150px"
+                src="img/oepntag.png" />
+
+
+            <h1 style="margin-bottom: 50px" data-aos="fade-up" data-aos-duration="2000">
+                學員見證
+                <img src="img/underline4.png"
+                    style="position: absolute; top: -10; width: 250px; left: 10; right: 0; margin-left: auto; margin-right: auto;">
+            </h1>
+            <div>
+                麥師傅曾為電影和演唱會製作小巴牌，<br>更多年來開班授徒，桃李滿們。
+            </div>
+            <div class="gallery js-flickity" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 50px;">
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/1.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/2.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/3.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/4.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/5.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/6.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/7.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/8.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/9.jpg" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/10.JPG" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/11.jpg" />
+                </div>
+                <div class="gallery-cell">
+                    <img style="width: 100%" src="img/bus/students/12.JPG" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 style="margin-bottom: 20px; margin-top: 100px;">
+                <span class=" d-none d-md-block"> 常見問題<img src="img/underline4.png"
+                        style="position: relative; width: 250px; left: -200px; top: 10px;">
+                </span>
+
+                <span class=" d-xs-block d-md-none"> 常見問題<img src="img/underline4.png"
+                        style="position: relative; width: 250px; left: -40px; top: -50px; margin-bottom: -60px;">
+                </span>
+            </h1>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Q1: 什麼時候可以開始上課？
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            早鳥優惠預購課程時間結束後，課程將會分階段陸續上架。
+                            <br><br>
+                            實際開課日將會透過短訊或電郵通知大家！<br>
+                            課程是預錄好的網上課程，你不會錯過任何精心製作的內容。 你可以在有空的時候按觀看和複習。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                Q2. 請問上課地點? 上課時間?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            上課形式以觀看預先錄製好的影片進行，以確保課程內容製作高品質，更配上中文字幕方便世界各地華人觀看，讓學員更快、更精準學習。<br><br>
+
+                            課程上線後，你可以隨時隨地透過手機、平板、或電腦登入學員專區觀看課程影片，沒有時間和地點的限制。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Q3. 香港以外可以報名嗎？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            絕對可以！任何國家都能網上觀看課程。課程視頻以預先錄製模式，打破任可時差地域限制。學員可以隨自己學習進度安排時間上課。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Q4: 請問課程可以看多久？看幾次？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            可永久、無限次數觀看課程內容。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="false" aria-controls="collapseFive">
+                                Q5. 學習時遇到困難怎樣解決？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            隨時可以到學員討論專區發問，導師會同學員互動親自解答。歡迎你一起加入學員討論專區與老師和同學一起互動。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSix">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                                aria-expanded="false" aria-controls="collapseSix">
+                                Q6. 上課前，需要要自備工具嗎？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+                            課程會附送所有需要的小巴牌製作材料和工具，報名時請填妥準確個人資料和郵寄地址後，《好想學》會安排將課程材料送到你指定的地址內（郵寄時間：香港大約7日 / 海外大約14日）
+                            <br><br>
+                            *郵寄時間若有調整，將會透過短訊或電郵通知學員!
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSeven">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                                aria-expanded="false" aria-controls="collapseSeven">
+                                Q7. 購買後可以同朋友用一個帳戶共享課程嗎？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body">
+                            很高興你喜歡並選擇我們的課程，相信導師的心血、知識及專業已經得到你認同。為了能提供高品質的教學成效，每一堂課程都需要導師及課程團隊用長時間的人力心力與資源才可以完成，希望可以與更多志同道合的學員分享，同時亦希望你能夠出一分力維護你所支持導師權益，好讓技能繼續傳承。<br><br>
+
+                            另外，多帳戶共用並觀看課程會違反《好想學》的會員使用條款，如經查實有此事，《好想學》保留取消學員資格等權利。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                                aria-expanded="false" aria-controls="collapseEight">
+                                Q8. 其他問題？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body">
+                            可以私訊《好想學》社交媒體，或歡迎你電郵到 hello@wewannalearn.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container  d-none d-md-block" style="margin-bottom: 30px;">
+
+            <div class="d-flex justify-content-between">
+
+                <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block"
+                        style="width: 200px;" /><img src="logo.png" class=" d-xs-block d-md-none"
+                        style="width: 180px;" /></a>
+
+
+                <div class="d-flex justify-content-around">
+
+                    <a class="footerlink" href="#">有關我們</a>
+                    <a class="footerlink" href="#">導師介紹</a>
+                    <a class="footerlink" href="#">常見問題 </a>
+
+                </div>
+
+                <div class="d-flex justify-content-around" style="margin-top: -15px;">
+
+                    <a href="#"><img class="footerlinkicon" src="img/socialicon/fb.png"></a>
+                    <a href="#"><img class="footerlinkicon" src="img/socialicon/ig.png"></a>
+                    <a href="#"><img class="footerlinkicon" src="img/socialicon/yt.png"> </a>
+
+                </div>
+                <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+                    src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
+            </a> -->
+
+
+            </div>
+        </div>
+
+        <div class="container d-xs-block d-md-none" style="margin-top: 30px; margin-bottom: 20px;">
+
+            <div class="d-flex justify-content-between">
+
+                <a class="navbar-brand" href="#"><img src="logo.png" class=" d-xs-block d-md-none"
+                        style="width: 100px;" /></a>
+
+
+                <div class="d-flex justify-content-around">
+
+                    <a class="footerlink_mobile" href="#">有關我們</a>
+                    <a class="footerlink_mobile" href="#">導師介紹</a>
+                    <a class="footerlink_mobile" href="#">常見問題 </a>
+
+                </div>
+
+                <div class="d-flex justify-content-around" style="margin-top: -20px;">
+
+                    <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/fb.png"></a>
+                    <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/ig.png"></a>
+                    <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/yt.png"> </a>
+
+                </div>
+                <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+                    src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
+            </a> -->
+
+
+            </div>
+        </div>
 
     </div>
-
-    <div class="container d-xs-block d-md-none" style="margin-top: 130px;  margin-bottom: 400px" data-aos="fade-up"
-        data-aos-duration="2000">
-
-        <div class="d-xs-block d-md-none"
-            style="width: 100%; left: 0; right: 0; margin-left: auto; margin-right: auto; ">
-            <h1 style="font-size: 25px;">「每次手寫，都不能做到一式一樣，唯獨這點絕對不會被機器取代。」</h1>
-        </div>
-
-
-        <img src="img/bus/photo18.png" style="width: 120px; left: -20px;
-margin-top: 50px; position: absolute;" class=" d-xs-block d-md-none" />
-        <img src="img/bus/photo17.png" style="width: 220px; right: -20px;
-margin-top: 150px; position: absolute;" class=" d-xs-block d-md-none" />
-
-
-        <div class="backgroundword" class=" d-xs-block d-md-none" style=" font-size: 30px; right: 100px;
-        top: 360px; position: absolute;">
-            香港人精神
-        </div>
-    </div>
-
-    <div class="container" data-aos="fade-up" data-aos-duration="2000">
-        <h1 style="margin-bottom: 20px; margin-top: 100px;">
-            <span class="myunderline"> 常見問題 </span>
-        </h1>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
-                            Q1: 什麼時候可以開始上課？
-                        </button>
-                    </h5>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        早鳥優惠預購課程時間結束後，課程將會分階段陸續上架。
-                        <br><br>
-                        實際開課日將會透過短訊或電郵通知大家！<br>
-                        課程是預錄好的網上課程，你不會錯過任何精心製作的內容。 你可以在有空的時候按觀看和複習。
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="false" aria-controls="collapseTwo">
-                            Q2. 請問上課地點? 上課時間?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                        上課形式以觀看預先錄製好的影片進行，以確保課程內容製作高品質，更配上中文字幕方便世界各地華人觀看，讓學員更快、更精準學習。<br><br>
-
-                        課程上線後，你可以隨時隨地透過手機、平板、或電腦登入學員專區觀看課程影片，沒有時間和地點的限制。
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                            aria-expanded="false" aria-controls="collapseThree">
-                            Q3. 香港以外可以報名嗎？
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                        絕對可以！任何國家都能網上觀看課程。課程視頻以預先錄製模式，打破任可時差地域限制。學員可以隨自己學習進度安排時間上課。
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingFour">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
-                            aria-expanded="false" aria-controls="collapseThree">
-                            Q4: 請問課程可以看多久？看幾次？
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="card-body">
-                        可永久、無限次數觀看課程內容。
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingFive">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
-                            aria-expanded="false" aria-controls="collapseFive">
-                            Q5. 學習時遇到困難怎樣解決？
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                    <div class="card-body">
-                        隨時可以到學員討論專區發問，導師會同學員互動親自解答。歡迎你一起加入學員討論專區與老師和同學一起互動。
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingSix">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
-                            aria-expanded="false" aria-controls="collapseSix">
-                            Q6. 上課前，需要要自備工具嗎？
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                    <div class="card-body">
-                        課程會附送所有需要的小巴牌製作材料和工具，報名時請填妥準確個人資料和郵寄地址後，《好想學》會安排將課程材料送到你指定的地址內（郵寄時間：香港大約7日 / 海外大約14日）
-                        <br><br>
-                        *郵寄時間若有調整，將會透過短訊或電郵通知學員!
-
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingSeven">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
-                            aria-expanded="false" aria-controls="collapseSeven">
-                            Q7. 購買後可以同朋友用一個帳戶共享課程嗎？
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                    <div class="card-body">
-                        很高興你喜歡並選擇我們的課程，相信導師的心血、知識及專業已經得到你認同。為了能提供高品質的教學成效，每一堂課程都需要導師及課程團隊用長時間的人力心力與資源才可以完成，希望可以與更多志同道合的學員分享，同時亦希望你能夠出一分力維護你所支持導師權益，好讓技能繼續傳承。<br><br>
-
-                        另外，多帳戶共用並觀看課程會違反《好想學》的會員使用條款，如經查實有此事，《好想學》保留取消學員資格等權利。
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
-                            aria-expanded="false" aria-controls="collapseEight">
-                            Q8. 其他問題？
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                    <div class="card-body">
-                        可以私訊《好想學》社交媒體，或歡迎你電郵到 hello@wewannalearn.com
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <script>
         AOS.init();
         const according_words = [
-            `<h3>紅Van歷史導賞 (20分鐘）</h3>
-                            <span>窺探麥師傅40年來製作小巴水牌的故事和紅Van的演變，輕鬆了解小巴行內秘史、術語和鮮為人知的小巴暗黑面故事。繼而讓大家融入不同時代中的小巴文化，更細味掌握小巴牌製作理念。</span>`,
-            `<h3>港式毛筆書法簡介(20分鐘）</h3>
-                            <span>小巴字體以粗體楷書起家，在注入自成一派的揮筆技巧和美學元素後，演變至今天香港獨有的小巴招牌字體。<br><br>小巴招牌的寫法與正統的毛筆字不太一樣。麥師傅會先以四、五筆畫個大概，然後再填色，反倒更像在畫畫。「毛筆字是一筆過的，不可以翻手 ，但用油寫一定要翻手的。」</span>`,
-            `<h3>小巴牌書法工作傳授 (30分鐘）</h3>
-                            <span>小巴牌製作材料和工具簡介 (課程學費已包括在內，材料包括一塊尺寸
-15cm X 23cm 紅VAN膠片、兩塊迷你紅Van膠片鎖匙扣、紅藍色調教墨水、兩支大狼毫和細圭筆毛筆、模板紙及油漆）
-<br><br>
-麥師傅會傳授手寫小巴書法的靈活精粹，一筆一畫地教授大家書寫獨有的小巴中文字體，更加可以加上英文字句，再從美學角度掌握小巴牌的書寫空間，讓大家學懂自行製作屬於自己的小巴牌。
-<br>
-—————
-P.S.
-教導大家用毛筆寫「水牌」。他表示早期只要用毛筆沾油漆，字體夠大夠明顯就好，不過油漆的濃稠度就非常講究，太稠的話字體會起泡；太稀的話字體會缺色。現代則必須追求美感，除了要用楷書體來寫之外，還要注重留空、端正及必須加上英文字。
-</span>`,
+            `<h3>紅Van歷史導賞 (3集）</h3>
+                            <span>窺探麥師傅40年來製作小巴牌的故事和紅Van的演變，輕鬆了解小巴行內秘史、術語和鮮為人知的小巴暗黑面故事。繼而讓大家融入不同時代中的小巴文化，更細味掌握小巴牌製作理念。</span>`,
+            `<h3>港式毛筆書法簡介 (3集）</h3>
+                            <span>小巴字體以粗體楷書起家，再注入自成一派的揮筆技巧和美學元素後，演變至今天香港獨有的小巴招牌字體。<br>除了字體獨特外，寫法也非常有趣！小巴招牌的寫法與正統的毛筆字不太一樣。麥師傅會先以四、五筆畫起稿，然後再填色，反倒更像在畫畫。「毛筆字是一筆過的，不可以翻手 ，但用油寫一定要翻手的。」</span>`,
+            `<h3>小巴牌書法工作傳授 (3集）</h3>
+                            <span>麥師傅會傳授手寫小巴書法的靈活精粹，一筆一畫地教授大家書寫獨有的小巴中文字體，更加可以加上英文字句，再從美學角度掌握小巴牌的書寫空間，讓大家學懂自行製作屬於自己的小巴牌。(課程會附送小巴牌製作材料和工具)</span>`,
         ];
 
         function choose_according_course(x, y) {
@@ -678,6 +905,7 @@ P.S.
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
 </body>
 
 </html>
