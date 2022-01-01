@@ -21,23 +21,99 @@
       color: black;
     }
 
-    img {
-      filter: invert(100%);
-    }
-
     body {
       background: white;
       color: black;
-      padding: 40px;
       width: 100%;
-      overflow-x: hidden;
+      /* overflow-x: hidden; */
+    }
+
+    .footerlink_mobile {
+      color: #fd5e34;
+      margin-right: 10px;
+      margin-top: 0px;
+    }
+
+
+    .footerlink {
+      color: #fd5e34;
+      margin-right: 50px;
+      margin-top: 50px;
+    }
+
+    .footerlinkicon {
+      margin-top: 50px;
+      width: 50px;
+    }
+
+    .footerlinkicon_mobile {
+      margin-top: 30px;
+      width: 30px;
+    }
+
+    .bluesubtitle {
+      background: #007bff;
+      color: white;
+      display: inline-block;
+      padding: 5px 10px;
+      /* border-radius: 4px; */
+    }
+
+
+    .blurbackground {
+      -webkit-filter: blur(2px) brightness(30%);
+      -moz-filter: blur(2px) brightness(30%);
+      -o-filter: blur(2px) brightness(30%);
+      -ms-filter: blur(2px) brightness(30%);
+      filter: blur(2px) brightness(30%);
+      overflow: hidden;
+      background: white;
     }
 
     .submitbutton {
       color: #fff;
       background-color: #007bff;
       border-color: #007bff;
+      /* width: 100px; */
+      padding: 5px 15px;
+      border-radius: 10px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 20px;
     }
+
+    .upsellbutton {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      /* width: 100px; */
+      padding: 5px 15px;
+      border-radius: 10px;
+      font-size: 20px;
+      position: relative;
+      left: 120px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+
+    .upsellbutton_mobile {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      /* width: 100px; */
+      padding: 5px 15px;
+      border-radius: 10px;
+      font-size: 20px;
+      position: relative;
+      left: 70px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
 
     .myunderline {
       border-bottom: 4px solid #fd5e34;
@@ -45,26 +121,374 @@
       display: inline-block;
       /* border-radius: 10px; */
     }
+
+    .popupwindow {
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: 100px;
+      width: 900px;
+      max-height: 80%;
+      background: #fd5e34;
+      color: white;
+      z-index: 999;
+      border: 6px solid white;
+      border-radius: 20px;
+      padding: 20px;
+      overflow: scroll;
+    }
+
+    .popupwindow_mobile {
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: 100px;
+      width: 350px;
+      max-height: 80%;
+      background: #fd5e34;
+      color: white;
+      z-index: 999;
+      border: 6px solid white;
+      border-radius: 20px;
+      padding: 20px;
+      overflow: scroll;
+    }
   </style>
 </head>
 
-<body class="">
-  <nav class="navbar navbar-expand-lg navbar-dark" style="margin-bottom: 50px; z-index: 999">
-    <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
-        src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
+<body>
+  <div class="desktoppopup d-none d-md-block">
+    <div id="desktoppopup" class="popupwindow ">
+      <button onclick="closepopup('desktoppopup')"
+        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 400px);  z-index: 999;">✕</button>
+      <div class="row">
+        <div class="col-6">
+          <h1 style="margin-top: 90px; font-size: 43px;">「前面有落！」</h1>
+          <h1 style="margin-top: 30px; padding: 20px; font-size: 35px;">一句耳熟能詳的叫喊，能勾起你對紅van<br>的甚麼回憶？</h1>
+        </div>
+        <div class="col-6" style="margin-top: 30px;">
+          <h1 style="font-size: 25px;">
+            <!--           
+          「前面有落！」<br>
 
+          一句耳熟能詳的叫喊，<br>能勾起你對紅van的甚麼回憶？<br>
 
-  </nav>
+          &lt;&lt; -->
+            搭紅VAN——<br>從水牌說起：小巴的流金歲月
+            <!-- &gt;&gt; -->
+          </h1>
 
-  <div class="flex flex-col items-center mt-32 text-3xl" style="color: #fd5e34; ">
+          <div style="margin-right: 50px">
+            <div style="font-weight: bold;">
+              作者：
+              麥錦生 (著)
+            </div>
 
-    <p><b>恭 喜 您!</b></p>
-    <p><b>您已經成功報讀課程!</b></p>
+            <div style="margin-top: 20px;">
+              從五十年代走來，紅VAN接載過從鄉村躍身到市區打拼的打工仔，接載過風雨中趕着回家的歸人，接載過暴動中逃難的工人，也接載過你和我上課下班，紅VAN不只是一種交通工具，更是一種香港情懷，你對它有甚麼認識？</div>
 
-    <p>課程開始日期將會在電話短訊及電郵公布!</p>
+            <div style="margin-top: 20px;">
+              本書透過麥錦生──香港至今最後一位小巴水牌寫手，述說對小巴行業半世紀來的觀察，以及與紅VAN休戚相關的感情，結合多幀珍貴的舊照片、舊剪報，描寫出鮮為人知的完整的小巴歷史，更邀請了多位與小巴行業密切的司機、管理者、小巴迷，分享對小巴的認識和感受。
+            </div>
 
-    <a style="margin-top: 50px;" href="/"> <button class="submitbutton p-4 rounded">返回主頁</button></a>
+            <ul style="margin-top: 20px;">
+              <li>● 從白牌車到十九座小巴的故事</li>
+              <li>● 小巴牌照值多少錢？</li>
+              <li>● 有紅色小巴的地方就沒有綠色小巴？</li>
+              <li>● 花碼是甚麼？</li>
+              <li>● 消失了的大丸、旺角先施、香港紗廠</li>
+            </ul>
+            <div style="margin-bottom: 20px;">
+              我們都在搭着紅VAN想舊時。
+            </div>
+          </div>
+
+          <button class="upsellbutton">追加書本及麥師傅親筆簽名</button>
+
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="d-xs-block d-md-none">
+    <div id="mobilepopup" class="popupwindow_mobile ">
+      <button onclick="closepopup('mobilepopup')"
+        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 120px);  z-index: 999;">✕</button>
+      <div class="row">
+        <div class="col-12">
+          <h1 style="margin-top: 90px; font-size: 35px;">「前面有落！」</h1>
+          <h1 style="margin-top: 30px; padding: 20px; font-size: 25px;">一句耳熟能詳的叫喊，能勾起你對紅van<br>的甚麼回憶？</h1>
+        </div>
+        <div class="col-12" style="margin-top: 30px;">
+          <h1 style="font-size: 22px;">
+            <!--           
+          「前面有落！」<br>
+
+          一句耳熟能詳的叫喊，<br>能勾起你對紅van的甚麼回憶？<br>
+
+          &lt;&lt; -->
+            搭紅VAN——<br>從水牌說起：小巴的流金歲月
+            <!-- &gt;&gt; -->
+          </h1>
+
+          <div style="">
+            <div style="font-weight: bold;">
+              作者：
+              麥錦生 (著)
+            </div>
+
+            <div style="margin-top: 20px;">
+              從五十年代走來，紅VAN接載過從鄉村躍身到市區打拼的打工仔，接載過風雨中趕着回家的歸人，接載過暴動中逃難的工人，也接載過你和我上課下班，紅VAN不只是一種交通工具，更是一種香港情懷，你對它有甚麼認識？</div>
+
+            <div style="margin-top: 20px;">
+              本書透過麥錦生──香港至今最後一位小巴水牌寫手，述說對小巴行業半世紀來的觀察，以及與紅VAN休戚相關的感情，結合多幀珍貴的舊照片、舊剪報，描寫出鮮為人知的完整的小巴歷史，更邀請了多位與小巴行業密切的司機、管理者、小巴迷，分享對小巴的認識和感受。
+            </div>
+
+            <ul style="margin-top: 20px;">
+              <li>● 從白牌車到十九座小巴的故事</li>
+              <li>● 小巴牌照值多少錢？</li>
+              <li>● 有紅色小巴的地方就沒有綠色小巴？</li>
+              <li>● 花碼是甚麼？</li>
+              <li>● 消失了的大丸、旺角先施、香港紗廠</li>
+            </ul>
+            <div style="margin-bottom: 20px;">
+              我們都在搭着紅VAN想舊時。
+            </div>
+          </div>
+
+          <button class="upsellbutton_mobile">追加書本及麥師傅親筆簽名</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden" class="blurbackground"
+    onclick="outfopopup()">
+    <nav class="navbar navbar-expand-lg navbar-dark" style=" z-index: 999">
+      <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-none d-md-block"
+          style="width: 250px;" /><img src="./img/logo_orange.png" class=" d-xs-block d-md-none"
+          style="width: 180px;" /></a>
+
+      <div class="d-none d-md-block">
+        <img src="./img/charge/bubble_oragnge.png" style="width: 200px; position: absolute; right: 200px;">
+        <img src="./img/charge/closetag_orange.png" style="width: 300px; top: 200px; position: absolute; left: 0px;">
+        <img src="./img/charge/slack_orange.png" style="width: 300px; position: absolute; right: -100px; top: 500px;">
+      </div>
+
+      <div class="d-xs-block d-md-none">
+        <img src="./img/charge/bubble_oragnge.png"
+          style="width: 130px; top: 300px; position: absolute; left: -70px; z-index: -999;">
+        <img src="./img/charge/opentag_orange.png" style="width: 200px; top: 80px; position: absolute; left: -40px;">
+        <img src="./img/charge/closetag_orange.png" style="width: 200px; top: 280px; position: absolute; right: -80px;">
+        <img src="./img/charge/slack_orange.png" style="width: 150px; position: absolute; right: -60px; top: 40px;">
+      </div>
+    </nav>
+    <div class="d-none d-md-block">
+      <div class="flex flex-col items-center mt-32 text-3xl" style="color: #fd5e34; margin-top: 50px;">
+
+        <div style="font-size: 40px; margin-bottom: -10px;"><b>恭喜您!</b></div>
+        <div style="font-size: 40px; margin-bottom: 10px;"><b>您已經成功報讀課程!</b></div>
+
+        <div>課程開始日期將會在電話短訊及電郵公布!</div>
+
+        <div class="myunderline" style="font-size: 18px; font-weight: bold; margin-top: 100px; margin-bottom: 50px;">
+          請跟隨以下步驟來確保最好的體驗</div>
+
+        <div class="container" style="margin-bottom: 50px;">
+
+          <div class="row"
+            style="max-width: 900px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;">
+
+            <div class="col-3" style="font-size: 14px;">
+              步驟 #1<br>
+              <h1 style="font-size: 18px; text-align: center; margin-top: 10px;">請查詢你的電郵</h1>
+              我們經已將收據及確認電郵發送到你的電子郵箱內，而課程開始當天我們也會發出提示到你的電子郵箱，請查看你的電郵，如10-15 分鐘後也沒有收到，請立即發電郵至<br>
+              <span style="">hello@wewannalearn.com<span><br>
+                  通知我們！
+                  <div style="position: absolute; right: 0px; top: 30px;">ᐅ</div>
+            </div>
+            <div class="col-3" style="font-size: 14px;">
+              步驟 #2<br>
+              <h1 style="font-size: 18px; text-align: center; margin-top: 10px;">提供你的郵寄地址</h1>
+              請立刻按以下按鈕填妥個人資料，好想學會安排10月尾將課程材料、小巴模型及如有購買書本送到你指定的地址內<br>（郵寄時間：香港大約 3-5日 / 海外大約 5-7日）
+
+              <div style="position: absolute; right: 0px; top: 30px;">ᐅ</div>
+            </div>
+            <div class="col-3" style="font-size: 14px;">
+              步驟 #3<br>
+              <h1 style="font-size: 18px; text-align: center; margin-top: 10px;">參加學員討論區</h1>
+              請立即到以下連結加入小巴牌課程私人群組，認識與你一樣有共同理念來自不同地方的學員, 得到很多正面支援, 一同成長，一同進步! 還有，馬上在討論區與麥師傅打招呼及分享你的小巴故事！<br>
+              <div style="position: absolute; right: 0px; top: 30px;">ᐅ</div>
+            </div>
+            <div class="col-3" style="font-size: 14px;">
+              步驟 #4<br>
+              <h1 style="font-size: 18px; text-align: center; margin-top: 10px;">追蹤好想學社交媒體，緊貼課程動向</h1>
+              <div class="flex justify-center" style="margin-top: 30px;">
+                <div><a href="#"><img style="width: 100%;" src="img/socialicon/fb.png"></a></div>
+                <div><a href="#"><img style="width: 100%;" src="img/socialicon/ig.png"></a></div>
+                <div><a href="#"><img style="width: 100%;" src="img/socialicon/yt.png"></a></div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <a style="margin-top: 50px;" href="/"> <button class="submitbutton ">返回主頁</button></a>
+
+      </div>
+    </div>
+
+    <div class="d-xs-block d-md-none">
+      <div class="flex flex-col items-center mt-32 text-2xl d-xs-block d-md-none" style="color: #fd5e34; ">
+
+        <div style="font-size: 30px; margin-bottom: -10px; margin-top: -50px;"><b>恭喜您!</b></div>
+        <div style="font-size: 30px; margin-bottom: 10px;"><b>您已經成功報讀課程!</b></div>
+        <img
+          style="width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; position: relative; z-index: 1000;"
+          src="img/homepage/busvideopreview.jpg" />
+        <div style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: bold;">課程開始日期將會<br>在電話短訊及電郵公布!
+        </div>
+
+        <div class="myunderline" style="font-size: 18px; font-weight: bold; margin-top: 20px; margin-bottom: 50px;">
+          請跟隨以下步驟來確保最好的體驗</div>
+
+        <div class="container" style="margin-bottom: 20px;">
+
+          <div class="row"
+            style="max-width: 900px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px; text-align: center;">
+
+            <div class="col-12" style="font-size: 14px; ">
+              步驟 #1<br>
+              <h1 class="bluesubtitle" style="font-size: 18px; text-align: center; margin-top: 10px;">請查詢你的電郵</h1> <br>
+              我們經已將收據及確認電郵發送到你的電子郵箱內，而課程開始當天我們也會發出提示到你的<br>電子郵箱，請查看你的電郵，如10-15 分鐘後也沒有收到，請立即發電郵至<br>
+              <span style="">hello@wewannalearn.com<span><br>
+                  通知我們！
+                  <!-- <div style="position: absolute; right: 0px; top: 50px;">ᐅ</div> -->
+            </div>
+            <div class="col-12" style="font-size: 14px; margin-top: 30px;">
+              步驟 #2<br>
+              <h1 class="bluesubtitle" style="font-size: 18px; text-align: center; margin-top: 10px;">提供你的郵寄地址</h1> <br>
+              請立刻按以下按鈕填妥個人資料，好想學會安排10月尾將課程材料、小巴模型及如有購買書本送到你指定的地址內<br>（郵寄時間：香港大約 3-5日 / 海外大約 5-7日）
+
+              <!-- <div style="position: absolute; right: 0px; top: 30px;">ᐅ</div> -->
+            </div>
+            <div class="col-12" style="font-size: 14px; margin-top: 50px;">
+              步驟 #3<br>
+              <h1 class="bluesubtitle" style="font-size: 18px; text-align: center; margin-top: 10px;">參加學員討論區</h1> <br>
+              請立即到以下連結加入小巴牌課程私人群組，認識與你一樣有共同理念來自不同地方的學員, 得到很多正面支援, 一同成長，一同進步! 還有，馬上在討論區與麥師傅打招呼及分享你的小巴故事！<br>
+              <!-- <div style="position: absolute; right: 0px; top: 30px;">ᐅ</div> -->
+            </div>
+            <div class="col-12" style="font-size: 14px; margin-top: 50px;">
+              步驟 #4<br>
+              <h1 class="bluesubtitle" style="font-size: 18px; text-align: center; margin-top: 10px;">追蹤好想學社交媒體， <br>
+                緊貼課程動向
+              </h1> <br>
+              <div class="flex justify-center" style="margin-top: 10px; width: 100%; text-align: center;">
+                <a href="#"><img style="width: 50px;" src="img/socialicon/fb.png"></a>
+                <a href="#"><img style="width: 50px;" src="img/socialicon/ig.png"></a>
+                <a href="#"><img style="width: 50px;" src="img/socialicon/yt.png"></a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <a style="margin-top: 50px;" href="/"> <button class="submitbutton ">返回主頁</button></a>
+
+      </div>
+    </div>
+
+    <div style="height: 150px; overflow: hidden;" class="d-none d-md-block">
+      <img src="./img/charge/bubble_oragnge.png" style="width: 400px; position: absolute; left: -50px; bottom: -400px;">
+      <img src="./img/charge/opentag_orange.png" style="width: 500px; position: absolute; right: 50px; bottom: -700px;">
+    </div>
+
+
+    <div class="container  d-none d-md-block" style="">
+
+      <div class="d-flex justify-content-between">
+
+        <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-none d-md-block"
+            style="width: 200px;" /><img src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
+
+
+        <div class="d-flex justify-content-around">
+
+          <a class="footerlink" href="#">有關我們</a>
+          <a class="footerlink" href="#">導師介紹</a>
+          <a class="footerlink" href="#">常見問題 </a>
+
+        </div>
+
+        <div class="d-flex justify-content-around" style="margin-top: -15px;">
+
+          <a href="#"><img class="footerlinkicon" src="img/socialicon/fb.png"></a>
+          <a href="#"><img class="footerlinkicon" src="img/socialicon/ig.png"></a>
+          <a href="#"><img class="footerlinkicon" src="img/socialicon/yt.png"> </a>
+
+        </div>
+        <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+          src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
+  </a> -->
+
+
+      </div>
+    </div>
+
+    <div class="container d-xs-block d-md-none" style=" margin-top: 50px;">
+
+      <div class="d-flex justify-content-between">
+
+        <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-xs-block d-md-none"
+            style="width: 100px;" /></a>
+
+
+        <div class="d-flex justify-content-around">
+
+          <a class="footerlink_mobile" href="#">有關我們</a>
+          <a class="footerlink_mobile" href="#">導師介紹</a>
+          <a class="footerlink_mobile" href="#">常見問題 </a>
+
+        </div>
+
+        <div class="d-flex justify-content-around" style="margin-top: -20px;">
+
+          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/fb.png"></a>
+          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/ig.png"></a>
+          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/yt.png"> </a>
+
+        </div>
+        <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+          src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
+  </a> -->
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function closepopup(x) {
+      console.log(x)
+      document.getElementById(x).style.display = "none"
+      document.getElementById('alldiv').classList.remove('blurbackground')
+    }
+
+    function outfopopup() {
+      if (document.getElementById('alldiv').classList.contains('blurbackground')) {
+        document.getElementById('alldiv').classList.remove('blurbackground')
+        document.getElementById("desktoppopup").style.display = "none"
+        document.getElementById("mobilepopup").style.display = "none"
+      }
+
+    }
+  </script>
 </body>
 
 </html>
