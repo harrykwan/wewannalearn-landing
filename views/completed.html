@@ -58,217 +58,13 @@
       padding: 5px 10px;
       /* border-radius: 4px; */
     }
-
-
-    .blurbackground {
-      -webkit-filter: blur(2px) brightness(30%);
-      -moz-filter: blur(2px) brightness(30%);
-      -o-filter: blur(2px) brightness(30%);
-      -ms-filter: blur(2px) brightness(30%);
-      filter: blur(2px) brightness(30%);
-      overflow: hidden;
-      background: white;
-    }
-
-    .submitbutton {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-      /* width: 100px; */
-      padding: 5px 15px;
-      border-radius: 10px;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 20px;
-    }
-
-    .upsellbutton {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-      /* width: 100px; */
-      padding: 5px 15px;
-      border-radius: 10px;
-      font-size: 20px;
-      position: relative;
-      left: 120px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-
-
-    .upsellbutton_mobile {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-      /* width: 100px; */
-      padding: 5px 15px;
-      border-radius: 10px;
-      font-size: 20px;
-      position: relative;
-      left: 70px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-
-    .myunderline {
-      border-bottom: 4px solid #fd5e34;
-      padding-bottom: 4px;
-      display: inline-block;
-      /* border-radius: 10px; */
-    }
-
-    .popupwindow {
-      position: fixed;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      top: 100px;
-      width: 900px;
-      max-height: 80%;
-      background: #fd5e34;
-      color: white;
-      z-index: 999;
-      border: 6px solid white;
-      border-radius: 20px;
-      padding: 20px;
-      overflow: scroll;
-    }
-
-    .popupwindow_mobile {
-      position: fixed;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      top: 100px;
-      width: 350px;
-      max-height: 80%;
-      background: #fd5e34;
-      color: white;
-      z-index: 999;
-      border: 6px solid white;
-      border-radius: 20px;
-      padding: 20px;
-      overflow: scroll;
-    }
   </style>
 </head>
 
 <body>
-  <div class="desktoppopup d-none d-md-block">
-    <div id="desktoppopup" class="popupwindow ">
-      <button onclick="closepopup('desktoppopup')"
-        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 400px);  z-index: 999;">✕</button>
-      <div class="row">
-        <div class="col-6">
-          <h1 style="margin-top: 90px; font-size: 43px;">「前面有落！」</h1>
-          <h1 style="margin-top: 30px; padding: 20px; font-size: 35px;">一句耳熟能詳的叫喊，能勾起你對紅van<br>的甚麼回憶？</h1>
-        </div>
-        <div class="col-6" style="margin-top: 30px;">
-          <h1 style="font-size: 25px;">
-            <!--           
-          「前面有落！」<br>
 
-          一句耳熟能詳的叫喊，<br>能勾起你對紅van的甚麼回憶？<br>
 
-          &lt;&lt; -->
-            搭紅VAN——<br>從水牌說起：小巴的流金歲月
-            <!-- &gt;&gt; -->
-          </h1>
-
-          <div style="margin-right: 50px">
-            <div style="font-weight: bold;">
-              作者：
-              麥錦生 (著)
-            </div>
-
-            <div style="margin-top: 20px;">
-              從五十年代走來，紅VAN接載過從鄉村躍身到市區打拼的打工仔，接載過風雨中趕着回家的歸人，接載過暴動中逃難的工人，也接載過你和我上課下班，紅VAN不只是一種交通工具，更是一種香港情懷，你對它有甚麼認識？</div>
-
-            <div style="margin-top: 20px;">
-              本書透過麥錦生──香港至今最後一位小巴水牌寫手，述說對小巴行業半世紀來的觀察，以及與紅VAN休戚相關的感情，結合多幀珍貴的舊照片、舊剪報，描寫出鮮為人知的完整的小巴歷史，更邀請了多位與小巴行業密切的司機、管理者、小巴迷，分享對小巴的認識和感受。
-            </div>
-
-            <ul style="margin-top: 20px;">
-              <li>● 從白牌車到十九座小巴的故事</li>
-              <li>● 小巴牌照值多少錢？</li>
-              <li>● 有紅色小巴的地方就沒有綠色小巴？</li>
-              <li>● 花碼是甚麼？</li>
-              <li>● 消失了的大丸、旺角先施、香港紗廠</li>
-            </ul>
-            <div style="margin-bottom: 20px;">
-              我們都在搭着紅VAN想舊時。
-            </div>
-          </div>
-
-          <button class="upsellbutton">追加書本及麥師傅親筆簽名</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="d-xs-block d-md-none">
-    <div id="mobilepopup" class="popupwindow_mobile ">
-      <button onclick="closepopup('mobilepopup')"
-        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 120px);  z-index: 999;">✕</button>
-      <div class="row">
-        <div class="col-12">
-          <h1 style="margin-top: 90px; font-size: 35px;">「前面有落！」</h1>
-          <h1 style="margin-top: 30px; padding: 20px; font-size: 25px;">一句耳熟能詳的叫喊，能勾起你對紅van<br>的甚麼回憶？</h1>
-        </div>
-        <div class="col-12" style="margin-top: 30px;">
-          <h1 style="font-size: 22px;">
-            <!--           
-          「前面有落！」<br>
-
-          一句耳熟能詳的叫喊，<br>能勾起你對紅van的甚麼回憶？<br>
-
-          &lt;&lt; -->
-            搭紅VAN——<br>從水牌說起：小巴的流金歲月
-            <!-- &gt;&gt; -->
-          </h1>
-
-          <div style="">
-            <div style="font-weight: bold;">
-              作者：
-              麥錦生 (著)
-            </div>
-
-            <div style="margin-top: 20px;">
-              從五十年代走來，紅VAN接載過從鄉村躍身到市區打拼的打工仔，接載過風雨中趕着回家的歸人，接載過暴動中逃難的工人，也接載過你和我上課下班，紅VAN不只是一種交通工具，更是一種香港情懷，你對它有甚麼認識？</div>
-
-            <div style="margin-top: 20px;">
-              本書透過麥錦生──香港至今最後一位小巴水牌寫手，述說對小巴行業半世紀來的觀察，以及與紅VAN休戚相關的感情，結合多幀珍貴的舊照片、舊剪報，描寫出鮮為人知的完整的小巴歷史，更邀請了多位與小巴行業密切的司機、管理者、小巴迷，分享對小巴的認識和感受。
-            </div>
-
-            <ul style="margin-top: 20px;">
-              <li>● 從白牌車到十九座小巴的故事</li>
-              <li>● 小巴牌照值多少錢？</li>
-              <li>● 有紅色小巴的地方就沒有綠色小巴？</li>
-              <li>● 花碼是甚麼？</li>
-              <li>● 消失了的大丸、旺角先施、香港紗廠</li>
-            </ul>
-            <div style="margin-bottom: 20px;">
-              我們都在搭着紅VAN想舊時。
-            </div>
-          </div>
-
-          <button class="upsellbutton_mobile">追加書本及麥師傅親筆簽名</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden" class="blurbackground"
-    onclick="outfopopup()">
+  <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden">
     <nav class="navbar navbar-expand-lg navbar-dark" style=" z-index: 999">
       <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-none d-md-block"
           style="width: 250px;" /><img src="./img/logo_orange.png" class=" d-xs-block d-md-none"
@@ -338,7 +134,7 @@
 
           </div>
         </div>
-        <a style="margin-top: 50px;" href="/"> <button class="submitbutton ">返回主頁</button></a>
+        <!-- <a style="margin-top: 50px;" href="/"> <button class="submitbutton ">返回主頁</button></a> -->
 
       </div>
     </div>
@@ -398,7 +194,7 @@
 
           </div>
         </div>
-        <a style="margin-top: 50px;" href="/"> <button class="submitbutton ">返回主頁</button></a>
+        <!-- <a style="margin-top: 50px;" href="/"> <button class="submitbutton ">返回主頁</button></a> -->
 
       </div>
     </div>
@@ -470,22 +266,6 @@
     </div>
   </div>
 
-  <script>
-    function closepopup(x) {
-      console.log(x)
-      document.getElementById(x).style.display = "none"
-      document.getElementById('alldiv').classList.remove('blurbackground')
-    }
-
-    function outfopopup() {
-      if (document.getElementById('alldiv').classList.contains('blurbackground')) {
-        document.getElementById('alldiv').classList.remove('blurbackground')
-        document.getElementById("desktoppopup").style.display = "none"
-        document.getElementById("mobilepopup").style.display = "none"
-      }
-
-    }
-  </script>
 </body>
 
 </html>

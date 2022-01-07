@@ -42,7 +42,7 @@ app.get("/joinus", (req, res, next) => {
 });
 
 app.get("/charge", (req, res, next) => {
-  return res.render("./charge.html", {
+  return res.render("./charge_" + req.query.course + ".html", {
     warning: "",
   });
 });
@@ -91,13 +91,13 @@ app.post("/charge", (req, res) => {
       // .then(() => res.render("./completed.html"))
       .catch((err) => {
         console.log(err);
-        res.render("./charge.html", {
+        res.render("./charge_" + req.query.course + ".html", {
           warning: err.raw.message ? err.raw.message : "Error",
         });
       });
   } catch (err) {
     console.log(err);
-    res.render("./charge.html", {
+    res.render("./charge_" + req.query.course + ".html", {
       warning: "Error",
     });
   }
