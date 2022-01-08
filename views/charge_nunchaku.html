@@ -1,0 +1,577 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+  <meta property="og:image:secure_url" content="https://i.ibb.co/Ws78dSR/linkbanner.jpg">
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="423" />
+  <meta property="og:image:height" content="221" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" rel="stylesheet" />
+
+  <title></title>
+
+  <style>
+    html {
+      background: white;
+      color: black;
+    }
+
+    body {
+      background: white;
+      color: black;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+
+
+    .submitbutton {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      width: 100px;
+      padding: 10px 5px;
+      border-radius: 10px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .myunderline {
+      border-bottom: 4px solid #fd5e34;
+      padding-bottom: 4px;
+      display: inline-block;
+      /* border-radius: 10px; */
+    }
+
+    .footerlink_mobile {
+      color: #fd5e34;
+      margin-right: 10px;
+      margin-top: 0px;
+    }
+
+
+    .footerlink {
+      color: #fd5e34;
+      margin-right: 50px;
+      margin-top: 50px;
+    }
+
+    .footerlinkicon {
+      margin-top: 50px;
+      width: 50px;
+    }
+
+    .footerlinkicon_mobile {
+      margin-top: 30px;
+      width: 30px;
+    }
+
+    .contactinput {
+      background: #EEE;
+      width: 500px;
+    }
+
+    .pricetag {
+      width: 500px;
+    }
+
+
+
+    .blurbackground {
+      -webkit-filter: blur(2px) brightness(30%);
+      -moz-filter: blur(2px) brightness(30%);
+      -o-filter: blur(2px) brightness(30%);
+      -ms-filter: blur(2px) brightness(30%);
+      filter: blur(2px) brightness(30%);
+      overflow: hidden;
+      background: white;
+    }
+
+
+    .upsellbutton {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      /* width: 100px; */
+      padding: 5px 15px;
+      border-radius: 10px;
+      font-size: 20px;
+      position: relative;
+      left: 50px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+
+    .upsellbutton_mobile {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      /* width: 100px; */
+      padding: 5px 15px;
+      border-radius: 10px;
+      font-size: 20px;
+      position: relative;
+      left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+
+    .myunderline {
+      border-bottom: 4px solid #fd5e34;
+      padding-bottom: 4px;
+      display: inline-block;
+      /* border-radius: 10px; */
+    }
+
+    .popupwindow {
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: 100px;
+      width: 900px;
+      max-height: 80%;
+      background: #fd5e34;
+      color: white;
+      z-index: 999;
+      border: 6px solid white;
+      border-radius: 20px;
+      padding: 20px;
+      overflow: scroll;
+    }
+
+    .popupwindow_mobile {
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: 100px;
+      width: 350px;
+      max-height: 80%;
+      background: #fd5e34;
+      color: white;
+      z-index: 999;
+      border: 6px solid white;
+      border-radius: 20px;
+      padding: 20px;
+      overflow: scroll;
+    }
+
+    /* For Mobile */
+    @media screen and (max-width: 540px) {
+      .contactinput {
+        background: #EEE;
+        width: 100%;
+      }
+
+      .pricetag {
+        width: 300px;
+      }
+
+    }
+
+    /* For Tablets */
+    @media screen and (min-width: 540px) and (max-width: 780px) {
+      .contactinput {
+        background: #EEE;
+        width: 100%;
+      }
+
+      .pricetag {
+        width: 300px;
+      }
+
+    }
+  </style>
+</head>
+
+<body class="">
+  <div class="d-none d-md-block">
+    <div id="desktoppopup" class="popupwindow ">
+      <button onclick="closepopup('desktoppopup')"
+        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 400px);  z-index: 999;">✕</button>
+      <div class="row">
+        <div class="col-6">
+          <!-- <div class="gallery js-flickity" style="width: 100%; ">
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/5.JPG" />
+            </div>
+
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/3.JPG" />
+            </div>
+
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/5.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/6.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/7.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/8.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/9.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/10.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/11.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/12.JPG" />
+            </div>
+          </div> -->
+          <video width="100%" height="240" muted autoplay>
+            <source src="img/doublestick/upsell/1.MOV">
+            Your browser does not support the video tag.
+          </video>
+          <img style="width: 100%; margin-top: 60px;" src="img/doublestick/upsell/2.JPG" />
+          <img style="width: 100%; margin-top: 60px;" src="img/doublestick/upsell/3.JPG" />
+        </div>
+        <div class="col-6" style="margin-top: 30px;">
+
+
+
+          <div style="margin-right: 50px">
+            1. 迷你手指雙節棍: 強化手指末梢神經，更讓觸覺敏感；加強手部微小肌肉，有利於雙節棍的技術訓練，而且趣味十足! 既可隨身保護自己，又可消磨時間，只需小範圍的空間即可訓練加強腦筋轉動
+
+          </div>
+          <div style="margin-right: 50px; margin-top: 20px;">
+            2. 毛巾: 印有香港雙節棍總會標誌，用來融入雙節棍的動作為日常練習，讓雙節棍的技術更生活化，可以隨時隨身物都成為雙節棍，用起來絕不失色，虎虎生威!
+
+          </div>
+
+          <button style="margin-top: 20px;" onclick="addon()" class="upsellbutton">手指雙節棍和毛巾 HKD $80</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-xs-block d-md-none">
+    <div id="mobilepopup" class="popupwindow_mobile ">
+      <button onclick="closepopup('mobilepopup')"
+        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 120px);  z-index: 999;">✕</button>
+      <div class="row">
+        <div class="col-12">
+          <img style="width: 100%; margin-bottom: 30px; margin-top: 50px;" src="img/doublestick/upsell/2.JPG" />
+          <!-- <div class="gallery js-flickity" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0px;">
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/1.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/2.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/3.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/4.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/5.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/6.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/7.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/8.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/9.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/10.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/11.JPG" />
+            </div>
+            <div class="gallery-cell">
+              <img style="width: 100%" src="img/bus/upsell/12.JPG" />
+            </div>
+          </div> -->
+        </div>
+        <div class="col-12">
+
+          <div style="margin-right: 50px">
+            1. 迷你手指雙節棍: 強化手指末梢神經，更讓觸覺敏感；加強手部微小肌肉，有利於雙節棍的技術訓練，而且趣味十足! 既可隨身保護自己，又可消磨時間，只需小範圍的空間即可訓練加強腦筋轉動
+
+          </div>
+          <div style="margin-right: 50px; margin-top: 20px;">
+            2. 毛巾: 印有香港雙節棍總會標誌，用來融入雙節棍的動作為日常練習，讓雙節棍的技術更生活化，可以隨時隨身物都成為雙節棍，用起來絕不失色，虎虎生威!
+
+          </div>
+
+
+
+          <button style="margin-top: 20px;" onclick="addon()" class="upsellbutton_mobile">手指雙節棍和毛巾 HKD $80</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden" class="blurbackground"
+    onclick="outfopopup()">
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-md-block" style="margin-bottom: 50px; z-index: 999">
+      <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" style="width: 250px;" /></a>
+      <div>
+        <img src="./img/charge/bubble_oragnge.png" style="width: 200px; position: absolute; right: 200px; top: -20px;">
+        <img src="./img/charge/closetag_orange.png" style="width: 300px; top: 200px; position: absolute; left: 0px;">
+        <img src="./img/charge/slack_orange.png" style="width: 250px; position: absolute; right: 0px; top: 400px;">
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark d-xs-block d-md-none" style="margin-bottom: 50px; z-index: 999">
+      <a class="navbar-brand" href="#"><img src="./img/logo_orange.png"
+          style="width: 180px; margin-top: 0px; margin-left: 0px;" /></a>
+      <div>
+        <img src="./img/charge/bubble_oragnge.png"
+          style="width: 130px; top: 300px; position: absolute; left: -70px; z-index: -999;">
+        <img src="./img/charge/opentag_orange.png" style="width: 200px; top: 80px; position: absolute; left: -40px;">
+        <img src="./img/charge/closetag_orange.png" style="width: 200px; top: 280px; position: absolute; right: -80px;">
+        <img src="./img/charge/slack_orange.png" style="width: 150px; position: absolute; right: -60px; top: 40px;">
+      </div>
+    </nav>
+
+    <div class="d-none d-md-block">
+      <div class="h-20 flex justify-center">
+        <h1 style="color: #fd5e34;" class="text-4xl">您正在訂購</h1>
+      </div>
+      <div class="h-20 flex justify-center">
+        <h1 style="color: #fd5e34;" class="text-4xl"><span class="myunderline">好想學手寫小巴牌課程</span></h1>
+      </div>
+      <img
+        style="width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto;  position: relative; z-index: 1000;"
+        src="img/homepage/doublestickvideopreview.jpg" />
+      <div
+        style="color: #fd5e34; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;">
+        1. Be Water雙節棍網上課程 (<strike>價值 HKD $599</strike>)<br>
+        2. 海綿安全雙節棍一套 (黃色) (價值 HKD $80) <br>
+        早鳥優惠只需：<b>HKD $399！</b><br><br>
+        每副雙節棍上印有香港雙節棍總會標誌及雙節棍袋， 棍長28cm，重150克，繩子長16cm，符合國際測試。<br>
+        <div id="addondescription" hidden>
+          <br>
+          追加: <br>
+          3. 手指雙節棍和毛巾 (價值HKD $80）
+        </div>
+      </div>
+    </div>
+
+    <div class="d-xs-block d-md-none">
+      <div class="h-20 flex justify-center" style="margin-bottom: -30px;">
+        <h1 style="color: #fd5e34; font-weight: bold; font-size: 28px;">您正在訂購</h1>
+      </div>
+      <div class="h-20 flex justify-center">
+        <h1 style="color: #fd5e34; font-weight: bold; font-size: 28px;"><span class="myunderline">好想學手寫小巴牌課程</span></h1>
+      </div>
+      <img
+        style="width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; position: relative; z-index: 1000;"
+        src="img/homepage/doublestickvideopreview.jpg" />
+      <div
+        style="color: #fd5e34; width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;">
+
+        1. Be Water雙節棍網上課程 (<strike>價值 HKD $599</strike>)<br>
+        2. 海綿安全雙節棍一套 (黃色) (價值 HKD $80) <br>
+        早鳥優惠只需：<b>HKD $399！</b><br><br>
+        每副雙節棍上印有香港雙節棍總會標誌及雙節棍袋， 棍長28cm，重150克，繩子長16cm，符合國際測試。<br>
+      </div>
+      <div
+        style="color: #fd5e34; width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;"
+        id="addondescription_mobile" hidden>
+        <br>
+        追加: <br>
+        3. 手指雙節棍和毛巾 (價值HKD $80）
+      </div>
+    </div>
+
+
+
+    <div class="flex justify-center mt-12 ">
+      <div class="pricetag">
+        <h2 style="color: #fd5e34;" class="text-2xl">
+          <span class="">Total:</span>
+          <span class="" style="margin-left: calc(100% - 200px); font-size: 18px;">HKD
+            <b><span id="pricetag" class="text-2xl">479</span></b>
+          </span>
+        </h2>
+      </div>
+    </div>
+
+    <div
+      style="color: #fd5e34; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;"
+      hidden>
+      把握時機！報讀課程不只是承傳香港獨門工藝，還可以支持香港最後的手寫小巴牌工業，製作屬於自己獨一無二故事的小巴牌。<br>
+      <br>
+      <b>
+        您會是下一個小巴牌承傳者嗎？<br>
+        立即購買，由您將香港精神發揚開去！<br>
+        <br>
+        百分百安全保證！<br></b>
+      我們採用多重保護系統，所有付款資料及個人私隱圴會受多層保密，絕對不會有任何洩露！<br>
+    </div>
+
+
+    <div class="flex justify-center mt-16">
+
+      <form action="/charge" method="POST" class="flex flex-col ">
+
+        <h1 style="font-size: 25px; color: #fd5e34;">聯絡資料</h1>
+        <div style="color: #fd5e34; margin-top: 20px;">姓名</div>
+        <input class=" p-2 h-10 mb-4 contactinput " type="text" name="name">
+        <div style="color: #fd5e34;">手提電話</div>
+        <input class=" p-2 h-10 mb-4 contactinput " type="text" name="phone">
+        <div style="color: #fd5e34;">有效常用的電郵地址 <span style="font-size: 12px;">*請確保輸入正確的電郵地址</span></div>
+        <input type="email" class=" p-2 h-10 mb-4 contactinput " name="email">
+        <input id="formcoursecode" name="coursecode" value="minibus" hidden>
+        <input id="formcourse" name="course" value="minibus" hidden>
+        <!-- <input class="bg-transparent p-2 h-10 mb-4" type="text" name="address" placeholder="Address"> -->
+        <h1 style="font-size: 25px; color: #fd5e34; margin-top: 20px;">付款資料</h1>
+        <div style="margin-top: 20px; margin-bottom: 50px;">
+          <div style=" background: #EEE;">
+            <div id="card-element" class="bg-transparent p-2 h-10 mb-4"></div>
+          </div>
+
+          <div id="card-errors" role="alert">
+            <%- warning %>
+          </div>
+
+        </div>
+
+        <button class="submitbutton ">完成付款</button>
+
+      </form>
+
+    </div>
+
+
+
+    <div style="height: 150px; overflow: hidden;" class="d-none d-md-block">
+      <img src="./img/charge/bubble_oragnge.png" style="width: 400px; position: absolute; left: -50px; bottom: -400px;">
+      <img src="./img/charge/opentag_orange.png" style="width: 500px; position: absolute; right: 50px; bottom: -700px;">
+    </div>
+
+
+
+    <div class="container  d-none d-md-block" style="">
+
+      <div class="d-flex justify-content-between">
+
+        <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-none d-md-block"
+            style="width: 200px;" /><img src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
+
+
+        <div class="d-flex justify-content-around">
+
+          <a class="footerlink" href="#">有關我們</a>
+          <a class="footerlink" href="#">導師介紹</a>
+          <a class="footerlink" href="#">常見問題 </a>
+
+        </div>
+
+        <div class="d-flex justify-content-around" style="margin-top: -15px;">
+
+          <a href="#"><img class="footerlinkicon" src="img/socialicon/fb.png"></a>
+          <a href="#"><img class="footerlinkicon" src="img/socialicon/ig.png"></a>
+          <a href="#"><img class="footerlinkicon" src="img/socialicon/yt.png"> </a>
+
+        </div>
+        <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+          src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
+  </a> -->
+
+
+      </div>
+    </div>
+
+    <div class="container d-xs-block d-md-none">
+
+      <div class="" style="text-align: center;">
+
+        <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-xs-block d-md-none"
+            style="width: 180px;" /></a><br>
+
+
+
+        <a class="footerlink_mobile" href="#">有關我們</a>
+        <a class="footerlink_mobile" href="#">導師介紹</a>
+        <a class="footerlink_mobile" href="#">常見問題 </a>
+
+
+        <div class="flex justify-center" style="margin-top: -10px; margin-bottom: 50px;">
+
+          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/fb.png"></a>
+          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/ig.png"></a>
+          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/yt.png"> </a>
+
+        </div>
+        <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+                  src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
+          </a> -->
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    var totalprice = 479
+
+
+    function closepopup(x) {
+      console.log(x)
+      document.getElementById(x).style.display = "none"
+      document.getElementById('alldiv').classList.remove('blurbackground')
+    }
+
+    function outfopopup() {
+      if (document.getElementById('alldiv').classList.contains('blurbackground')) {
+        document.getElementById('alldiv').classList.remove('blurbackground')
+        document.getElementById("desktoppopup").style.display = "none"
+        document.getElementById("mobilepopup").style.display = "none"
+      }
+
+    }
+
+    function addon() {
+      totalprice = 559
+      document.getElementById("formcoursecode").value = "minibusaddon"
+      document.getElementById("pricetag").innerHTML = totalprice
+      document.getElementById('addondescription').hidden = false
+      document.getElementById('addondescription_mobile').hidden = false
+      outfopopup()
+    }
+  </script>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="card.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+</body>
+
+
+</html>

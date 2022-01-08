@@ -30,18 +30,26 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/minibus", (req, res, next) => {
-  return res.render("./tutorintro1.html", {
-    warning: "",
-  });
+  return res.render("./tutorintro1.html", {});
+});
+
+app.get("/nunchaku", (req, res, next) => {
+  return res.render("./tutorintro2.html", {});
+});
+
+app.get("/cooking", (req, res, next) => {
+  return res.render("./tutorintro3.html", {});
 });
 
 app.get("/joinus", (req, res, next) => {
-  return res.render("./joinus.html", {
-    warning: "",
-  });
+  return res.render("./joinus.html", {});
 });
 
 app.get("/charge", (req, res, next) => {
+  if (!req.query.course)
+    return res.render("./charge_" + "minibus" + ".html", {
+      warning: "",
+    });
   return res.render("./charge_" + req.query.course + ".html", {
     warning: "",
   });
@@ -62,6 +70,14 @@ app.post("/charge", (req, res) => {
       "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg",
     minibusaddon:
       "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg",
+    doublestick:
+      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/doublestickvideopreview.jpg",
+    doublestickaddon:
+      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/doublestickvideopreview.jpg",
+    saurce:
+      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/saurcevideopreview.jpg",
+    saurceaddon:
+      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/saurcevideopreview.jpg",
   };
 
   try {
@@ -95,7 +111,7 @@ app.post("/charge", (req, res) => {
                   "entry.1896806186": req.body.name ? req.body.name : "",
                   "entry.673454844": req.body.phone ? req.body.phone : "",
                   "entry.1920172636": req.body.email ? req.body.email : "",
-                  "entry.1648267103": courseprice,
+                  "entry.1648267103": req.body.coursecode + " " + courseprice,
                 },
               };
               request(options, function (error, response) {
