@@ -475,6 +475,8 @@
         <input class=" p-2 h-10 mb-4 contactinput " type="text" name="phone">
         <div style="color: #fd5e34;">有效常用的電郵地址 <span style="font-size: 12px;">*請確保輸入正確的電郵地址</span></div>
         <input type="email" class=" p-2 h-10 mb-4 contactinput " name="email">
+        <input id="formcoursecode" name="coursecode" value="minibus" hidden>
+        <input id="formcourse" name="course" value="minibus" hidden>
         <!-- <input class="bg-transparent p-2 h-10 mb-4" type="text" name="address" placeholder="Address"> -->
         <h1 style="font-size: 25px; color: #fd5e34; margin-top: 20px;">付款資料</h1>
         <div style="margin-top: 20px; margin-bottom: 50px;">
@@ -567,7 +569,7 @@
 
 
   <script>
-    var totalprice = 399
+    var totalprice = 499
 
 
     function closepopup(x) {
@@ -586,7 +588,8 @@
     }
 
     function addon() {
-      totalprice = 458
+      totalprice = 558
+      document.getElementById("formcoursecode").value = "minibusaddon"
       document.getElementById("pricetag").innerHTML = totalprice
       document.getElementById('addondescription').hidden = false
       document.getElementById('addondescription_mobile').hidden = false

@@ -48,8 +48,27 @@ app.get("/charge", (req, res, next) => {
 });
 
 app.post("/charge", (req, res) => {
-  const courseprice = 128;
+  const coursepricelist = {
+    minibus: 499,
+    minibusaddon: 558,
+    doublestick: 479,
+    doublestickaddon: 559,
+    saurce: 399,
+    saurceaddon: 598,
+  };
+
+  const courseimglist = {
+    minibus:
+      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg",
+    minibusaddon:
+      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg",
+  };
+
   try {
+    const courseprice = coursepricelist[req.body.coursecode]
+      ? coursepricelist[req.body.coursecode]
+      : 0;
+    if (coursepricelist == 0) throw "wrong course code";
     stripe.customers
       .create({
         name: req.body.name ? req.body.name : "",
@@ -63,12 +82,12 @@ app.post("/charge", (req, res) => {
           stripe.charges
             .create({
               amount: courseprice,
-              currency: "usd",
+              currency: "hkd",
               customer: customer.id,
             })
             .then((x) => {
               console.log(x);
-              res.render("./completed.html");
+              res.render("./completed_" + req.body.course + ".html");
               var options = {
                 method: "POST",
                 url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScDpQR2gQ4EhmkOlFX6JXWSjwDCDYMUAfZvB4qRL7xyeXy3kQ/formResponse",
@@ -83,6 +102,22 @@ app.post("/charge", (req, res) => {
                 if (error) console.log(error);
                 // console.log(response.body);
               });
+              var options = {
+                method: "POST",
+                url: "https://irq3jumapc.execute-api.us-east-1.amazonaws.com/dev/paymentconfirm",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  subject: "多謝購買課程",
+                  to: "harry1998kwan@gmail.com",
+                  courseimg: courseimglist[req.body.course],
+                }),
+              };
+              request(options, function (error, response) {
+                if (error) throw new Error(error);
+                console.log(response.body);
+              });
             })
         // .then(() =>
         //   res.render(req.body.url.split("charge.html").join("completed.html"))
@@ -91,7 +126,7 @@ app.post("/charge", (req, res) => {
       // .then(() => res.render("./completed.html"))
       .catch((err) => {
         console.log(err);
-        res.render("./charge_" + req.query.course + ".html", {
+        res.render("./charge_" + req.body.course + ".html", {
           warning: err.raw.message ? err.raw.message : "Error",
         });
       });
