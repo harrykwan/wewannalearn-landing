@@ -22,6 +22,10 @@
             /* overflow-x: hidden; */
         }
 
+        #alldiv {
+            background: #fd5e34;
+        }
+
         .myunderline {
             border-bottom: 4px solid white;
             padding-bottom: 4px;
@@ -306,7 +310,7 @@
 
     <div id="alldiv" onclick="outfopopup()" style="position: relative; overflow-x: hidden; overflow-y: hidden;">
         <nav class="navbar navbar-expand-lg navbar-dark" style=" z-index: 999">
-            <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+            <a class="navbar-brand" href="/"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
                     src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -315,11 +319,11 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto" style="backdrop-filter: blur(200px);">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">有關我們 <span class="sr-only">(current)</span></a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/#aboutus">有關我們 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">導師介紹</a>
+                        <a class="nav-link" href="/#tutor">導師介紹</a>
                     </li>
                 </ul>
             </div>
@@ -443,16 +447,16 @@
                 <div class="row" style="width: calc(100% + 150px); margin-left: -75px;">
                     <div class="col-1"></div>
                     <div class="col-2" style="margin-top: 35px; text-align: center">
-                        <img style="width: 50px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                        <img style="width: 50px; left: 0; right: 0; margin-left: 20px; margin-right: 0;"
                             src="./img/meida/tvb.png">
                     </div>
 
                     <div class="col-2" style="margin-top: 10px; text-align: center">
-                        <img style="width: 100px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                        <img style="width: 100px; left: 0; right: 0; margin-left: -20px; margin-right: 0;"
                             src="./img/meida/now.png">
                     </div>
                     <div class="col-2" style="margin-top: 50px;">
-                        <img style="width: 80px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                        <img style="width: 80px; left: 0; right: 0; margin-left: -10px; margin-right: 0;"
                             src="./img/meida/viu.png">
                     </div>
                     <div class="col-2" style="margin-top: 40px; text-align: center">
@@ -460,7 +464,7 @@
                             src="./img/meida/rthk.png">
                     </div>
                     <div class="col-2" style="margin-top: 40px; text-align: center">
-                        <img style="width: 40px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                        <img style="width: 40px; left: 0; right: 0; margin-left: -40px; margin-right: 0;"
                             src="./img/meida/cable.png">
                     </div>
                     <div class="col-1"></div>
@@ -991,15 +995,15 @@ margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
 
             <div class="d-flex justify-content-between">
 
-                <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block"
+                <a class="navbar-brand" href="/"><img src="logo.png" class=" d-none d-md-block"
                         style="width: 200px;" /><img src="logo.png" class=" d-xs-block d-md-none"
                         style="width: 180px;" /></a>
 
 
                 <div class="d-flex justify-content-around">
 
-                    <a class="footerlink" href="#">有關我們</a>
-                    <a class="footerlink" href="#">導師介紹</a>
+                    <a class="footerlink" href="/#aboutus">有關我們</a>
+                    <a class="footerlink" href="/#tutor">導師介紹</a>
                     <a class="footerlink" href="#">常見問題 </a>
 
                 </div>
@@ -1028,8 +1032,8 @@ margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
 
 
 
-                <a class="footerlink_mobile" href="#">有關我們</a>
-                <a class="footerlink_mobile" href="#">導師介紹</a>
+                <a class="footerlink_mobile" href="/#aboutus">有關我們</a>
+                <a class="footerlink_mobile" href="/#tutor">導師介紹</a>
                 <a class="footerlink_mobile" href="#">常見問題 </a>
 
 
@@ -1114,6 +1118,13 @@ margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
             document.getElementById("desktoppopup").style.display = "block"
             document.getElementById("mobilepopup").style.display = "block"
         }
+
+        function checkurl() {
+            if (window.location.href.indexOf("#buy") != -1) {
+                joincourse()
+            }
+        }
+        checkurl()
     </script>
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

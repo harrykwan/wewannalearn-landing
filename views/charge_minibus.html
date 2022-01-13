@@ -23,6 +23,8 @@
       color: black;
     }
 
+
+
     body {
       background: white;
       color: black;
@@ -548,8 +550,8 @@
 
 
 
-        <a class="footerlink_mobile" href="#">有關我們</a>
-        <a class="footerlink_mobile" href="#">導師介紹</a>
+        <a class="footerlink_mobile" href="/#aboutus">有關我們</a>
+        <a class="footerlink_mobile" href="/#tutor">導師介紹</a>
         <a class="footerlink_mobile" href="#">常見問題 </a>
 
 
@@ -572,8 +574,10 @@
 
 
   <script>
+    const addonlimit = 50
     var totalprice = 499
-
+    var addonstillhave = false
+    var addoncount = -1;
 
     function closepopup(x) {
       console.log(x)
@@ -591,6 +595,12 @@
     }
 
     function addon() {
+      console.log(addoncount)
+      if (addoncount == -1) return
+      if (!addonstillhave) {
+        alert("Sorry, sold out " + addoncount + '/' + addonlimit)
+        return
+      }
       totalprice = 558
       document.getElementById("formcoursecode").value = "minibusaddon"
       document.getElementById("pricetag").innerHTML = totalprice
@@ -598,6 +608,39 @@
       document.getElementById('addondescription_mobile').hidden = false
       outfopopup()
     }
+
+
+
+    function getaddoncount() {
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          console.log(this.responseText);
+          addoncount = parseInt(this.responseText)
+          checkaddonlimit()
+        }
+      });
+
+      xhr.open("GET", "/getaddoncount");
+
+      xhr.send();
+    }
+
+
+
+    function checkaddonlimit() {
+      if (addoncount >= addonlimit) {
+        addonstillhave = false
+      } else {
+        addonstillhave = true
+      }
+
+    }
+
+
+    getaddoncount()
   </script>
 
   <script src="https://js.stripe.com/v3/"></script>

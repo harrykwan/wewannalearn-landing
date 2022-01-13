@@ -1,4 +1,7 @@
 require("dotenv").config();
+const { JsonDB } = require("node-json-db");
+const { Config } = require("node-json-db/dist/lib/JsonDBConfig");
+const db = new JsonDB(new Config("myDataBase", true, false, "/"));
 const express = require("express");
 const request = require("request");
 const bodyParser = require("body-parser");
@@ -45,6 +48,18 @@ app.get("/teach", (req, res, next) => {
   return res.render("./joinus.html", {});
 });
 
+app.get("/getaddoncount", (req, res, next) => {
+  try {
+    let getaddoncount = db.count("/minibusaddon/list");
+    console.log(getaddoncount);
+    if (getaddoncount) res.send("" + getaddoncount);
+    else res.send("0");
+  } catch (e) {
+    console.log(e);
+    res.send(0);
+  }
+});
+
 app.get("/charge", (req, res, next) => {
   const coursetourl = {
     "Minibus-Sign-Calligraphy": "minibus",
@@ -89,9 +104,14 @@ app.post("/charge", (req, res) => {
 
   try {
     const courseprice = coursepricelist[req.body.coursecode]
-      ? coursepricelist[req.body.coursecode]
+      ? coursepricelist[req.body.coursecode] * 100
       : 0;
     if (coursepricelist == 0) throw "wrong course code";
+
+    if (req.body.coursecode == "minibusaddon") {
+      db.push("/minibusaddon/list[]", req.body);
+    }
+
     stripe.customers
       .create({
         name: req.body.name ? req.body.name : "",
