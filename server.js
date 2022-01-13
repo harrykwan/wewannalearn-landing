@@ -190,6 +190,7 @@ app.post("/newaccount", (req, res) => {
     formData: {
       "entry.715279161": req.body.name ? req.body.name : "",
       "entry.1341847609": req.body.email ? req.body.email : "",
+      "entry.2013507720": req.body.course ? req.body.course : "",
     },
   };
   request(options, function (error, response) {
