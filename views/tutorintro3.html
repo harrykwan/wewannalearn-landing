@@ -160,12 +160,154 @@
             margin-top: 30px;
             width: 30px;
         }
+
+        .popupwindow {
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 100px;
+            width: 900px;
+            max-height: 80%;
+            background: #fd5e34;
+            color: white;
+            z-index: 9999;
+            border: 6px solid white;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: scroll;
+            padding: 50px 150px;
+
+        }
+
+        .popupwindow_mobile {
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 100px;
+            width: 350px;
+            max-height: 80%;
+            background: #fd5e34;
+            color: white;
+            z-index: 9999;
+            border: 6px solid white;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: scroll;
+        }
+
+        .submitbutton {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            /* width: 100px; */
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 20px;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .popupinput {
+            background: white;
+            color: #007bff;
+            border: none;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+        }
+
+        .popupinput::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #007bff;
+            ;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        .popupinput:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #007bff;
+
+        }
+
+        .popupinput::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #007bff;
+
+        }
+
+
+        .clickable:hover {
+            cursor: pointer;
+        }
+
+        .blurbackground {
+            -webkit-filter: blur(2px) brightness(30%);
+            -moz-filter: blur(2px) brightness(30%);
+            -o-filter: blur(2px) brightness(30%);
+            -ms-filter: blur(2px) brightness(30%);
+            filter: blur(2px) brightness(30%);
+            overflow: hidden;
+            background: white;
+        }
     </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
-    <div style="position: relative; overflow-x: hidden; overflow-y: hidden;">
+    <div class="d-none d-md-block">
+        <div id="desktoppopup" class="popupwindow " hidden>
+            <div onclick="closepopup('desktoppopup')"
+                style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 400px);  z-index: 999;">✕</div>
+            <form style="text-align: center;" action="/newaccount" method="POST">
+                <img src="logo.png" style="width: 250px;" />
+                <h1 style="margin-bottom: 20px; font-size: 25px;">「無論去到邊度，
+                    您都可以快靚正
+                    煮出香港味道！」
+                </h1>
+                <div style="margin-bottom: 20px;">您會是下一個香港味道承傳者嗎？ <br>
+                    把握時機，由你將香港精神發揚光開去！
+                </div>
+                <input class="popupinput" placeholder="輸入你的名字" name="name">
+                <input class="popupinput" placeholder="輸入你的電𨛘" name="email">
+                <input hidden value="Hong-Kong-Comfort-Food-Cooking" name="course">
+                <button class="submitbutton" type="submit">登記學員</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="d-xs-block d-md-none">
+        <div id="mobilepopup" class="popupwindow_mobile " hidden>
+            <div onclick="closepopup('mobilepopup')"
+                style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 120px);  z-index: 999;">✕</div>
+            <form style="text-align: center;" action="/newaccount" method="POST">
+                <img src="logo.png" style="width: 250px;" />
+                <h1 style="margin-bottom: 20px; font-size: 22px;">「無論去到邊度，
+                    您都可以快靚正
+                    煮出香港味道！。」
+                </h1>
+                <div style="margin-bottom: 20px;">您會是下一個香港味道承傳者嗎？ <br>
+                    把握時機，由你將香港精神發揚光開去！
+                </div>
+                <input class="popupinput" placeholder="輸入你的名字" name="name">
+                <input class="popupinput" placeholder="輸入你的電𨛘" name="email">
+                <input hidden value="Hong-Kong-Comfort-Food-Cooking" name="course">
+                <button class="submitbutton" type="submit">登記學員</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div style="position: fixed; bottom: 0; right: 0; z-index: 9999;" class="clickable">
+        <img src="./img/homepage/joincourse.png" style="width: 200px;" onclick="joincourse()">
+    </div>
+    <div style="position: relative; overflow-x: hidden; overflow-y: hidden;" id="alldiv" onclick="outfopopup()">
         <nav class="navbar navbar-expand-lg navbar-dark" style=" z-index: 999">
             <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
                     src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
@@ -283,21 +425,22 @@
                     手寫小巴牌的意義除了是集體回憶和玩味潮流外，更是引領和提醒我們在人生路上前進的座右銘，透過唯一一個官方小巴牌製作網上課程，大家都可以勾劃出屬於自己人生故事的字句，將精神注入獨一無二的手寫小巴牌當中，在人生快樂或迷失的時候都可以陪伴我們左右。
                     <div class="d-none d-md-block" style="margin-bottom: 100px;">
                         <div class="row">
-                            <div class="col-sm" style="margin-top: 50px;">
-                                <img style="width: 130px;" src="./img/meida/viu.png">
+                            <div class="col-sm" style="margin-top: 10px;">
+                                <img style="width: 130px;" src="./img/saurce/12.png">
                             </div>
                             <div class="col-sm" style="margin-top: 10px;">
-                                <img style="width: 130px;" src="./img/meida/now.png">
-                            </div>
-                            <div class="col-sm" style="margin-top: 25px;">
-                                <img style="width: 80px;" src="./img/meida/tvb.png">
-                            </div>
-                            <div class="col-sm" style="margin-top: 40px;">
-                                <img style="width: 70px;" src="./img/meida/rthk.png">
+                                <img style="width: 130px;" src="./img/saurce/13.png">
                             </div>
                             <div class="col-sm" style="margin-top: 20px;">
-                                <img style="width: 70px;" src="./img/meida/cable.png">
+                                <img style="width: 120px;" src="./img/saurce/16.png">
                             </div>
+                            <div class="col-sm" style="margin-top: 25px;">
+                                <img style="width: 100px;" src="./img/saurce/14.png">
+                            </div>
+                            <div class="col-sm" style="margin-top: 20px;">
+                                <img style="width: 120px;" src="./img/saurce/15.png">
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -305,26 +448,27 @@
             <div class="d-xs-block d-md-none">
                 <div class="row" style="width: calc(100% + 150px); margin-left: -75px;">
                     <div class="col-1"></div>
-                    <div class="col-2" style="margin-top: 50px;">
+                    <div class="col-2" style="margin-top: 20px;">
                         <img style="width: 80px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
-                            src="./img/meida/viu.png">
+                            src="./img/saurce/12.png">
                     </div>
                     <div class="col-2" style="margin-top: 10px; text-align: center">
                         <img style="width: 100px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
-                            src="./img/meida/now.png">
+                            src="./img/saurce/13.png">
                     </div>
-                    <div class="col-2" style="margin-top: 35px; text-align: center">
-                        <img style="width: 50px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
-                            src="./img/meida/tvb.png">
+                    <div class="col-2" style="margin-top: 20px; text-align: center">
+                        <img style="width: 80px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/saurce/16.png">
                     </div>
-                    <div class="col-2" style="margin-top: 40px; text-align: center">
-                        <img style="width: 50px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
-                            src="./img/meida/rthk.png">
+                    <div class="col-2" style="margin-top: 20px; text-align: center">
+                        <img style="width: 80px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/saurce/14.png">
                     </div>
-                    <div class="col-2" style="margin-top: 40px; text-align: center">
-                        <img style="width: 40px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
-                            src="./img/meida/cable.png">
+                    <div class="col-2" style="margin-top: 20px; text-align: center">
+                        <img style="width: 80px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
+                            src="./img/saurce/15.png">
                     </div>
+
                     <div class="col-1"></div>
                 </div>
             </div>
@@ -889,6 +1033,29 @@ margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
                 if (x.src.indexOf("after") != -1) {
                     x.src = x.src.split("after").join("before");
                 }
+            }
+
+            function closepopup(x) {
+                console.log(x)
+                document.getElementById(x).style.display = "none"
+                document.getElementById('alldiv').classList.remove('blurbackground')
+            }
+
+            function outfopopup() {
+                if (document.getElementById('alldiv').classList.contains('blurbackground')) {
+                    document.getElementById('alldiv').classList.remove('blurbackground')
+                    document.getElementById("desktoppopup").style.display = "none"
+                    document.getElementById("mobilepopup").style.display = "none"
+                }
+
+            }
+
+            function joincourse() {
+                document.getElementById('alldiv').classList.add('blurbackground')
+                document.getElementById('desktoppopup').hidden = false
+                document.getElementById('mobilepopup').hidden = false
+                document.getElementById("desktoppopup").style.display = "block"
+                document.getElementById("mobilepopup").style.display = "block"
             }
         </script>
         <script src="https://player.vimeo.com/api/player.js"></script>

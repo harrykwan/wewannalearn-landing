@@ -29,30 +29,37 @@ app.get("/", (req, res, next) => {
   return res.render("./index.html");
 });
 
-app.get("/minibus", (req, res, next) => {
+app.get("/Minibus-Sign-Calligraphy", (req, res, next) => {
   return res.render("./tutorintro1.html", {});
 });
 
-app.get("/nunchaku", (req, res, next) => {
+app.get("/Hong-Kong-Nunchaku", (req, res, next) => {
   return res.render("./tutorintro2.html", {});
 });
 
-app.get("/cooking", (req, res, next) => {
+app.get("/Hong-Kong-Comfort-Food-Cooking", (req, res, next) => {
   return res.render("./tutorintro3.html", {});
 });
 
-app.get("/joinus", (req, res, next) => {
+app.get("/teach", (req, res, next) => {
   return res.render("./joinus.html", {});
 });
 
 app.get("/charge", (req, res, next) => {
-  if (!req.query.course)
+  const coursetourl = {
+    "Minibus-Sign-Calligraphy": "minibus",
+    "Hong-Kong-Nunchaku": "nunchaku",
+    "Hong-Kong-Comfort-Food-Cooking": "cooking",
+  };
+  if (!coursetourl[req.query.course]) {
     return res.render("./charge_" + "minibus" + ".html", {
       warning: "",
     });
-  return res.render("./charge_" + req.query.course + ".html", {
-    warning: "",
-  });
+  } else {
+    return res.render("./charge_" + coursetourl[req.query.course] + ".html", {
+      warning: "",
+    });
+  }
 });
 
 app.post("/charge", (req, res) => {
@@ -112,6 +119,7 @@ app.post("/charge", (req, res) => {
                   "entry.673454844": req.body.phone ? req.body.phone : "",
                   "entry.1920172636": req.body.email ? req.body.email : "",
                   "entry.1648267103": req.body.coursecode + " " + courseprice,
+                  "entry.1337606191": req.body.address ? req.body.address : "",
                 },
               };
               request(options, function (error, response) {
@@ -152,6 +160,23 @@ app.post("/charge", (req, res) => {
       warning: "Error",
     });
   }
+});
+
+app.post("/newaccount", (req, res) => {
+  console.log(req.body);
+  var options = {
+    method: "POST",
+    url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSddTSIEeVOtRiy6QI2UeBCuIvNpOMwl5dDMxo3d-ATFfvqVGQ/formResponse",
+    formData: {
+      "entry.715279161": req.body.name ? req.body.name : "",
+      "entry.1341847609": req.body.email ? req.body.email : "",
+    },
+  };
+  request(options, function (error, response) {
+    if (error) console.log(error);
+    // console.log(response.body);
+    res.redirect("/charge?course=" + req.body.course);
+  });
 });
 
 app.use(bodyParser.json());
