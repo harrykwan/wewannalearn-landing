@@ -173,6 +173,10 @@
       overflow: scroll;
     }
 
+    .pricetag {
+      color: #fd5e34;
+    }
+
     /* For Mobile */
     @media screen and (max-width: 540px) {
       .contactinput {
@@ -184,6 +188,10 @@
         width: 300px;
       }
 
+      .bold {
+        font-weight: bold;
+        font-size: 18px;
+      }
     }
 
     /* For Tablets */
@@ -197,6 +205,10 @@
         width: 300px;
       }
 
+      .bold {
+        font-weight: bold;
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -243,7 +255,8 @@
             </div>
           </div> -->
 
-          <img style="width: 100%; margin-top: 60px;" src="img/bus/upsell/1.JPG" />
+          <img style="width: 100%; margin-top: 60px; border-radius: 50%; border: 4px solid black"
+            src="img/bus/upsell/3.JPG" />
         </div>
         <div class="col-6" style="margin-top: 30px;">
 
@@ -279,7 +292,8 @@
         style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 120px);  z-index: 999;">✕</button>
       <div class="row">
         <div class="col-12">
-          <img style="width: 100%; margin-bottom: 30px; margin-top: 50px;" src="img/bus/upsell/1.JPG" />
+          <img style="width: 100%; margin-bottom: 30px; margin-top: 50px; border: 4px solid black; border-radius: 50%;"
+            src="img/bus/upsell/3.JPG" />
           <!-- <div class="gallery js-flickity" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0px;">
             <div class="gallery-cell">
               <img style="width: 100%" src="img/bus/upsell/1.JPG" />
@@ -380,27 +394,39 @@
         style="width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto;  position: relative; z-index: 1000;"
         src="img/homepage/busvideopreview.jpg" />
       <div
-        style="color: #fd5e34; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;">
-        1. 手寫小巴牌網上課程 (<strike>價值 HKD $599</strike>)
-        <br>早鳥優惠只需：<b>HKD $399！</b><br>
-        2. 手寫小巴牌製作工具盒 (價值 HKD $100)<br>
-        <br><br>
-        內含所有材料：<br>
-        <br>
-        - 尺寸15cm X 23cm 紅VAN膠片一塊<br>
-        - 白色小巴牌(亞架力)一個<br>
-        - 獨家調製藍色墨水一支<br>
-        - 獨家調製紅色墨水一支<br>
-        - 大狼毫毛筆 兩支<br>
-        - 小圭筆 兩支<br>
-        - 油性水筆一支<br>
-        - 模版紙一張<br>
-        - 稀釋劑一支<br>
-        <div id="addondescription" hidden>
-          <br>
-          追加: <br>
-          3. 限量版紅Van小巴模型 (價值HKD $59）
+        style="color: #fd5e34; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px; border-bottom: 3px solid #fd5e34; padding-bottom: 30px;">
+        <div class="d-flex">
+          <div class="p-2 bold">1. 手寫小巴牌網上課程 (無限重温)</div>
+          <div class="ml-auto p-2 bold"><span style="font-size: 16px; font-weight: normal;">HKD</span> $799</div>
         </div>
+
+        <div class="d-flex">
+          <div class="p-2 bold">2. 手寫小巴牌製作工具盒 </div>
+          <div class="ml-auto p-2 bold"><span style="font-size: 16px; font-weight: normal;">HKD</span> $100</div>
+        </div>
+
+        <div style="margin-top: 10px; ">
+          <div class="bold" style="padding-left: 30px;">內含所有材料：</div>
+          <div style="margin-top: 10px; padding-left: 50px;">
+            - 尺寸15cm X 23cm 紅VAN膠片一塊<br>
+            - 白色小巴牌(亞架力)一個<br>
+            - 獨家調製藍色墨水一支<br>
+            - 獨家調製紅色墨水一支<br>
+            - 大狼毫毛筆 兩支<br>
+            - 小圭筆 兩支<br>
+            - 油性水筆一支<br>
+            - 模版紙一張<br>
+            - 稀釋劑一支<br>
+          </div>
+        </div>
+
+        <div id="addondescription" hidden style="margin-top: 10px;">
+          <div class="d-flex">
+            <div class="p-2 bold">3. 追加：限量版紅Van小巴模型</div>
+            <div class="ml-auto p-2 bold"><span style="font-size: 16px; font-weight: normal;">HKD</span> $59</div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -415,35 +441,61 @@
         style="width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; position: relative; z-index: 1000;"
         src="img/homepage/busvideopreview.jpg" />
       <div
-        style="color: #fd5e34; width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;">
-        1. 手寫小巴牌網上課程 (<strike>價值 HKD $599</strike>) <br>
-        早鳥優惠只需：<b>HKD $399！</b><br>
-        2. 手寫小巴牌製作工具盒 (價值 HKD $100)<br>
-        <br><br>
-        內含所有材料：<br>
-        <br>
-        - 尺寸15cm X 23cm 紅VAN膠片一塊<br>
-        - 白色小巴牌(亞架力)一個<br>
-        - 獨家調製藍色墨水一支<br>
-        - 獨家調製紅色墨水一支<br>
-        - 大狼毫毛筆 兩支<br>
-        - 小圭筆 兩支<br>
-        - 油性水筆一支<br>
-        - 模版紙一張<br>
-        - 稀釋劑一支<br>
+        style="color: #fd5e34; width: 100%; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px; border-bottom: 3px solid #fd5e34; padding-bottom: 30px;">
+        <div class="d-flex">
+          <div class="p-2 bold">1. 手寫小巴牌網上課程 (無限重温)</div>
+          <div class="ml-auto p-2 bold"><span style="font-size: 16px; font-weight: normal;">HKD</span> $799</div>
+        </div>
+
+        <div class="d-flex">
+          <div class="p-2 bold">2. 手寫小巴牌製作工具盒 </div>
+          <div class="ml-auto p-2 bold"><span style="font-size: 16px; font-weight: normal;">HKD</span> $100</div>
+        </div>
+
+        <div style="margin-top: 10px; ">
+          <div class="bold" style="padding-left: 30px;">內含所有材料：</div>
+          <div style="margin-top: 10px; padding-left: 50px;">
+            - 尺寸15cm X 23cm 紅VAN膠片一塊<br>
+            - 白色小巴牌(亞架力)一個<br>
+            - 獨家調製藍色墨水一支<br>
+            - 獨家調製紅色墨水一支<br>
+            - 大狼毫毛筆 兩支<br>
+            - 小圭筆 兩支<br>
+            - 油性水筆一支<br>
+            - 模版紙一張<br>
+            - 稀釋劑一支<br>
+          </div>
+        </div>
+
+
+        <div id="addondescription_mobile" hidden style="margin-top: 10px;">
+          <div class="d-flex">
+            <div class="p-2 bold">3. 追加：限量版紅Van小巴模型</div>
+            <div class="ml-auto p-2 bold"><span style="font-size: 16px; font-weight: normal;">HKD</span> $59</div>
+          </div>
+        </div>
       </div>
-      <div
-        style="color: #fd5e34; width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;"
-        id="addondescription_mobile" hidden>
-        <br>
-        追加: <br>
-        3. 限量版紅Van小巴模型 (價值HKD $59）
-      </div>
+
     </div>
 
 
+    <div class="flex justify-center " style="margin-top: 20px;">
+      <div class="pricetag">
+        <div class="d-flex">
+          <div class="ml-auto p-2 bold" style="font-size: 25px;"><span
+              style="font-size: 18px; font-weight: normal; margin-right: 20px;">合共價錢</span><strike><span
+                style="font-size: 20px; ">HKD</span> $899</strike>
+          </div>
+        </div>
 
-    <div class="flex justify-center mt-12 ">
+        <div class="d-flex">
+          <div class="ml-auto p-2 bold" style="font-size: 25px;"><span style="margin-right: 20px;">早鳥價</span><span
+              style="font-size: 20px; ">HKD</span> $<span id="pricetag">399</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="flex justify-center mt-12 ">
       <div class="pricetag">
         <h2 style="color: #fd5e34;" class="text-2xl">
           <span class="">Total:</span>
@@ -452,7 +504,7 @@
           </span>
         </h2>
       </div>
-    </div>
+    </div> -->
 
     <div style="color: black; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;"
       hidden>
@@ -476,9 +528,9 @@
         <input class=" p-2 h-10 mb-4 contactinput " type="text" name="name" required>
         <div style="color: #fd5e34;">手提電話</div>
         <input class=" p-2 h-10 mb-4 contactinput " type="text" name="phone" required>
-        <div style="color: #fd5e34;">有效常用的電郵地址 <span style="font-size: 12px;">*請確保輸入正確的電郵地址</span></div>
+        <div style="color: #fd5e34;">電郵地址 <span style="font-size: 12px;">*請確保輸入正確的電郵地址</span></div>
         <input type="email" class=" p-2 h-10 mb-4 contactinput " name="email" required>
-        <div style="color: #fd5e34;">郵寄地址</div>
+        <div style="color: #fd5e34;">郵寄地址（郵寄方法會採用到付服務）</div>
         <input type="text" class=" p-2 h-10 mb-4 contactinput " name="address" required>
         <input id="formcoursecode" name="coursecode" value="minibus" hidden>
         <input id="formcourse" name="course" value="minibus" hidden>
@@ -510,65 +562,7 @@
 
 
 
-    <div class="container  d-none d-md-block" style="">
 
-      <div class="d-flex justify-content-between">
-
-        <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-none d-md-block"
-            style="width: 200px;" /><img src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
-
-
-        <div class="d-flex justify-content-around">
-
-          <a class="footerlink" href="#">有關我們</a>
-          <a class="footerlink" href="#">導師介紹</a>
-          <a class="footerlink" href="#">常見問題 </a>
-
-        </div>
-
-        <div class="d-flex justify-content-around" style="margin-top: -15px;">
-
-          <a href="#"><img class="footerlinkicon" src="img/socialicon/fb.png"></a>
-          <a href="#"><img class="footerlinkicon" src="img/socialicon/ig.png"></a>
-          <a href="#"><img class="footerlinkicon" src="img/socialicon/yt.png"> </a>
-
-        </div>
-        <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
-          src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
-  </a> -->
-
-
-      </div>
-    </div>
-
-    <div class="container d-xs-block d-md-none">
-
-      <div class="" style="text-align: center;">
-
-        <a class="navbar-brand" href="#"><img src="./img/logo_orange.png" class=" d-xs-block d-md-none"
-            style="width: 180px;" /></a><br>
-
-
-
-        <a class="footerlink_mobile" href="/#aboutus">有關我們</a>
-        <a class="footerlink_mobile" href="/#tutor">導師介紹</a>
-        <a class="footerlink_mobile" href="#">常見問題 </a>
-
-
-        <div class="flex justify-center" style="margin-top: -10px; margin-bottom: 50px;">
-
-          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/fb.png"></a>
-          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/ig.png"></a>
-          <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/yt.png"> </a>
-
-        </div>
-        <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
-                  src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
-          </a> -->
-
-
-      </div>
-    </div>
   </div>
 
 
