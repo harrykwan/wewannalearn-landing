@@ -208,9 +208,10 @@
             background-color: #007bff;
             border-color: #007bff;
             /* width: 100px; */
-            padding: 5px 15px;
+            padding: 8px 20px;
+
             border-radius: 10px;
-            font-size: 20px;
+            font-size: 25px;
 
             margin-top: 10px;
             margin-bottom: 10px;
@@ -260,6 +261,11 @@
             overflow: hidden;
             background: white;
         }
+
+        .boldtitle {
+            font-weight: bold;
+            font-size: 20px;
+        }
     </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
@@ -281,7 +287,7 @@
                 <input class="popupinput" placeholder="輸入你的名字" name="name" required>
                 <input type="email" class="popupinput" placeholder="輸入你的電𨛘" name="email" required>
                 <input hidden value="Hong-Kong-Comfort-Food-Cooking" name="course">
-                <button class="submitbutton" type="submit">登記學員</button>
+                <button class="submitbutton" type="submit">參加課程</button>
             </form>
         </div>
     </div>
@@ -299,10 +305,10 @@
                 <div style="margin-bottom: 20px;">您會是下一個香港味道承傳者嗎？ <br>
                     把握時機，由你將香港精神發揚光開去！
                 </div>
-                <input class="popupinput" placeholder="輸入你的名字" name="name">
-                <input type="email" class="popupinput" placeholder="輸入你的電𨛘" name="email">
+                <input class="popupinput" placeholder="輸入你的名字" name="name" required>
+                <input type="email" class="popupinput" placeholder="輸入你的電𨛘" name="email" required>
                 <input hidden value="Hong-Kong-Comfort-Food-Cooking" name="course">
-                <button class="submitbutton" type="submit">登記學員</button>
+                <button class="submitbutton" type="submit">參加課程</button>
             </form>
         </div>
     </div>
@@ -328,19 +334,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/#tutor">導師介紹</a>
                     </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/joinus">導師招募</a>
+                    </li>
                 </ul>
             </div>
         </nav>
 
         <div class="container  d-xs-block d-md-none ">
             <img class=" d-xs-block d-md-none "
-                style="width: calc(100% + 150px); margin-left: -90px;  margin-bottom: 50px;"
+                style="width: calc(100% + 50px); margin-left: -25px;  margin-bottom: 50px;"
                 src="./img/saurce/header1mobile.png">
             <div class="row">
                 <div class="col-sm" style="z-index: 100">
                     <h1 style="font-size: 25px; font-weight: bold;">「無論去到邊度，您都可以快靚正煮出香港味道！」</h1>
-                    <h2 style="margin-top: 30px; font-size: 18px;  font-weight: bold;">
-                        <span class="myunderline">搵食達人/香港醬油世家第三代｜Keith Ku
+                    <h2 style="margin-top: 30px; font-size: 23px; font-weight: bold;">
+                        <span class="myunderline">香港味道傳承
                         </span>
                     </h2>
                     <span>品嚐到美味的家常菜是我們一生其中最幸福窩心的事情。Keith秉承了80多年香港醬油世家的精粹，將對香港味道的一份愛融合於傳統加創新的獨門快靚正煮食系統，讓每個人都可以簡單快捷煮出回味無窮的香港味道！
@@ -357,7 +366,7 @@
                 <div class="col-sm" style="z-index: 100">
                     <h1 style="font-size: 50px;">「無論去到邊度，<br>您都可以快靚正<br>煮出香港味道！」</h1>
                     <h2 style="margin-top: 100px">
-                        <span style="font-size: 23px;" class="myunderline">搵食達人/香港醬油世家第三代｜Keith Ku
+                        <span class="myunderline">香港味道傳承
                         </span>
                     </h2>
                     <span>品嚐到美味的家常菜是我們一生其中最幸福窩心的事情。Keith秉承了80多年香港醬油世家的精粹，將對香港味道的一份愛融合於傳統加創新的獨門快靚正煮食系統，讓每個人都可以簡單快捷煮出回味無窮的香港味道！
@@ -429,20 +438,21 @@
 
                     <div class="d-none d-md-block" style="margin-bottom: 100px;">
                         <div class="row">
-                            <div class="col-sm" style="margin-top: 10px;">
-                                <img style="width: 130px;" src="./img/saurce/12.png">
-                            </div>
-                            <div class="col-sm" style="margin-top: 10px;">
+
+                            <!-- <div class="col-sm" style="margin-top: 10px;">
                                 <img style="width: 130px;" src="./img/saurce/13.png">
+                            </div> -->
+                            <div class="col-sm" style="margin-top: -5px;">
+                                <img style="width: 150px;" src="./img/saurce/16.png">
                             </div>
-                            <div class="col-sm" style="margin-top: 20px;">
-                                <img style="width: 120px;" src="./img/saurce/16.png">
+                            <div class="col-sm" style="margin-top: -5px;">
+                                <img style="width: 150px;" src="./img/saurce/12.png">
                             </div>
-                            <div class="col-sm" style="margin-top: 25px;">
-                                <img style="width: 100px;" src="./img/saurce/14.png">
+                            <div class="col-sm" style="margin-top: -15px;">
+                                <img style="width: 150px;" src="./img/saurce/14.png">
                             </div>
-                            <div class="col-sm" style="margin-top: 20px;">
-                                <img style="width: 120px;" src="./img/saurce/15.png">
+                            <div class="col-sm" style="margin-top: -10px;">
+                                <img style="width: 150px;" src="./img/saurce/15.png">
                             </div>
 
                         </div>
@@ -451,29 +461,30 @@
             </div>
             <div class="d-xs-block d-md-none">
                 <div class="row" style="width: calc(100% + 150px); margin-left: -75px;">
-                    <div class="col-1"></div>
-                    <div class="col-2" style="margin-top: 20px;">
-                        <img style="width: 80px; left: 0; right: 0; margin-left: auto; margin-right: 0;"
-                            src="./img/saurce/12.png">
-                    </div>
-                    <div class="col-2" style="margin-top: 10px; text-align: center">
+                    <div class="col-2"></div>
+
+                    <!-- <div class="col-2" style="margin-top: 10px; text-align: center">
                         <img style="width: 100px; left: 0; right: 0; margin-left: -20px;  margin-right: 0;"
                             src="./img/saurce/13.png">
-                    </div>
+                    </div> -->
                     <div class="col-2" style="margin-top: 20px; text-align: center">
-                        <img style="width: 80px; left: 0; right: 0; margin-left: -20px;  margin-right: 0;"
+                        <img style="width: 110px; left: 0; right: 0; margin-left: -20px;  margin-right: 0;"
                             src="./img/saurce/16.png">
                     </div>
+                    <div class="col-2" style="margin-top: 20px;">
+                        <img style="width: 110px; left: 0; right: 0; margin-left: -20px; margin-right: 0;"
+                            src="./img/saurce/12.png">
+                    </div>
                     <div class="col-2" style="margin-top: 20px; text-align: center">
-                        <img style="width: 80px; left: 0; right: 0; margin-left: -20px; margin-right: 0;"
+                        <img style="width: 110px; left: 0; right: 0; margin-top: -5px; margin-left: -20px; margin-right: 0;"
                             src="./img/saurce/14.png">
                     </div>
                     <div class="col-2" style="margin-top: 20px; text-align: center">
-                        <img style="width: 80px; left: 0; right: 0; margin-left: -20px; margin-right: 0;"
+                        <img style="width: 110px; left: 0; right: 0; margin-left: -20px; margin-right: 0;"
                             src="./img/saurce/15.png">
                     </div>
 
-                    <div class="col-1"></div>
+                    <div class="col-2"></div>
                 </div>
             </div>
         </div>
@@ -484,9 +495,9 @@
 
         <div class="container" data-aos="fade-up" data-aos-duration="2000">
             <img src="img/saurce/1.png"
-                style="width: calc(100% + 150px); margin-left: -90px; height: 300px; object-fit: cover; margin-bottom: 100px; margin-top: 50px;"
+                style="width: calc(100% + 150px); margin-left: -90px; height: 500px; object-fit: cover; margin-bottom: 100px; margin-top: 50px; object-position: center bottom;"
                 class=" d-xs-block d-md-none" />
-            <img src="img/closetag.png" style="width: 200px; position: absolute; right: 0px; top: 300px; z-index: -1;"
+            <img src="img/closetag.png" style="width: 200px; position: absolute; right: 0px; top: 500px; z-index: -1;"
                 class=" d-xs-block d-md-none" />
             <div class="row">
                 <div class="col-sm-5">
@@ -495,32 +506,33 @@
                     </h1>
                     <div class="d-none d-md-block" style="margin-top: 30px; margin-bottom: 400px;">
 
-                        「唔止教識你煮一道菜咁簡單！」
-                        <br><br>
+                        <div class="boldtitle" style="margin-top: 50px;">「唔止教識你煮一道菜咁簡單！」</div>
+                        <br>
                         由選取親民簡單的食材為核心基礎，到煮飯前的醃肉秘訣，烹調菜式時的每一個步驟和獨門調味技巧，如自製醬汁等，整個過程都會系統化地一一全面傳授給您！而當中的獨門理念和技巧更可令學員得到啟發和學以致用於其他食材和菜式。
-                        <br><br>
-                        「喺有限時間內，煮出百變星君嘅香港味道！」
-                        <br><br>
+                        <br>
+                        <div class="boldtitle" style="margin-top: 20px;">「喺有限時間內，<br>煮出變化多端嘅香港味道！」</div>
+                        <br>
                         綜合多年的心思和經驗，研發出一套配合都市人忙碌的生活節奏的快靚正煮食系統。透過課程內六個單元系統，讓你在有限食材和極短時間的情況下學會烹調出變化多端的美味家常菜。
 
                     </div>
                     <div class=" d-xs-block d-md-none" style="margin-top: 30px;"">
-                        「唔止教識你煮一道菜咁簡單！」
-                        <br><br>
-                        由選取親民簡單的食材為核心基礎，到煮飯前的醃肉秘訣，烹調菜式時的每一個步驟和獨門調味技巧，如自製醬汁等，整個過程都會系統化地一一全面傳授給您！而當中的獨門理念和技巧更可令學員得到啟發和學以致用於其他食材和菜式。
-                        <br><br>
-                        「喺有限時間內，煮出百變星君嘅香港味道！」
-                        <br><br>
-                        綜合多年的心思和經驗，研發出一套配合都市人忙碌的生活節奏的快靚正煮食系統。透過課程內六個單元系統，讓你在有限食材和極短時間的情況下學會烹調出變化多端的美味家常菜。
-                    </div>
-
-
+                       
+                        <div class=" boldtitle" style="margin-top: 50px;">「唔止教識你煮一道菜咁簡單！」</div>
+                    <br>
+                    由選取親民簡單的食材為核心基礎，到煮飯前的醃肉秘訣，烹調菜式時的每一個步驟和獨門調味技巧，如自製醬汁等，整個過程都會系統化地一一全面傳授給您！而當中的獨門理念和技巧更可令學員得到啟發和學以致用於其他食材和菜式。
+                    <br>
+                    <div class="boldtitle" style="margin-top: 20px;">「喺有限時間內，<br>煮出變化多端嘅香港味道！」</div>
+                    <br>
+                    綜合多年的心思和經驗，研發出一套配合都市人忙碌的生活節奏的快靚正煮食系統。透過課程內六個單元系統，讓你在有限食材和極短時間的情況下學會烹調出變化多端的美味家常菜。
                 </div>
-                <div class=" col-sm-7">
-                        <img src="img/saurce/1.png" style="width: 100%; position: absolute; right: -100px; top: -100px"
-                            class="d-none d-sm-block" />
 
-                        <img class="d-none d-sm-block" style="
+
+            </div>
+            <div class=" col-sm-7">
+                <img src="img/saurce/1.png" style="width: 100%; position: absolute; right: -100px; top: -100px"
+                    class="d-none d-sm-block" />
+
+                <img class="d-none d-sm-block" style="
               width: 400px;
               position: absolute;
               left: -130px;
@@ -528,173 +540,174 @@
               z-index: -1;
             " src="img/closetag.png" />
 
-                        <img class="d-none d-sm-block" style="
+                <img class="d-none d-sm-block" style="
               width: 400px;
               position: absolute;
               right: -200px;
               top: 520px;
               z-index: -1;
             " src="img/slash.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 100px" data-aos="fade-up" data-aos-duration="2000">
+        <img src="img/saurce/2.png"
+            style="width: calc(100% + 50px); margin-left: -25px; height: 300px; object-fit: cover; margin-bottom: 50px; object-position: center -60px;"
+            class=" d-xs-block d-md-none" />
+        <div class="row">
+            <div class="col-sm">
+                <img src="img/saurce/2.png" style="width: 115%; position: absolute; left: -100px; top: -100px"
+                    class="d-none d-sm-block" />
+                <img class="d-none d-sm-block" style="width: 230px; position: absolute; right: 50px; top: 650px"
+                    src="img/bubble.png" />
+            </div>
+            <div class="col-sm">
+                <h1>課程內容 <img src="img/underline4.png"
+                        style="position: absolute; top: -10; width: 250px; left: -24; right: 0; ">
+                </h1>
+                <div style="margin-top: 40px;">*每集課堂會深入淺出並濃縮至10分鐘內，讓學員閃電式學習! </div>
+                <div class="row" style="margin-left: 10px; margin-top: 70px">
+                    <div class="col-2">
+                        <div id="accordinggroup-course">
+                            <h3 onclick="choose_according_course(this,0)" class="myaccording-focus">
+                                #01
+                            </h3>
+                            <h3 onclick="choose_according_course(this,1)" class="myaccording-nofocus">
+                                #02
+                            </h3>
+                            <h3 onclick="choose_according_course(this,2)" class="myaccording-nofocus">
+                                #03
+                            </h3>
+                            <h3 onclick="choose_according_course(this,3)" class="myaccording-nofocus">
+                                #04
+                            </h3>
+                            <h3 onclick="choose_according_course(this,4)" class="myaccording-nofocus">
+                                #05
+                            </h3>
+                            <h3 onclick="choose_according_course(this,5)" class="myaccording-nofocus">
+                                #06
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div style="margin-left: 20px">
+                            <div id="accordingcontent-course">
+                                <h3>「古家調味大法」- 瑞士汁 [4集]</h3>
+                                <span>瑞士汁大家就食得多，但究竟如何做到一個好味嘅瑞士汁？今集會教你製作一個與別不同的瑞士汁，醬汁香濃兼帶有層次感，仲可以保存一年慢慢用！絕對有別於市場上買到的工廠現成醬料！今集更會分享給你除了經典港式瑞士雞翼之外，還可以有什麼其他食物配搭，例如是瑞士汁炒牛肉配煎米底、瑞士汁珍肝等等。
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="container" style="margin-top: 100px" data-aos="fade-up" data-aos-duration="2000">
-                <img src="img/saurce/2.png"
-                    style="width: calc(100% + 150px); margin-left: -90px; height: 300px; object-fit: cover; margin-bottom: 50px;"
-                    class=" d-xs-block d-md-none" />
-                <div class="row">
-                    <div class="col-sm">
-                        <img src="img/saurce/2.png" style="width: 115%; position: absolute; left: -100px; top: -100px"
-                            class="d-none d-sm-block" />
-                        <img class="d-none d-sm-block" style="width: 230px; position: absolute; right: 50px; top: 550px"
-                            src="img/bubble.png" />
-                    </div>
-                    <div class="col-sm">
-                        <h1>課程內容 <img src="img/underline4.png"
-                                style="position: absolute; top: -10; width: 250px; left: -24; right: 0; ">
-                        </h1>
-                        <div class="row" style="margin-left: 10px; margin-top: 70px">
-                            <div class="col-2">
-                                <div id="accordinggroup-course">
-                                    <h3 onclick="choose_according_course(this,0)" class="myaccording-focus">
-                                        #01
-                                    </h3>
-                                    <h3 onclick="choose_according_course(this,1)" class="myaccording-nofocus">
-                                        #02
-                                    </h3>
-                                    <h3 onclick="choose_according_course(this,2)" class="myaccording-nofocus">
-                                        #03
-                                    </h3>
-                                    <h3 onclick="choose_according_course(this,3)" class="myaccording-nofocus">
-                                        #04
-                                    </h3>
-                                    <h3 onclick="choose_according_course(this,4)" class="myaccording-nofocus">
-                                        #05
-                                    </h3>
-                                    <h3 onclick="choose_according_course(this,5)" class="myaccording-nofocus">
-                                        #06
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="col-10">
-                                <div style="margin-left: 20px">
-                                    <div id="accordingcontent-course">
-                                        <h3>瑞士汁 (4集）</h3>
-                                        <span>瑞士汁大家就食得多，但究竟如何做到一個好味嘅瑞士汁？今集會教你製作一個與別不同的瑞士汁，醬汁香濃兼帶有層次感，仲可以保存一年慢慢用！絕對有別於市場上買到的工廠現成醬料！今集更會分享給你除了經典港式瑞士雞翼之外，還可以有什麼其他食物配搭，例如是瑞士汁炒牛肉配煎米底、瑞士汁珍肝等等。
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="d-none d-md-block"
+        style="text-align: center; height: 60vw; margin-top: 34vw;  padding: 0; width: 100%;">
+        <img src="img/saurce/11.png" data-aos="fade-up" data-aos-duration="3000"
+            style="position: absolute; width: 100%; z-index: 999; left: 0; right: 0; margin-left: auto; margin-right: auto;" />
+        <img src="img/saurce/17.png" data-aos="fade-up" data-aos-duration="2000"
+            style="position: absolute; width: 100%; left: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" />
+    </div>
+
+
+    <div class="container d-xs-block d-md-none" style="margin-top: 12%; padding: 0; margin-bottom: 260px">
+        <img src="img/saurce/11.png" data-aos="fade-up" data-aos-duration="3000"
+            style="position: absolute; width: 100%; z-index: 999" />
+        <img src="img/saurce/17.png" data-aos="fade-up" data-aos-duration="2000"
+            style="position: absolute; width: 100%; left: 0" />
+    </div>
+
+
+    <div class="container d-none d-md-block" data-aos="fade-up" data-aos-duration="2000">
+        <div class="row">
+            <div class="col-sm-7">
+
+                <div>
+                    -2018最具創意廚藝網紅奬(冠軍)<br>
+                    -2020美思工房一COOK成名(亞軍)<br>
+                    -活躍於Foodie 及 Blogger界<br>
+                    -古家私房菜主理人<br>
+
                 </div>
-            </div>
+                <h1 style="margin-top: 20px">「香港製造· 醬人精神」</h1>
 
-            <div class="d-none d-md-block"
-                style="text-align: center; height: 60vw; margin-top: 43vw;  padding: 0; width: 100%;">
-                <img src="img/saurce/11.png" data-aos="fade-up" data-aos-duration="3000"
-                    style="position: absolute; width: 100%; z-index: 999; left: 0; right: 0; margin-left: auto; margin-right: auto;" />
-                <img src="img/saurce/17.png" data-aos="fade-up" data-aos-duration="2000"
-                    style="position: absolute; width: 100%; left: 0; left: 0; right: 0; margin-left: auto; margin-right: auto;" />
-            </div>
-
-
-            <div class="container d-xs-block d-md-none" style="margin-top: 12%; padding: 0; margin-bottom: 230px">
-                <img src="img/saurce/11.png" data-aos="fade-up" data-aos-duration="3000"
-                    style="position: absolute; width: 100%; z-index: 999" />
-                <img src="img/saurce/17.png" data-aos="fade-up" data-aos-duration="2000"
-                    style="position: absolute; width: 100%; left: 0" />
-            </div>
-
-
-            <div class="container d-none d-md-block" data-aos="fade-up" data-aos-duration="2000">
-                <div class="row">
-                    <div class="col-sm-7">
-
-                        <div>
-                            -2018最具創意廚藝網紅奬(冠軍)<br>
-                            -2020美思工房一COOK成名(亞軍)<br>
-                            -古家私房菜主理人<br>
-                            -活躍於Foodie 及 Blogger界<br>
-
-                        </div>
-                        <h1 style="margin-top: 20px">「香港製造· 醬人精神」</h1>
-
-                        <div style="margin-top: 20px">
-                            具有80多年家族歷史的鉅利醬油廠面臨政府因發展收地遷折，餘下的日子在倒數中。《鉅利醬油》是香港僅存的老字號，以傳統天然醬油製法堅持80載，老醬油園內的陳年大瓦缸承載了傳統的香港味道。這份家傳戶曉的味道陪伴着香港人成長，本地嘴刁名人如蘇絲黃、蔡一傑、肥媽和鼎爺等多年來也極力支持。
-
-                        </div>
-
-
-                        <img src="img/saurce/4.png" style="
-              width: 90%;
-              margin-left: 0;
-              margin-right: auto;
-              margin-top: 100px;
-            " class="d-none d-md-block" />
-                        <img src="img/word/word7.png" style="left: -70px; top: 600px; z-index: 1; width: 400px;"
-                            class="backgroundwordimg">
-                        <img src="img/oepntag.png" style="left: -170px; top: 800px; z-index: 1; width: 450px;"
-                            class="backgroundwordimg">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="img/saurce/3.png" style="width: 90%;   margin-left: auto;
-               margin-right: 0; " class="d-none d-md-block" />
-
-
-                        <div style="margin-top: 20px">
-                            <div style="margin-top: 20px" class="boldtitle">
-                                「就算有日香港手作醬油工業沒落，仍然堅信仲可以承傳香港味道！」
-                            </div>
-                            <div style="margin-top: 20px">
-                                作為醬油世家第三代，Keith秉承了堅守香港味道的精粹，更加有一份責任感將香港味道延續下去，甚至注入創新方法將香港味道昇華。在醬油世家的薰陶下，Keith從小對食物味道有著特別的講究，非常擅長捐窿捐罅搵好嘢食，更成為本地真材實料的食評專家。其後Keith更建立古家私房菜，用心下廚煮食，日以繼夜鑽研獨門的烹調方法務求做到心目中認為好的味道！能夠令家人和朋友食到舔舔脷同流露出滿足嘅笑容就是他最大的煮食原動力，志在透過課程將這份香港味道分享開去。
-
-                            </div>
-                        </div>
-
-                        <img src="img/saurce/5.png" style="width: 80%;   margin-left: 0;
-                margin-right: auto; margin-top: 50px;" class="d-none d-md-block" />
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container d-xs-block d-md-none" data-aos="fade-up" data-aos-duration="2000">
-                <div class="row">
-                    <div class="col-7">
-                        <div style="margin-top: 50px;">
-                            -2018最具創意廚藝網紅奬(冠軍)<br>
-                            -2020美思工房一COOK成名(亞軍)<br>
-                            -古家私房菜主理人<br>
-                            -活躍於Foodie 及 Blogger界<br>
-                        </div>
-
-                    </div>
-                    <div class="col-5">
-                        <img src="img/saurce/3.png" style="width: calc(100% + 50px);   margin-top: 50px; margin-left: auto; object-fit: cover;
-               margin-right: 0; " class=" d-xs-block d-md-none" />
-                        <!-- 
-                <img src="img/bus/photo20.png" style="width: 80%;   margin-left: 0;
-                margin-right: auto; margin-top: 50px;" class="d-xs-block d-md-none" /> -->
-
-                    </div>
-                </div>
-
-                <h1 style="font-size: 20px; margin-top: 20px" class="boldtitle">「香港製造· 醬人精神」</h1>
                 <div style="margin-top: 20px">
                     具有80多年家族歷史的鉅利醬油廠面臨政府因發展收地遷折，餘下的日子在倒數中。《鉅利醬油》是香港僅存的老字號，以傳統天然醬油製法堅持80載，老醬油園內的陳年大瓦缸承載了傳統的香港味道。這份家傳戶曉的味道陪伴着香港人成長，本地嘴刁名人如蘇絲黃、蔡一傑、肥媽和鼎爺等多年來也極力支持。
 
                 </div>
 
-                <img src="img/word/word7.png" style="
+
+                <img src="img/saurce/4.png" style="
+              width: 90%;
+              margin-left: 0;
+              margin-right: auto;
+              margin-top: 100px;
+            " class="d-none d-md-block" />
+                <img src="img/word/word7.png" style="left: -70px; top: 670px; z-index: 1; width: 400px;"
+                    class="backgroundwordimg">
+                <img src="img/oepntag.png" style="left: -170px; top: 800px; z-index: 1; width: 450px;"
+                    class="backgroundwordimg">
+            </div>
+            <div class="col-sm-5">
+                <img src="img/saurce/3.png" style="width: 90%;   margin-left: auto;
+               margin-right: 0; " class="d-none d-md-block" />
+
+
+                <div style="margin-top: 20px">
+                    <div style="margin-top: 20px" class="boldtitle">
+                        「就算有日香港手作醬油工業沒落，仍然堅信仲可以承傳香港味道！」
+                    </div>
+                    <div style="margin-top: 20px">
+                        作為醬油世家第三代，Keith秉承了堅守香港味道的精粹，更加有一份責任感將香港味道延續下去，甚至注入創新方法將香港味道昇華。在醬油世家的薰陶下，Keith從小對食物味道有著特別的講究，非常擅長捐窿捐罅搵好嘢食，更成為本地真材實料的食評專家。其後Keith更建立古家私房菜，用心下廚煮食，日以繼夜鑽研獨門的烹調方法務求做到心目中認為好的味道！能夠令家人和朋友食到舔舔脷同流露出滿足嘅笑容就是他最大的煮食原動力，志在透過課程將這份香港味道分享開去。
+
+                    </div>
+                </div>
+
+                <img src="img/saurce/5.png" style="width: 80%;   margin-left: 0;
+                margin-right: auto; margin-top: 50px;" class="d-none d-md-block" />
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-xs-block d-md-none" data-aos="fade-up" data-aos-duration="2000">
+        <div class="row">
+            <div class="col-7">
+                <div style="margin-top: 50px;">
+                    -2018最具創意廚藝網紅奬(冠軍)<br>
+                    -2020美思工房一COOK成名(亞軍)<br>
+                    -活躍於Foodie 及 Blogger界<br>
+                    -古家私房菜主理人<br>
+                </div>
+
+            </div>
+            <div class="col-5">
+                <img src="img/saurce/3.png" style="width: calc(100% + 50px);   margin-top: 50px; margin-left: auto; object-fit: cover;
+               margin-right: 0; " class=" d-xs-block d-md-none" />
+                <!-- 
+                <img src="img/bus/photo20.png" style="width: 80%;   margin-left: 0;
+                margin-right: auto; margin-top: 50px;" class="d-xs-block d-md-none" /> -->
+
+            </div>
+        </div>
+
+        <h1 style="font-size: 20px; margin-top: 20px" class="boldtitle">「香港製造· 醬人精神」</h1>
+        <div style="margin-top: 20px">
+            具有80多年家族歷史的鉅利醬油廠面臨政府因發展收地遷折，餘下的日子在倒數中。《鉅利醬油》是香港僅存的老字號，以傳統天然醬油製法堅持80載，老醬油園內的陳年大瓦缸承載了傳統的香港味道。這份家傳戶曉的味道陪伴着香港人成長，本地嘴刁名人如蘇絲黃、蔡一傑、肥媽和鼎爺等多年來也極力支持。
+
+        </div>
+
+        <img src="img/word/word7.png" style="
             width: 250px; 
             position: absolute;
             left: 0;
-            top: 860px;
+            top: 780px;
             " class="d-xs-block d-md-none" />
 
-                <img src="img/saurce/4.png" style="
+        <img src="img/saurce/4.png" style="
           width: calc(100% + 150px); 
           margin-left: -90px; 
           margin-right: auto;
@@ -704,386 +717,386 @@
 
 
 
-                <div class="row">
-                    <div class="col-7">
-                        <div style="margin-top: 60px" class="boldtitle">
-                            「就算有日香港手作醬油工業沒落，仍然堅信仲可以承傳香港味道！」
-                        </div>
-
-                        <div style="margin-top: 20px">
-                            作為醬油世家第三代，Keith秉承了堅守香港味道的精粹，更加有一份責任感將香港味道延續下去，甚至注入創新方法將香港味道昇華。在醬油世家的薰陶下，Keith從小對食物味道有著特別的講究，非常擅長捐窿捐罅搵好嘢食，更成為本地真材實料的食評專家。其後Keith更建立古家私房菜，用心下廚煮食，日以繼夜鑽研獨門的烹調方法務求做到心目中認為好的味道！能夠令家人和朋友食到舔舔脷同流露出滿足嘅笑容就是他最大的煮食原動力，志在透過課程將這份香港味道分享開去。
-
-                        </div>
-
-                    </div>
-                    <div class="col-5">
-
-                        <img src="img/saurce/5.png" style="width: calc(100% + 45px); margin-left: 0px; object-fit: cover; height: 550px; 
-        margin-right: auto; margin-top: 100px; object-fit: cover;" class="d-xs-block d-md-none" />
-
-                    </div>
+        <div class="row">
+            <div class="col-7">
+                <div style="margin-top: 60px" class="boldtitle">
+                    「就算有日香港手作醬油工業沒落，仍然堅信仲可以承傳香港味道！」
                 </div>
+
+                <div style="margin-top: 20px">
+                    作為醬油世家第三代，Keith秉承了堅守香港味道的精粹，更加有一份責任感將香港味道延續下去，甚至注入創新方法將香港味道昇華。在醬油世家的薰陶下，Keith從小對食物味道有著特別的講究，非常擅長捐窿捐罅搵好嘢食，更成為本地真材實料的食評專家。其後Keith更建立古家私房菜，用心下廚煮食，日以繼夜鑽研獨門的烹調方法務求做到心目中認為好的味道！能夠令家人和朋友食到舔舔脷同流露出滿足嘅笑容就是他最大的煮食原動力，志在透過課程將這份香港味道分享開去。
+
+                </div>
+
             </div>
+            <div class="col-5">
+
+                <img src="img/saurce/5.png" style="width: calc(100% + 45px); margin-left: 0px; object-fit: cover; height: 550px; 
+        margin-right: auto; margin-top: 70px; object-fit: cover;" class="d-xs-block d-md-none" />
+
+            </div>
+        </div>
+    </div>
 
 
-            <div class="container d-none d-md-block" style="margin-top: 130px; margin-bottom: 650px;" data-aos="fade-up"
-                data-aos-duration="2000">
-                <div class=" d-none d-md-block"
-                    style="text-align: center; width: 70%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
-                    <h1>「秉承香港醬油世家的精粹， <br>將對香港味道的愛，融入每一道家常菜。」</h1>
-                    <div style="text-align: right; margin-right: 80px; font-size: 25px; font-weight: bold;">————————————
-                        Keith Ku
-                    </div>
-                </div>
+    <div class="container d-none d-md-block" style="margin-top: 130px; margin-bottom: 650px;" data-aos="fade-up"
+        data-aos-duration="2000">
+        <div class=" d-none d-md-block"
+            style="text-align: center; width: 70%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
+            <h1>「秉承香港醬油世家的精粹， <br>將對香港味道的愛，融入每一道家常菜。」</h1>
+            <div style="text-align: right; margin-right: 80px; font-size: 25px; font-weight: bold;">——
+                Keith Ku
+            </div>
+        </div>
 
 
-                <img src="img/saurce/6.png" style="width: 250px; left: 0;
+        <img src="img/saurce/6.png" style="width: 350px; left: 0;
       margin-top: 50px; position: absolute;" class="d-none d-md-block" />
-                <img src="img/saurce/7.png" style="width: 600px; right: 0;
+        <img src="img/saurce/7.png" style="width: 600px; right: 0;
      margin-top: 150px; position: absolute;" class="d-none d-md-block" />
 
 
-                <!-- <div class="backgroundword d-none d-md-block" style="font-size: 50px; right: 320px;
+        <!-- <div class="backgroundword d-none d-md-block" style="font-size: 50px; right: 320px;
 top: 580px; position: absolute;">
             香港人精神
         </div> -->
 
-                <img class="backgroundwordimg" src="img/word/word8.png"
-                    style="width: 400px;right: 320px; top: 580px; z-index: 1">
-                <img class="backgroundwordimg" src="img/closetag.png"
-                    style="width: 450px;left: 0px; top: 450px; z-index: 1">
+        <img class="backgroundwordimg" src="img/word/word8.png"
+            style="width: 450px;right: 320px; top: 580px; z-index: 1">
+        <img class="backgroundwordimg" src="img/closetag.png" style="width: 450px;left: 0px; top: 450px; z-index: -1">
+
+        <img class="backgroundwordimg" src="img/bubble.png" style="width: 450px;right: -50px; top: 100px; z-index: -1">
 
 
+    </div>
+
+    <div class="container d-xs-block d-md-none" style="margin-top: 50px;  margin-bottom: 400px" data-aos="fade-up"
+        data-aos-duration="2000">
+
+        <div class="d-xs-block d-md-none"
+            style="width: 100%; left: 0; right: 0; margin-left: auto; margin-right: auto; ">
+            <h1 style="font-size: 21px;">「秉承香港醬油世家的精粹，將對香港味道的愛，融入每一道家常菜。」</h1>
+            <div style="text-align: right; margin-right: 20px; font-size: 16px; font-weight: bold;">——
+                Keith Au
             </div>
-
-            <div class="container d-xs-block d-md-none" style="margin-top: 50px;  margin-bottom: 400px"
-                data-aos="fade-up" data-aos-duration="2000">
-
-                <div class="d-xs-block d-md-none"
-                    style="width: 100%; left: 0; right: 0; margin-left: auto; margin-right: auto; ">
-                    <h1 style="font-size: 21px;">「秉承香港醬油世家的精粹，將對香港味道的愛，融入每一道家常菜。」</h1>
-                    <div style="text-align: right; margin-right: 20px; font-size: 16px; font-weight: bold;">————————
-                        Keith Au
-                    </div>
-                </div>
+        </div>
 
 
-                <img src="img/saurce/6.png" style="width: 120px; left: -20px;
+        <img src="img/saurce/6.png" style="width: 120px; left: -20px;
 margin-top: 20px; position: absolute;" class=" d-xs-block d-md-none" />
-                <img src="img/saurce/7.png" style="width: 250px; right: -20px;
+        <img src="img/saurce/7.png" style="width: 250px; right: -20px;
 margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
 
 
-                <img src="./img/word/word8.png" class="backgroundwordimg" class=" d-xs-block d-md-none" style="right: 0px; width: 250px;
-        top: 300px; position: absolute; ">
+        <img src="./img/word/word8.png" class="backgroundwordimg" class=" d-xs-block d-md-none" style="right: 0px; width: 250px;
+        top: 310px; position: absolute; ">
 
-            </div>
-
-
+    </div>
 
 
-            <div class="container">
-                <h1 style="margin-bottom: 20px; margin-top: 100px;">
-                    <span class=" d-none d-md-block"> 常見問題<img src="img/underline4.png"
-                            style="position: relative; width: 250px; left: -200px; top: 10px;">
-                    </span>
 
-                    <span class=" d-xs-block d-md-none"> 常見問題<img src="img/underline4.png"
-                            style="position: relative; width: 250px; left: -40px; top: -50px; margin-bottom: -60px;">
-                    </span>
-                </h1>
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
-                                    Q1: 什麼時候可以開始上課？
-                                </button>
-                            </h5>
-                        </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordion">
-                            <div class="card-body">
-                                早鳥優惠預購課程時間結束後，課程將會分階段陸續上架。
-                                <br><br>
-                                實際開課日將會透過短訊或電郵通知大家！<br>
-                                課程是預錄好的網上課程，你不會錯過任何精心製作的內容。 你可以在有空的時候按觀看和複習。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    Q2. 請問上課地點? 上課時間?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                上課形式以觀看預先錄製好的影片進行，以確保課程內容製作高品質，更配上中文字幕方便世界各地華人觀看，讓學員更快、更精準學習。
+    <div class="container">
+        <h1 style="margin-bottom: 20px; margin-top: 100px;">
+            <span class=" d-none d-md-block"> 常見問題<img src="img/underline4.png"
+                    style="position: relative; width: 250px; left: -200px; top: 10px;">
+            </span>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Q3. 香港以外可以報名嗎？
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordion">
-                            <div class="card-body">
-                                絕對可以！任何國家都能網上觀看課程。課程視頻以預先錄製模式，打破任可時差地域限制。學員可以隨自己學習進度安排時間上課。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                    Q4: 請問課程可以看多久？看幾次？
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                            <div class="card-body">
-                                可永久、無限次數觀看課程內容。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Q5. 學習時遇到困難怎樣解決？
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                            <div class="card-body">
-                                隨時可以到學員討論專區發問，導師會同學員互動親自解答。歡迎你一起加入學員討論專區與老師和同學一起互動。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
-                                    aria-expanded="false" aria-controls="collapseSix">
-                                    Q6. 上課前，需要要自備工具嗎？
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                            <div class="card-body">
-                                課程主打貼地家常菜，平時家裏煮食用的基本廚具已經足夠。
+            <span class=" d-xs-block d-md-none"> 常見問題<img src="img/underline4.png"
+                    style="position: relative; width: 250px; left: -40px; top: -50px; margin-bottom: -60px;">
+            </span>
+        </h1>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Q1: 什麼時候可以開始上課？
+                        </button>
+                    </h5>
+                </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSeven">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    Q7. 購買後可以同朋友用一個帳戶共享課程嗎？
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
-                            data-parent="#accordion">
-                            <div class="card-body">
-                                很高興你喜歡並選擇我們的課程，相信導師的心血、知識及專業已經得到你認同。為了能提供高品質的教學成效，每一堂課程都需要導師及課程團隊用長時間的人力心力與資源才可以完成，希望可以與更多志同道合的學員分享，同時亦希望你能夠出一分力維護你所支持導師權益，好讓技能繼續傳承。<br><br>
-
-                                另外，多帳戶共用並觀看課程會違反《好想學》的會員使用條款，如經查實有此事，《好想學》保留取消學員資格等權利。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    Q8. 其他問題？
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
-                            data-parent="#accordion">
-                            <div class="card-body">
-                                可以私訊《好想學》社交媒體，或歡迎你電郵到 hello@wewannalearn.com
-                            </div>
-                        </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        早鳥優惠預購課程時間結束後，課程將會分階段陸續上架。
+                        <br><br>
+                        實際開課日將會透過短訊或電郵通知大家！<br>
+                        課程是預錄好的網上課程，你不會錯過任何精心製作的內容。 你可以在有空的時候按觀看和複習。
                     </div>
                 </div>
             </div>
-
-
-            <div class="container  d-none d-md-block">
-
-                <div class="d-flex justify-content-between">
-
-                    <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block"
-                            style="width: 200px;" /><img src="logo.png" class=" d-xs-block d-md-none"
-                            style="width: 180px;" /></a>
-
-
-                    <div class="d-flex justify-content-around">
-
-                        <a class="footerlink" href="#">有關我們</a>
-                        <a class="footerlink" href="#">導師介紹</a>
-                        <a class="footerlink" href="#">常見問題 </a>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Q2. 請問上課地點? 上課時間?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        上課形式以觀看預先錄製好的影片進行，以確保課程內容製作高品質，更配上中文字幕方便世界各地華人觀看，讓學員更快、更精準學習。
 
                     </div>
-
-                    <div class="d-flex justify-content-around" style="margin-top: -15px;">
-
-                        <a href="#"><img class="footerlinkicon" src="img/socialicon/fb-white.png"></a>
-                        <a href="#"><img class="footerlinkicon" src="img/socialicon/ig-white.png"></a>
-
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Q3. 香港以外可以報名嗎？
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        絕對可以！任何國家都能網上觀看課程。課程視頻以預先錄製模式，打破任可時差地域限制。學員可以隨自己學習進度安排時間上課。
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Q4: 請問課程可以看多久？看幾次？
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        可永久、無限次數觀看課程內容。
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                            aria-expanded="false" aria-controls="collapseFive">
+                            Q5. 學習時遇到困難怎樣解決？
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        隨時可以到學員討論專區發問，導師會同學員互動親自解答。歡迎你一起加入學員討論專區與老師和同學一起互動。
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                            aria-expanded="false" aria-controls="collapseSix">
+                            Q6. 上課前，需要要自備工具嗎？
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        課程主打貼地家常菜，平時家裏煮食用的基本廚具已經足夠。
 
                     </div>
-                    <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                            aria-expanded="false" aria-controls="collapseSeven">
+                            Q7. 購買後可以同朋友用一個帳戶共享課程嗎？
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                    <div class="card-body">
+                        很高興你喜歡並選擇我們的課程，相信導師的心血、知識及專業已經得到你認同。為了能提供高品質的教學成效，每一堂課程都需要導師及課程團隊用長時間的人力心力與資源才可以完成，希望可以與更多志同道合的學員分享，同時亦希望你能夠出一分力維護你所支持導師權益，好讓技能繼續傳承。<br><br>
+
+                        另外，多帳戶共用並觀看課程會違反《好想學》的會員使用條款，如經查實有此事，《好想學》保留取消學員資格等權利。
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                            aria-expanded="false" aria-controls="collapseEight">
+                            Q8. 其他問題？
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                    <div class="card-body">
+                        可以私訊《好想學》社交媒體，或歡迎你電郵到 hello@wewannalearn.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container  d-none d-md-block">
+
+        <div class="d-flex justify-content-between">
+
+            <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 200px;" /><img
+                    src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" /></a>
+
+
+            <div class="d-flex justify-content-around">
+
+                <a class="footerlink" href="#">有關我們</a>
+                <a class="footerlink" href="#">導師介紹</a>
+                <a class="footerlink" href="#">常見問題 </a>
+
+            </div>
+
+            <div class="d-flex justify-content-around" style="margin-top: -15px;">
+
+                <a href="https://www.facebook.com/wewannalearnofficial"><img class="footerlinkicon"
+                        src="img/socialicon/fb-white.png"></a>
+                <a href="https://www.instagram.com/wewannalearn/"><img class="footerlinkicon"
+                        src="img/socialicon/ig-white.png"></a>
+
+
+            </div>
+            <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
                         src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
                 </a> -->
 
-
-                </div>
-            </div>
-
-            <div class="container d-xs-block d-md-none">
-
-                <div class="" style="text-align: center;">
-
-                    <a class="navbar-brand" href="#"><img src="logo.png" class=" d-xs-block d-md-none"
-                            style="width: 180px;" /></a><br>
-
-
-
-                    <a class="footerlink_mobile" href="/#aboutus">有關我們</a>
-                    <a class="footerlink_mobile" href="/#tutor">導師介紹</a>
-                    <a class="footerlink_mobile" href="#">常見問題 </a>
-
-
-                    <div class="flex justify-center" style="margin-top: -10px; margin-bottom: 50px;">
-
-                        <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/fb-white.png"></a>
-                        <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/ig-white.png"></a>
-
-
-                    </div>
-                    <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
-                        src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
-                </a> -->
-
-
-                </div>
-            </div>
 
         </div>
-        <div
-            style="text-align: center; width: 100%; margin-top: 30px; margin-bottom: 100px; padding-left: 20px; padding-right: 20px;">
-            We Wanna Learn Co., Limited ©️
-            2022 All Rights Reserved</div>
-        <script>
-            AOS.init();
-            const according_words = [
-                `<h3>瑞士汁  (4集）</h3>
+    </div>
+
+    <div class="container d-xs-block d-md-none">
+
+        <div class="" style="text-align: center;">
+
+            <a class="navbar-brand" href="#"><img src="logo.png" class=" d-xs-block d-md-none"
+                    style="width: 180px;" /></a><br>
+
+
+
+            <a class="footerlink_mobile" href="/#aboutus">有關我們</a>
+            <a class="footerlink_mobile" href="/#tutor">導師介紹</a>
+            <a class="footerlink_mobile" href="#">常見問題 </a>
+
+
+            <div class="flex justify-center" style="margin-top: -10px; margin-bottom: 50px;">
+
+                <a href="https://www.facebook.com/wewannalearnofficial"><img class="footerlinkicon_mobile"
+                        src="img/socialicon/fb-white.png"></a>
+                <a href="https://www.instagram.com/wewannalearn/"><img class="footerlinkicon_mobile"
+                        src="img/socialicon/ig-white.png"></a>
+
+
+            </div>
+            <!-- <a class="navbar-brand" href="#"><img src="logo.png" class=" d-none d-md-block" style="width: 250px;" /><img
+                        src="logo.png" class=" d-xs-block d-md-none" style="width: 180px;" />
+                </a> -->
+
+
+        </div>
+    </div>
+
+    </div>
+    <div
+        style="text-align: center; width: 100%; margin-top: 30px; margin-bottom: 100px; padding-left: 20px; padding-right: 20px;">
+        We Wanna Learn Co., Limited ©️
+        2022 All Rights Reserved</div>
+    <script>
+        AOS.init();
+        const according_words = [
+            `<h3>「古家調味大法」- 瑞士汁  [4集]</h3>
                             <span>瑞士汁大家就食得多，但究竟如何做到一個好味嘅瑞士汁？今集會教你製作一個與別不同的瑞士汁，醬汁香濃兼帶有層次感，仲可以保存一年慢慢用！絕對有別於市場上買到的工廠現成醬料！今集更會分享給你除了經典港式瑞士雞翼之外，還可以有什麼其他食物配搭，例如是瑞士汁炒牛肉配煎米底、瑞士汁珍肝等等。</span>`,
-                `<h3>醃肉  (4集）</h3>
+            `<h3>「古家調味大法」- 醃肉  [4集]</h3>
                             <span>醃肉是烹調的基本技巧，但其重要程度往往會影響一道菜的成敗，就好像普通如醃牛肉或雞肉，究竟點先可以令其醃得鬆軟嫩滑？唔通真係要用化學鬆肉粉？！今集會教你非一般的天然醃肉知識，還會分享點樣以不同香料配合醃肉，做出特色風味。 </span>`,
-                `<h3>鹵水  (4集）</h3>
+            `<h3>「古家調味大法」- 鹵水  [4集]</h3>
                             <span>鹵水看似簡單，但當中其實大有學問，很多你沒有想過的菜式原來都會以鹵水先入味再加工，應用廣泛可塑性亦很高，今集會教你如何煮製和運用黑/白鹵水，更會示範一些幾近失傳的懷舊鹵水菜式。 </span>`,
-                `<h3>蒸蛋 (4集）</h3>
+            `<h3>「快靚正煮食系統」- 蒸蛋 [4集]</h3>
                             <span>蒸水蛋可謂每個家庭都必會煮的家常菜，白飯的最佳伴侶，但往往易煮難精，出品起哂泡泡不夠嫩滑，而且媽咪教落搭配都係幾個選擇，不是三色蛋就是加肉碎，變化實在不大！這集會教你如何十分鐘蒸出一道滑溜得吹彈可破的水蛋，更會分享一些意想不到的Fusion配搭變化，令到一道普通的蒸水蛋從此變得不一樣！</span>`,
-                `<h3>煲湯 (4集）</h3>
+            `<h3>「快靚正煮食系統」- 煲湯 [4集]</h3>
                             <span>煲湯說成廣東人的傳統飲食文化相信沒太多人會反對，當中時令材料的運用甚廣亦大有學問，究竟那些食材是季節限定食用？又有那些材料配搭會相尅，食咗對身體唔好？今集會跟大家硏究一下煲湯的材料配搭和準備工序，更會教大家如何在短時間內煲出媲美私房菜水準的美味濃湯。  </span>`,
-                `<h3> Food pairing (4集）</h3>
+            `<h3> 「一雞幾味配搭秘笈」- Food pairing [4集]</h3>
                             <span>大家有沒有一種食來食去都是同一味餸嘅感覺？有沒有覺得日日煮飯都要絞盡腦汁很有難度？今集會分享如何決定不同食材的配搭，更會介紹如何單單用同一種食材煮出幾款風味感覺截然不同的菜式，學會之後從此日日輕鬆煮食充滿新鮮感。 </span>`,
-            ];
+        ];
 
-            function choose_according_course(x, y) {
-                console.log(x);
-                document
-                    .getElementById("accordinggroup-course")
-                    .getElementsByClassName("myaccording-focus")[0]
-                    .classList.add("myaccording-nofocus");
-                document
-                    .getElementById("accordinggroup-course")
-                    .getElementsByClassName("myaccording-focus")[0]
-                    .classList.remove("myaccording-focus");
-                x.classList.remove("myaccording-nofocus");
-                x.classList.add("myaccording-focus");
-                document.getElementById("accordingcontent-course").innerHTML =
-                    according_words[y];
+        function choose_according_course(x, y) {
+            console.log(x);
+            document
+                .getElementById("accordinggroup-course")
+                .getElementsByClassName("myaccording-focus")[0]
+                .classList.add("myaccording-nofocus");
+            document
+                .getElementById("accordinggroup-course")
+                .getElementsByClassName("myaccording-focus")[0]
+                .classList.remove("myaccording-focus");
+            x.classList.remove("myaccording-nofocus");
+            x.classList.add("myaccording-focus");
+            document.getElementById("accordingcontent-course").innerHTML =
+                according_words[y];
+        }
+
+        function switchphoto_mousin(x) {
+            x = x.getElementsByTagName("img")[0];
+            if (x.src.indexOf("before") != -1) {
+                x.src = x.src.split("before").join("after");
             }
+        }
 
-            function switchphoto_mousin(x) {
-                x = x.getElementsByTagName("img")[0];
-                if (x.src.indexOf("before") != -1) {
-                    x.src = x.src.split("before").join("after");
-                }
+        function switchphoto_mousout(x) {
+            x = x.getElementsByTagName("img")[0];
+            if (x.src.indexOf("after") != -1) {
+                x.src = x.src.split("after").join("before");
             }
+        }
 
-            function switchphoto_mousout(x) {
-                x = x.getElementsByTagName("img")[0];
-                if (x.src.indexOf("after") != -1) {
-                    x.src = x.src.split("after").join("before");
-                }
-            }
+        function closepopup(x) {
+            console.log(x)
+            document.getElementById(x).style.display = "none"
+            document.getElementById('alldiv').classList.remove('blurbackground')
+        }
 
-            function closepopup(x) {
-                console.log(x)
-                document.getElementById(x).style.display = "none"
+        function outfopopup() {
+            if (document.getElementById('alldiv').classList.contains('blurbackground')) {
                 document.getElementById('alldiv').classList.remove('blurbackground')
+                document.getElementById("desktoppopup").style.display = "none"
+                document.getElementById("mobilepopup").style.display = "none"
             }
 
-            function outfopopup() {
-                if (document.getElementById('alldiv').classList.contains('blurbackground')) {
-                    document.getElementById('alldiv').classList.remove('blurbackground')
-                    document.getElementById("desktoppopup").style.display = "none"
-                    document.getElementById("mobilepopup").style.display = "none"
-                }
+        }
 
+        function joincourse() {
+            document.getElementById('alldiv').classList.add('blurbackground')
+            document.getElementById('desktoppopup').hidden = false
+            document.getElementById('mobilepopup').hidden = false
+            document.getElementById("desktoppopup").style.display = "block"
+            document.getElementById("mobilepopup").style.display = "block"
+        }
+
+
+        function checkurl() {
+            if (window.location.href.indexOf("#buy") != -1) {
+                joincourse()
             }
-
-            function joincourse() {
-                document.getElementById('alldiv').classList.add('blurbackground')
-                document.getElementById('desktoppopup').hidden = false
-                document.getElementById('mobilepopup').hidden = false
-                document.getElementById("desktoppopup").style.display = "block"
-                document.getElementById("mobilepopup").style.display = "block"
-            }
-
-
-            function checkurl() {
-                if (window.location.href.indexOf("#buy") != -1) {
-                    joincourse()
-                }
-            }
-            checkurl()
-        </script>
-        <script src="https://player.vimeo.com/api/player.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+        }
+        checkurl()
+    </script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
 </body>
 

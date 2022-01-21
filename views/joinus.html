@@ -157,6 +157,28 @@
             margin-top: 30px;
             width: 30px;
         }
+
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #FFF;
+            opacity: .6;
+            /* Firefox */
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #FFF;
+        }
+
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #FFF;
+        }
+
+        .rotate {
+            transform: rotate(90deg);
+        }
     </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
@@ -178,6 +200,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/#tutor">導師介紹</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/joinus">導師招募</a>
                     </li>
                 </ul>
             </div>
@@ -226,6 +251,11 @@
             data-aos-duration="2000">
             <!-- <h1 style="margin-bottom: 50px">無論你是</h1> -->
             <img src="img/joinus/whoareyou.gif" style="width: 500px; margin-bottom: -30px; margin-top: -50px;">
+
+            <div
+                style="width: 400px; border: 4px solid white; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: -30px;">
+            </div>
+
             <div class="myunderline" style="border-width: 10px; margin-bottom: 20px;">
                 <!-- 有教學經驗的導師 -->
             </div>
@@ -238,10 +268,14 @@
             data-aos="fade-up" data-aos-duration="2000">
             <!-- <h1 style="margin-bottom: 50px">無論你是</h1> -->
             <img src="img/joinus/whoareyou.gif" style="width: 300px; margin-bottom: -40px; margin-top: 0px;">
+            <div
+                style="width: 230px; border: 4px solid white; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </div>
+
             <div class="myunderline" style="border-width: 10px; margin-bottom: 20px;">
                 <!-- 有教學經驗的導師 -->
             </div>
-            <div>如果你是任何行內領域的專家，<br>亦擁有教學的熱情，<br>好想感染和啟發大眾的話，<br>歡迎你申請成為《好想學》的導師！
+            <div style="margin-top: 50px;">如果你是任何行內領域的專家，<br>亦擁有教學的熱情，<br>好想感染和啟發大眾的話，<br>歡迎你申請成為《好想學》的導師！
             </div>
         </div>
 
@@ -283,7 +317,7 @@
                     </div>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;"
-                                src="./img/joinus/icon17.png">
+                                src="./img/joinus/icon18.png">
                         </div>
                         <div class="col-sm-7">
                             <h5>助您節省不必要花費的時間和精神
@@ -295,7 +329,7 @@
                     </div>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;"
-                                src="./img/joinus/icon18.png">
+                                src="./img/joinus/icon17.png">
                         </div>
                         <div class="col-sm-7">
                             <h5>提供課程市場定位及建立個人品牌
@@ -318,7 +352,7 @@
                     </div>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;"
-                                src="./img/joinus/icon19.png">
+                                src="./img/joinus/icon25.png">
                         </div>
                         <div class="col-sm-7">
                             <h5>無地域限制錄製教學內容
@@ -348,6 +382,7 @@
                             </h5>
                             <div>只需要錄製一次性的教學影片，並可創造持續性、可觀的被動收入。</div>
                         </div>
+
                     </div>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;"
@@ -361,7 +396,7 @@
                     </div>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;"
-                                src="./img/joinus/icon17.png">
+                                src="./img/joinus/icon18.png">
                         </div>
                         <div class="col-sm-7">
                             <h5>助您節省不必要花費的時間和精神
@@ -373,7 +408,7 @@
                     </div>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;"
-                                src="./img/joinus/icon18.png">
+                                src="./img/joinus/icon17.png">
                         </div>
                         <div class="col-sm-7">
                             <h5>提供課程市場定位及建立個人品牌
@@ -396,7 +431,7 @@
                     </div>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-sm-3"><img style="width: 100px;  margin-top: -10px;"
-                                src="./img/joinus/icon19.png">
+                                src="./img/joinus/icon25.png">
                         </div>
                         <div class="col-sm-7">
                             <h5>無地域限制錄製教學內容
@@ -442,7 +477,7 @@
                         《好想學》是美國和香港創立的網上課程專家平台，集合大中華地區和海外巿場的豐富網上課程經驗，以保留傳統教學價值及使用前瞻性大膽創新的思維徹底地釋放每一位導師的潛能和影響力。在線上線下發光發亮！透過精心設計的網上課程教學系統更快更準地幫助學員成功！
                     </div>
                     <div style="margin-bottom: 30px;">
-                        在過去兩年，《好想學》成功幫助30+位導師提供品牌及網上教學指導，成功擴大學員人數、大大提升大大提升收入和增強影響力。最重要將導師所擁有專長發展至不受地域、時間、外來不明朗因素而受到嚴重影響，業務仍然可以繼續營運！
+                        在過去兩年，《好想學》成功幫助導師提供品牌及網上教學指導，擴大學員人數、大大提升大大提升收入和增強影響力。最重要將導師所擁有專長發展至不受地域、時間、外來不明朗因素而受到嚴重影響，業務仍然可以繼續營運！
                     </div>
 
                     <h1 class="myunderline" style="font-size: 23px; margin-bottom: 20px; font-weight: bold;">
@@ -474,7 +509,7 @@
                         《好想學》是美國和香港創立的網上課程專家平台，集合大中華地區和海外巿場的豐富網上課程經驗，以保留傳統教學價值及使用前瞻性大膽創新的思維徹底地釋放每一位導師的潛能和影響力。在線上線下發光發亮！透過精心設計的網上課程教學系統更快更準地幫助學員成功！
                     </div>
                     <div style="margin-bottom: 30px;">
-                        在過去兩年，《好想學》成功幫助30+位導師提供品牌及網上教學指導，成功擴大學員人數、大大提升大大提升收入和增強影響力。最重要將導師所擁有專長發展至不受地域、時間、外來不明朗因素而受到嚴重影響，業務仍然可以繼續營運！
+                        在過去兩年，《好想學》成功幫助導師提供品牌及網上教學指導，擴大學員人數、大大提升大大提升收入和增強影響力。最重要將導師所擁有專長發展至不受地域、時間、外來不明朗因素而受到嚴重影響，業務仍然可以繼續營運！
                     </div>
 
                     <h1 class="myunderline" style="font-size: 18px; margin-bottom: 20px; font-weight: bold;">
@@ -524,15 +559,25 @@
             <img style="width: 250px; position: absolute; top: -100; left: -100;" src="./img/oepntag.png">
             <h1>立即申請成為導師</h1>
             <div class="row">
-                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon20.png"><br>填寫申請表
+                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon20.png">
+                    <div style="margin-top: -20px; margin-bottom: 20px;">填寫申請表</div>
+                    <div class="rotate" style="font-size: 25px;">ᐅ</div>
                 </div>
-                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon21.png"><br>透過1對1免費諮詢<br>與團隊跟進
+                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon21.png">
+                    <div style="margin-top: -20px; margin-bottom: 20px;">透過1對1免費諮詢<br>與團隊跟進</div>
+                    <div class="rotate" style="font-size: 25px;">ᐅ</div>
                 </div>
-                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon22.png"><br>課程策劃及市場定位
+                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon22.png">
+                    <div style="margin-top: -20px; margin-bottom: 20px;">課程策劃及市場定位</div>
+                    <div class="rotate" style="font-size: 25px;">ᐅ</div>
                 </div>
-                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon23.png"><br>課程製作及審核
+                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon23.png">
+                    <div style="margin-top: -20px; margin-bottom: 20px;">課程製作及審核</div>
+                    <div class="rotate" style="font-size: 25px;">ᐅ</div>
                 </div>
-                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon24.png"><br>課程正式推出</div>
+                <div class="col-12"><img style="width: 150px;" src="./img/joinus/icon24.png">
+                    <div style="margin-top: -20px; margin-bottom: 20px;">課程正式推出</div>
+                </div>
             </div>
             <img style="width: 150px; position: absolute; bottom: -120px; left: -30;" src="./img/bubble.png">
             <img style="width: 180px; position: absolute; bottom: -200px; right: -100;" src="./img/slash.png">
@@ -546,7 +591,7 @@
                 <div class="next round" onclick="nextquestion(this)">&#8250;</div>
                 <div>
                     <div class="questiondiv" id="questiondiv">導師名字</div>
-                    <input class="contactusinput" id="answerinput">
+                    <input class="contactusinput" placeholder="請在此填寫資料" id="answerinput">
                     <nav class="indicators">
                         <ul id="questionaireindicator">
                             <li class="current"></li>
@@ -608,8 +653,10 @@
 
                 <div class="d-flex justify-content-around" style="margin-top: -15px;">
 
-                    <a href="#"><img class="footerlinkicon" src="img/socialicon/fb-white.png"></a>
-                    <a href="#"><img class="footerlinkicon" src="img/socialicon/ig-white.png"></a>
+                    <a href="https://www.facebook.com/wewannalearnofficial"><img class="footerlinkicon"
+                            src="img/socialicon/fb-white.png"></a>
+                    <a href="https://www.instagram.com/wewannalearn/"><img class="footerlinkicon"
+                            src="img/socialicon/ig-white.png"></a>
 
 
                 </div>
@@ -637,8 +684,10 @@
 
                 <div class="flex justify-center" style="margin-top: -10px; margin-bottom: 50px;">
 
-                    <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/fb-white.png"></a>
-                    <a href="#"><img class="footerlinkicon_mobile" src="img/socialicon/ig-white.png"></a>
+                    <a href="https://www.facebook.com/wewannalearnofficial"><img class="footerlinkicon_mobile"
+                            src="img/socialicon/fb-white.png"></a>
+                    <a href="https://www.instagram.com/wewannalearn/"><img class="footerlinkicon_mobile"
+                            src="img/socialicon/ig-white.png"></a>
 
 
                 </div>
