@@ -102,11 +102,24 @@ app.post("/charge", (req, res) => {
       "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/saurcevideopreview.jpg",
   };
 
+  const emailtitlelist = {
+    minibus: "【匠人精神！手寫小巴牌網上課程】多謝你的訂購！",
+    minibusaddon: "【匠人精神！手寫小巴牌網上課程】多謝你的訂購！",
+    doublestick: "【型爆！雙節棍入門網上課程】多謝你的訂購！",
+    doublestickaddon: "【型爆！雙節棍入門網上課程】多謝你的訂購！",
+    saurce: "【快靚正！香港味道煮食網上課程】多謝你的訂購！",
+    saurceaddon: "【快靚正！香港味道煮食網上課程】多謝你的訂購！",
+  };
+
   try {
     const courseprice = coursepricelist[req.body.coursecode]
       ? coursepricelist[req.body.coursecode] * 100
       : 0;
     if (coursepricelist == 0) throw "wrong course code";
+
+    const emailtitle = emailtitlelist[req.body.coursecode]
+      ? emailtitlelist[req.body.coursecode]
+      : "多謝購買課程";
 
     if (req.body.coursecode == "minibusaddon") {
       db.push("/minibusaddon/list[]", req.body);
@@ -153,7 +166,7 @@ app.post("/charge", (req, res) => {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                  subject: "多謝購買課程",
+                  subject: emailtitle,
                   to: req.body.email,
                   courseimg: courseimglist[req.body.course],
                 }),
