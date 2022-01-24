@@ -154,7 +154,7 @@ app.post("/charge", (req, res) => {
                 },
                 body: JSON.stringify({
                   subject: "多謝購買課程",
-                  to: "harry1998kwan@gmail.com",
+                  to: req.body.email,
                   courseimg: courseimglist[req.body.course],
                 }),
               };
