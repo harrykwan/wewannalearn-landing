@@ -88,18 +88,14 @@ app.post("/charge", (req, res) => {
   };
 
   const courseimglist = {
-    minibus:
-      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg",
-    minibusaddon:
-      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg",
+    minibus: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
+    minibusaddon: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
     doublestick:
-      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/doublestickvideopreview.jpg",
+      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
     doublestickaddon:
-      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/doublestickvideopreview.jpg",
-    saurce:
-      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/saurcevideopreview.jpg",
-    saurceaddon:
-      "https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/saurcevideopreview.jpg",
+      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
+    saurce: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
+    saurceaddon: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
   };
 
   const emailtitlelist = {
@@ -168,7 +164,7 @@ app.post("/charge", (req, res) => {
                 body: JSON.stringify({
                   subject: emailtitle,
                   to: req.body.email,
-                  courseimg: courseimglist[req.body.course],
+                  courseimg: courseimglist[req.body.coursecode],
                 }),
               };
               request(options, function (error, response) {
