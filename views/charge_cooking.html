@@ -233,7 +233,9 @@
       left: 0;
       height: 25px;
       width: 25px;
-      background-color: #eee;
+      /* background-color: #eee; */
+      border-radius: 5px;
+      border: 2px solid #fd5e34;
     }
 
     /* On mouse-over, add a grey background color */
@@ -315,23 +317,24 @@
             </div>
           </div> -->
 
-          <img style="width: 100%; margin-top: 60px; border: 4px solid black; border-radius: 50%;"
-            src="img/saurce/8.png" />
+          <img
+            style="width: 300px; margin-top: 60px; margin-bottom: 60px; border: 4px solid black; border-radius: 50%; left: 0; right: 0; margin-left: auto; margin-right: auto;"
+            src="img/saurce/upsell.jpg" />
         </div>
         <div class="col-6" style="margin-top: 30px;">
 
 
 
 
-          <div style="margin-right: 50px">
-            1.港式煲仔飯 (4集）<br>
+          <div style="margin-right: 50px; margin-top: 100px;">
+            <h1 style="font-size: 25px;">港女煲 X 港式煲仔飯 ［4集］</h1>
             <br>
-            煲仔飯算是香港特色美食之一，但有否感覺工序繁複、只能喺街食而不可在家煮？這集會教你如何在家都可以簡單煮出一個爽口有飯焦又充滿新意的港味地道煲仔飯。
+            「煲仔飯」作為香港特色美食之一；<br>
+            「港女煲」亦是入得廚房出得廳堂的女生恩物！<br><br>
+            今集同你分享在家輕鬆簡單用港女煲煮出充滿新意的港式煲仔飯，既爽口而有飯焦，充滿港式情懷。
             <br>
-            <br>
-            2. 一湯兩味 (4集）<br>
-            <br>
-            課程中「一雞幾味配搭秘笈」曾介紹同一種食材的多樣變化，這集會加碼分享如何有湯飲又有得食，教你煲湯之餘用湯汁湯料煮多兩個新鮮美味菜式，靈活創新用盡所有食材。
+
+
 
           </div>
 
@@ -350,7 +353,7 @@
       <div class="row">
         <div class="col-12">
           <img style="width: 100%; margin-bottom: 30px; margin-top: 50px; border: 4px solid black; border-radius: 50%;"
-            src="img/saurce/8.png" />
+            src="img/saurce/upsell.jpg" />
           <!-- <div class="gallery js-flickity" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0px;">
             <div class="gallery-cell">
               <img style="width: 100%" src="img/bus/upsell/1.JPG" />
@@ -392,15 +395,13 @@
         </div>
         <div class="col-12">
 
-          <div style="margin-right: 50px">
-            1.港式煲仔飯 (4集）<br>
+          <div style=" margin-bottom: 40px;">
+            港女煲 X 港式煲仔飯 ［4集］<br>
             <br>
-            煲仔飯算是香港特色美食之一，但有否感覺工序繁複、只能喺街食而不可在家煮？這集會教你如何在家都可以簡單煮出一個爽口有飯焦又充滿新意的港味地道煲仔飯。
+            「煲仔飯」作為香港特色美食之一；<br>
+            「港女煲」亦是入得廚房出得廳堂的女生恩物！<br><br>
+            今集同你分享在家輕鬆簡單用港女煲煮出充滿新意的港式煲仔飯，既爽口而有飯焦，充滿港式情懷。
             <br>
-            <br>
-            2. 一湯兩味 (4集）<br>
-            <br>
-            課程中「一雞幾味配搭秘笈」曾介紹同一種食材的多樣變化，這集會加碼分享如何有湯飲又有得食，教你煲湯之餘用湯汁湯料煮多兩個新鮮美味菜式，靈活創新用盡所有食材。
 
           </div>
 
@@ -498,18 +499,19 @@
     <div class="d-none d-md-block"
       style="left: 0; right: 0; margin-left: auto; margin-right: auto; width: 440px; color: fd5e34; margin-top: 40px;">
       <label class="container">
-        <div onclick="openaddondetails()">追加港式煲仔飯和一湯兩味 HKD $199 <span
-            style="color: #007bff; font-size: 18px; border-bottom: 1px solid #007bff;">詳情請按</span></div>
+
         <input type="checkbox" onchange="checkaddon(this)">
         <span class="checkmark"></span>
       </label>
+      <div onclick="openaddondetails()" style="margin-left: 50px;">(港女煲)港式煲仔飯 HKD $199 <span
+          style="color: #007bff; font-size: 18px; border-bottom: 1px solid #007bff;">詳情請按</span></div>
     </div>
 
 
     <div class="d-xs-block d-md-none"
       style="left: 0; right: 0; margin-left: auto; margin-right: auto; width: 330px; color: fd5e34; font-size: 20px; margin-top: 20px;">
       <label class="container">
-        <div onclick="openaddondetails()">追加港式煲仔飯和一湯兩味 HKD $199 <span
+        <div onclick="openaddondetails()">(港女煲)港式煲仔飯 HKD $199 <span
             style="color: #007bff; font-size: 18px; border-bottom: 1px solid #007bff;">詳情請按</span></div>
         <input type="checkbox" onchange="checkaddon(this)">
         <span class="checkmark"></span>
@@ -526,7 +528,7 @@
         </div>
 
         <div class="d-flex">
-          <div class="ml-auto p-2 bold" style="font-size: 25px;"><span style="margin-right: 20px;">早鳥價</span><span
+          <div class="ml-auto p-2 bold" style="font-size: 28px;"><span style="margin-right: 20px;">早鳥價</span><span
               style="font-size: 20px; ">HKD</span> $<span id="pricetag">399</span>
           </div>
         </div>
@@ -602,7 +604,7 @@
 
           <a class="footerlink" href="/#aboutus">有關我們</a>
           <a class="footerlink" href="/#tutor">導師介紹</a>
-          <a class="footerlink" href="#">常見問題 </a>
+          <a class="footerlink" href="/Minibus-Sign-Calligraphy#questions">常見問題 </a>
 
         </div>
 
@@ -633,7 +635,7 @@
 
         <a class="footerlink_mobile" href="/#aboutus">有關我們</a>
         <a class="footerlink_mobile" href="/#tutor">導師介紹</a>
-        <a class="footerlink_mobile" href="#">常見問題 </a>
+        <a class="footerlink_mobile" href="/Minibus-Sign-Calligraphy#questions">常見問題 </a>
 
 
         <div class="flex justify-center" style="margin-top: -10px; margin-bottom: 50px;">
