@@ -79,12 +79,12 @@ app.get("/charge", (req, res, next) => {
 
 app.post("/charge", (req, res) => {
   const coursepricelist = {
-    minibus: 499,
-    minibusaddon: 558,
-    doublestick: 479,
-    doublestickaddon: 559,
+    minibus: 399,
+    minibusaddon: 399 + 99,
+    doublestick: 399,
+    doublestickaddon: 399 + 299,
     saurce: 399,
-    saurceaddon: 598,
+    saurceaddon: 399 + 138,
   };
 
   const courseimglist = {
