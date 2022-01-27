@@ -240,7 +240,7 @@ app.post("/contactus", (req, res) => {
 
 // var httpServer = http.createServer(app);
 // var httpsServer = https.createServer(credentials, app);
-const port = 3000;
+const port = 80;
 app.listen(port, () => console.log("Server is running..."));
 // httpServer.listen(80);
 // httpsServer.listen(443);
