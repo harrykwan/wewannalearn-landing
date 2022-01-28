@@ -1,10 +1,14 @@
 require("dotenv").config();
-// const fs = require("fs");
-// var https = require("https");
+const fs = require("fs");
+var https = require("https");
 // var http = require("http");
-// var privateKey = fs.readFileSync("./server.key", "utf8");
-// var certificate = fs.readFileSync("./server.cert", "utf8");
-// var credentials = { key: privateKey, cert: certificate };
+var privateKey = fs.readFileSync("./server.key", "utf8");
+var certificate = fs.readFileSync("./server.cert", "utf8");
+var credentials = {
+  key: privateKey,
+  cert: certificate,
+  ca: [fs.readFileSync("./gd_1.crt"), fs.readFileSync("./gd_1.crt")],
+};
 const { JsonDB } = require("node-json-db");
 const { Config } = require("node-json-db/dist/lib/JsonDBConfig");
 const db = new JsonDB(new Config("myDataBase", true, false, "/"));
@@ -239,8 +243,8 @@ app.post("/contactus", (req, res) => {
 // Future Code Goes Here
 
 // var httpServer = http.createServer(app);
-// var httpsServer = https.createServer(credentials, app);
+var httpsServer = https.createServer(credentials, app);
 const port = 80;
 app.listen(port, () => console.log("Server is running..."));
 // httpServer.listen(80);
-// httpsServer.listen(443);
+httpsServer.listen(443);
