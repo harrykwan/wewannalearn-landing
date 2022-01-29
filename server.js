@@ -9,6 +9,7 @@ var credentials = {
   cert: certificate,
   ca: [fs.readFileSync("./gd_1.crt"), fs.readFileSync("./gd_1.crt")],
 };
+
 const { JsonDB } = require("node-json-db");
 const { Config } = require("node-json-db/dist/lib/JsonDBConfig");
 const db = new JsonDB(new Config("myDataBase", true, false, "/"));
@@ -57,6 +58,15 @@ app.get("/Hong-Kong-Comfort-Food-Cooking", (req, res, next) => {
 app.get("/teach", (req, res, next) => {
   return res.render("./joinus.html", {});
 });
+
+app.get(
+  "/.well-known/acme-challenge/hHweofG2gEvExw2U8QIThkAiopM4fKZzC-dLCvnk_Ic",
+  (req, res, next) => {
+    return res.send(
+      "hHweofG2gEvExw2U8QIThkAiopM4fKZzC-dLCvnk_Ic.WPopRAMiK7fq896tKu_f55uKd7J41QCJN1ZvAHsP6Gs"
+    );
+  }
+);
 
 app.get("/getaddoncount", (req, res, next) => {
   try {
