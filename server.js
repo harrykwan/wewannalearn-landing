@@ -2,12 +2,22 @@ require("dotenv").config();
 const fs = require("fs");
 var https = require("https");
 // var http = require("http");
-var privateKey = fs.readFileSync("./server.key", "utf8");
-var certificate = fs.readFileSync("./server.cert", "utf8");
+// var privateKey = fs.readFileSync("./server.key", "utf8");
+// var certificate = fs.readFileSync("./server.cert", "utf8");
+// var credentials = {
+//   key: privateKey,
+//   cert: certificate,
+//   ca: [fs.readFileSync("./gd_1.crt"), fs.readFileSync("./gd_1.crt")],
+// };
+
+// sslpkpath="/etc/letsencrypt/live/wewannalearn.com/privkey.pem"
+// sslcertpath="/etc/letsencrypt/live/wewannalearn.com/fullchain.pem"
+
+var privateKey = fs.readFileSync(process.env.sslpkpath, "utf8");
+var certificate = fs.readFileSync(process.env.sslcertpath, "utf8");
 var credentials = {
   key: privateKey,
   cert: certificate,
-  ca: [fs.readFileSync("./gd_1.crt"), fs.readFileSync("./gd_1.crt")],
 };
 
 const { JsonDB } = require("node-json-db");
