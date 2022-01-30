@@ -24,6 +24,7 @@ const { JsonDB } = require("node-json-db");
 const { Config } = require("node-json-db/dist/lib/JsonDBConfig");
 const db = new JsonDB(new Config("myDataBase", true, false, "/"));
 const express = require("express");
+const secure = require("express-force-https");
 const request = require("request");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -33,7 +34,7 @@ console.log(process.env.stripe_sk);
 console.log(process.env.port);
 const app = express();
 app.use(cors());
-
+app.use(secure);
 // This will make our form data much more useful
 app.use(bodyParser.urlencoded({ extended: true }));
 
