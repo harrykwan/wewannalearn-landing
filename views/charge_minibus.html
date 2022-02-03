@@ -767,6 +767,13 @@
 
 
     getaddoncount()
+
+
+    document.getElementsByTagName('form')[0].addEventListener("submit", (e) => {
+      e.preventDefault();
+
+    });
+
   </script>
 
   <script src="https://js.stripe.com/v3/" crossorigin="anonymous"></script>
