@@ -154,9 +154,9 @@ app.post("/chargetest", (req, res) => {
     }
 
     const customerjson = {
-      name: req.body.name ? req.body.name : "",
-      email: req.body.email ? req.body.email : "",
-      phone: req.body.phone ? req.body.phone : "",
+      // name: req.body.name ? req.body.name : "",
+      // email: req.body.email ? req.body.email : "",
+      // phone: req.body.phone ? req.body.phone : "",
       // address: req.body.address ? req.body.address : "",
       source: req.body.stripeToken,
     };
