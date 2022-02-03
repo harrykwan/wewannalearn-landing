@@ -218,6 +218,12 @@ app.post("/chargetest", (req, res) => {
                 console.log(response.body);
               });
             })
+            .catch((err) => {
+              console.log(err);
+              res.render("./charge_" + req.body.course + ".html", {
+                warning: err,
+              });
+            })
         // .then(() =>
         //   res.render(req.body.url.split("charge.html").join("completed.html"))
         // )
@@ -226,12 +232,12 @@ app.post("/chargetest", (req, res) => {
       .catch((err) => {
         console.log(err);
         res.render("./charge_" + req.body.course + ".html", {
-          warning: err.raw.message ? err.raw.message : "Error",
+          warning: err,
         });
       });
   } catch (err) {
     console.log(err);
-    res.render("./charge_" + req.query.course + ".html", {
+    res.render("./charge_" + req.body.course + ".html", {
       warning: "Error",
     });
   }
