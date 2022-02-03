@@ -221,7 +221,7 @@ app.post("/chargetest", (req, res) => {
             .catch((err) => {
               console.log(err);
               res.render("./charge_" + req.body.course + ".html", {
-                warning: err,
+                warning: err + " (create charge)",
               });
             })
         // .then(() =>
@@ -232,7 +232,7 @@ app.post("/chargetest", (req, res) => {
       .catch((err) => {
         console.log(err);
         res.render("./charge_" + req.body.course + ".html", {
-          warning: err,
+          warning: err + " (create customer)",
         });
       });
   } catch (err) {
