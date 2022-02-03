@@ -109,12 +109,12 @@ app.get("/charge", (req, res, next) => {
 
 app.post("/chargetest", (req, res) => {
   const coursepricelist = {
-    minibus: 1,
-    minibusaddon: 2,
-    doublestick: 3,
-    doublestickaddon: 4,
-    saurce: 5,
-    saurceaddon: 6,
+    minibus: 10,
+    minibusaddon: 11,
+    doublestick: 12,
+    doublestickaddon: 13,
+    saurce: 14,
+    saurceaddon: 15,
   };
 
   const courseimglist = {
@@ -184,6 +184,8 @@ app.post("/chargetest", (req, res) => {
                     ? req.body.country
                     : "" + " | " + req.body.city
                     ? req.body.city
+                    : "" + " | " + req.body.state
+                    ? req.body.state
                     : "" + " | " + req.body.postcode
                     ? req.body.postcode
                     : "",
@@ -306,6 +308,8 @@ app.post("/charge", (req, res) => {
                     ? req.body.country
                     : "" + " | " + req.body.city
                     ? req.body.city
+                    : "" + " | " + req.body.state
+                    ? req.body.state
                     : "" + " | " + req.body.postcode
                     ? req.body.postcode
                     : "",

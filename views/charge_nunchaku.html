@@ -575,9 +575,15 @@
         <input type="text" placeholder="Address" class=" p-2 h-10 mb-4 contactinput " name="address" required>
         <input type="text" placeholder="City" class=" p-2 h-10 mb-4 contactinput " name="city" required>
         <div class="d-flex">
+          <input placeholder="City" type="text" class=" p-2 h-10 mb-4 contactinput mr-auto"
+            style="width: 48%; display: inline-block;" name="city" required>
+          <input placeholder="State" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
+            style="width: 50%;  display: inline-block;" name="state" required>
+        </div>
+        <div class="d-flex">
           <input placeholder="Country" type="text" class=" p-2 h-10 mb-4 contactinput mr-auto"
             style="width: 70%; display: inline-block;" name="country" required>
-          <input placeholder="Postcode" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
+          <input placeholder="Postal Code" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
             style="width: 28%;  display: inline-block;" name="postcode" required>
         </div>
         <input id="formcoursecode" name="coursecode" value="minibus" hidden>
@@ -589,7 +595,7 @@
             <div id="card-element" class="bg-transparent p-2 h-10 mb-4"></div>
           </div>
 
-          <div id="card-errors" role="alert" style="width: 300px;">
+          <div id="card-errors" role="alert" class="contactinput " style="background: none; color: red;">
             <%- warning %>
           </div>
 
