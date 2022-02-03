@@ -2,7 +2,7 @@ const stripe = Stripe(
   // "pk_test_51I82ZnDb6MZGA6DdGDNhVtKtJjATBtdGsU64JYb5q4rBW6eb3wngFBqq4fxwB2O1xjpBkehtRJcQGrC6JdJmg8bf00p4ZhhwkT"
   "pk_live_51I82ZnDb6MZGA6DdbkUyj28xhv1i5mPcnnLlmlXvwJeLOEIA5fI8FwmcRO1bYcx3l7yS5f3q2lKlI62pOtsQUfVm00sezNE5nI"
 ); // Your Publishable Key
-const elements = stripe.elements({ theme: "stripe" });
+const elements = stripe.elements();
 
 // Create our card inputs
 var style = {
