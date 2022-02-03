@@ -19,6 +19,7 @@ const errorEl = document.querySelector("#card-errors");
 
 // Give our token to our form
 const stripeTokenHandler = (token) => {
+  console.log(token);
   const hiddenInput = document.createElement("input");
   hiddenInput.setAttribute("type", "hidden");
   hiddenInput.setAttribute("name", "stripeToken");
