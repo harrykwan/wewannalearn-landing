@@ -117,6 +117,8 @@ app.post("/chargetest", (req, res) => {
     saurceaddon: 15,
   };
 
+  console.log(req.body);
+
   const courseimglist = {
     minibus: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
     minibusaddon: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
