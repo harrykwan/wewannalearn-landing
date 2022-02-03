@@ -399,6 +399,19 @@ app.post("/contactus", (req, res) => {
 // var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
 const port = 80;
-app.listen(port, () => console.log("Server is running..."));
+// app.listen(port, () => console.log("Server is running..."));
+// set up plain http server
+var http = express();
+
+// set up a route to redirect http to https
+http.get("*", function (req, res) {
+  res.redirect("https://" + req.headers.host + req.url);
+
+  // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
+  // res.redirect('https://example.com' + req.url);
+});
+
+// have it listen on 8080
+http.listen(80);
 // httpServer.listen(80);
 httpsServer.listen(443);
