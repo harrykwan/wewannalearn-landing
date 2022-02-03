@@ -107,6 +107,128 @@ app.get("/charge", (req, res, next) => {
   }
 });
 
+app.post("/chargetest", (req, res) => {
+  const coursepricelist = {
+    minibus: 1,
+    minibusaddon: 2,
+    doublestick: 3,
+    doublestickaddon: 4,
+    saurce: 5,
+    saurceaddon: 6,
+  };
+
+  const courseimglist = {
+    minibus: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
+    minibusaddon: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
+    doublestick:
+      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
+    doublestickaddon:
+      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
+    saurce: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
+    saurceaddon: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
+  };
+
+  const emailtitlelist = {
+    minibus: "【匠人精神！手寫小巴牌網上課程】多謝你的訂購！",
+    minibusaddon: "【匠人精神！手寫小巴牌網上課程】多謝你的訂購！",
+    doublestick: "【型爆！雙節棍入門網上課程】多謝你的訂購！",
+    doublestickaddon: "【型爆！雙節棍入門網上課程】多謝你的訂購！",
+    saurce: "【快靚正！香港味道煮食網上課程】多謝你的訂購！",
+    saurceaddon: "【快靚正！香港味道煮食網上課程】多謝你的訂購！",
+  };
+
+  try {
+    const courseprice = coursepricelist[req.body.coursecode]
+      ? coursepricelist[req.body.coursecode] * 100
+      : 0;
+    if (coursepricelist == 0) throw "wrong course code";
+
+    const emailtitle = emailtitlelist[req.body.coursecode]
+      ? emailtitlelist[req.body.coursecode]
+      : "多謝購買課程";
+
+    if (req.body.coursecode == "minibusaddon") {
+      db.push("/minibusaddon/list[]", req.body);
+    }
+
+    stripe.customers
+      .create({
+        name: req.body.name ? req.body.name : "",
+        email: req.body.email ? req.body.email : "",
+        phone: req.body.phone ? req.body.phone : "",
+        // address: req.body.address ? req.body.address : "",
+        source: req.body.stripeToken,
+      })
+      .then(
+        (customer) =>
+          stripe.charges
+            .create({
+              amount: courseprice,
+              currency: "hkd",
+              customer: customer.id,
+            })
+            .then((x) => {
+              console.log(x);
+              res.render("./completed_" + req.body.course + ".html");
+              var options = {
+                method: "POST",
+                url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScDpQR2gQ4EhmkOlFX6JXWSjwDCDYMUAfZvB4qRL7xyeXy3kQ/formResponse",
+                formData: {
+                  "entry.1896806186": req.body.name ? req.body.name : "",
+                  "entry.673454844": req.body.phone ? req.body.phone : "",
+                  "entry.1920172636": req.body.email ? req.body.email : "",
+                  "entry.1648267103": req.body.coursecode + " " + courseprice,
+                  "entry.1337606191": req.body.address
+                    ? req.body.address
+                    : "" + " | " + req.body.country
+                    ? req.body.country
+                    : "" + " | " + req.body.city
+                    ? req.body.city
+                    : "" + " | " + req.body.postcode
+                    ? req.body.postcode
+                    : "",
+                },
+              };
+              request(options, function (error, response) {
+                if (error) console.log(error);
+                // console.log(response.body);
+              });
+              var options = {
+                method: "POST",
+                url: "https://irq3jumapc.execute-api.us-east-1.amazonaws.com/dev/paymentconfirm",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  subject: emailtitle,
+                  to: req.body.email,
+                  courseimg: courseimglist[req.body.coursecode],
+                }),
+              };
+              request(options, function (error, response) {
+                if (error) throw new Error(error);
+                console.log(response.body);
+              });
+            })
+        // .then(() =>
+        //   res.render(req.body.url.split("charge.html").join("completed.html"))
+        // )
+      )
+      // .then(() => res.render("./completed.html"))
+      .catch((err) => {
+        console.log(err);
+        res.render("./charge_" + req.body.course + ".html", {
+          warning: err.raw.message ? err.raw.message : "Error",
+        });
+      });
+  } catch (err) {
+    console.log(err);
+    res.render("./charge_" + req.query.course + ".html", {
+      warning: "Error",
+    });
+  }
+});
+
 app.post("/charge", (req, res) => {
   const coursepricelist = {
     minibus: 399,
@@ -178,7 +300,15 @@ app.post("/charge", (req, res) => {
                   "entry.673454844": req.body.phone ? req.body.phone : "",
                   "entry.1920172636": req.body.email ? req.body.email : "",
                   "entry.1648267103": req.body.coursecode + " " + courseprice,
-                  "entry.1337606191": req.body.address ? req.body.address : "",
+                  "entry.1337606191": req.body.address
+                    ? req.body.address
+                    : "" + " | " + req.body.country
+                    ? req.body.country
+                    : "" + " | " + req.body.city
+                    ? req.body.city
+                    : "" + " | " + req.body.postcode
+                    ? req.body.postcode
+                    : "",
                 },
               };
               request(options, function (error, response) {
