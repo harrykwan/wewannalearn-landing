@@ -120,14 +120,18 @@ app.post("/chargetest", (req, res) => {
   console.log(req.body);
 
   const courseimglist = {
-    minibus: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
-    minibusaddon: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
+    minibus:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/a90807cb-31a3-4adb-f6f4-99a9313c1d00/public",
+    minibusaddon:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/a90807cb-31a3-4adb-f6f4-99a9313c1d00/public",
     doublestick:
-      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/1398af81-3a30-4b9f-db9b-e41f9a310900/public",
     doublestickaddon:
-      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
-    saurce: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
-    saurceaddon: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/1398af81-3a30-4b9f-db9b-e41f9a310900/public",
+    saurce:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/041df1e4-0825-4778-4a3b-703546b9c400/public",
+    saurceaddon:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/041df1e4-0825-4778-4a3b-703546b9c400/public",
   };
 
   const emailtitlelist = {
@@ -255,14 +259,18 @@ app.post("/charge", (req, res) => {
   };
 
   const courseimglist = {
-    minibus: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
-    minibusaddon: "http://wewannalearn.com/img/homepage/busvideopreview.jpg",
+    minibus:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/a90807cb-31a3-4adb-f6f4-99a9313c1d00/public",
+    minibusaddon:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/a90807cb-31a3-4adb-f6f4-99a9313c1d00/public",
     doublestick:
-      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/1398af81-3a30-4b9f-db9b-e41f9a310900/public",
     doublestickaddon:
-      "http://wewannalearn.com/img/homepage/doublestickvideopreview.jpg",
-    saurce: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
-    saurceaddon: "http://wewannalearn.com/img/homepage/saurcevideopreview.jpg",
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/1398af81-3a30-4b9f-db9b-e41f9a310900/public",
+    saurce:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/041df1e4-0825-4778-4a3b-703546b9c400/public",
+    saurceaddon:
+      "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/041df1e4-0825-4778-4a3b-703546b9c400/public",
   };
 
   const emailtitlelist = {
