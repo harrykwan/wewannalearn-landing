@@ -327,7 +327,8 @@ app.post("/charge", (req, res) => {
                   "entry.1896806186": req.body.name ? req.body.name : "",
                   "entry.673454844": req.body.phone ? req.body.phone : "",
                   "entry.1920172636": req.body.email ? req.body.email : "",
-                  "entry.1648267103": req.body.coursecode + " " + courseprice,
+                  "entry.1648267103":
+                    req.body.coursecode + " " + courseprice / 100,
                   "entry.1337606191":
                     address +
                     " | " +
