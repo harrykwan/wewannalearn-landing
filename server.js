@@ -304,55 +304,73 @@ app.post("/charge", (req, res) => {
         // address: req.body.address ? req.body.address : "",
         source: req.body.stripeToken,
       })
-      .then((x) => {
-        console.log(x);
-        res.render("./completed_" + req.body.course + ".html");
-        const address = req.body.address ? req.body.address : "";
-        const country = req.body.country ? req.body.country : "";
-        const city = req.body.city ? req.body.city : "";
-        const state = req.body.state ? req.body.state : "";
-        const postcode = req.body.postcode ? req.body.postcode : "";
-        var options = {
-          method: "POST",
-          url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScDpQR2gQ4EhmkOlFX6JXWSjwDCDYMUAfZvB4qRL7xyeXy3kQ/formResponse",
-          formData: {
-            "entry.1896806186": req.body.name ? req.body.name : "",
-            "entry.673454844": req.body.phone ? req.body.phone : "",
-            "entry.1920172636": req.body.email ? req.body.email : "",
-            "entry.1648267103": req.body.coursecode + " " + courseprice / 100,
-            "entry.1337606191":
-              address +
-              " | " +
-              country +
-              " | " +
-              city +
-              " | " +
-              state +
-              " | " +
-              postcode,
-          },
-        };
-        request(options, function (error, response) {
-          if (error) console.log(error);
-          // console.log(response.body);
-        });
-        var options = {
-          method: "POST",
-          url: "https://irq3jumapc.execute-api.us-east-1.amazonaws.com/dev/paymentconfirm",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            subject: emailtitle,
-            to: req.body.email,
-            courseimg: courseimglist[req.body.coursecode],
-          }),
-        };
-        request(options, function (error, response) {
-          if (error) throw new Error(error);
-          console.log(response.body);
-        });
-      })
+      .then(
+        (customer) =>
+          stripe.charges
+            .create({
+              amount: courseprice,
+              currency: "hkd",
+              customer: customer.id,
+            })
+            .then((x) => {
+              console.log(x);
+              res.render("./completed_" + req.body.course + ".html");
+              const address = req.body.address ? req.body.address : "";
+              const country = req.body.country ? req.body.country : "";
+              const city = req.body.city ? req.body.city : "";
+              const state = req.body.state ? req.body.state : "";
+              const postcode = req.body.postcode ? req.body.postcode : "";
+              var options = {
+                method: "POST",
+                url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScDpQR2gQ4EhmkOlFX6JXWSjwDCDYMUAfZvB4qRL7xyeXy3kQ/formResponse",
+                formData: {
+                  "entry.1896806186": req.body.name ? req.body.name : "",
+                  "entry.673454844": req.body.phone ? req.body.phone : "",
+                  "entry.1920172636": req.body.email ? req.body.email : "",
+                  "entry.1648267103": req.body.coursecode + " " + courseprice,
+                  "entry.1337606191":
+                    address +
+                    " | " +
+                    country +
+                    " | " +
+                    city +
+                    " | " +
+                    state +
+                    " | " +
+                    postcode,
+                },
+              };
+              request(options, function (error, response) {
+                if (error) console.log(error);
+                // console.log(response.body);
+              });
+              var options = {
+                method: "POST",
+                url: "https://irq3jumapc.execute-api.us-east-1.amazonaws.com/dev/paymentconfirm",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  subject: emailtitle,
+                  to: req.body.email,
+                  courseimg: courseimglist[req.body.coursecode],
+                }),
+              };
+              request(options, function (error, response) {
+                if (error) throw new Error(error);
+                console.log(response.body);
+              });
+            })
+            .catch((err) => {
+              console.log(err);
+              res.render("./charge_" + req.body.course + ".html", {
+                warning: err + " (create charge)",
+              });
+            })
+        // .then(() =>
+        //   res.render(req.body.url.split("charge.html").join("completed.html"))
+        // )
+      )
       // .then(() => res.render("./completed.html"))
       .catch((err) => {
         console.log(err);
