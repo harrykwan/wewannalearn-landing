@@ -153,8 +153,12 @@ app.post("/chargetest", (req, res) => {
       ? emailtitlelist[req.body.coursecode]
       : "多謝購買課程";
 
-    if (req.body.coursecode == "minibusaddon") {
-      db.push("/minibusaddon/list[]", req.body);
+    try {
+      if (req.body.coursecode == "minibusaddon") {
+        db.push("/minibusaddon/list[]", req.body);
+      }
+    } catch (e) {
+      console.log(e);
     }
 
     const customerjson = {
