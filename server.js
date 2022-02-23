@@ -86,7 +86,7 @@ app.get("/getaddoncount", (req, res, next) => {
     else res.send("0");
   } catch (e) {
     console.log(e);
-    res.send(0);
+    res.send("0");
   }
 });
 
