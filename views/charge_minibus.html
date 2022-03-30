@@ -390,6 +390,36 @@
 
 
 
+  <div class="d-none d-md-block">
+    <div id="desktoppopup_mailing" class="popupwindow " hidden>
+      <button onclick="closepopup('desktoppopup_mailing')"
+        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 400px);  z-index: 999;">✕</button>
+      <br>（ 香港地區：採用順豐到付服務<br>
+      <br>
+      海外地區：由於疫情關係，國際運輸價格浮動不穩以及運送時間都要視乎海外學員地區情況而定。因此採用個別報價服務，好想學會在海外學員購買課程後透過電郵盡快提供運費資料，不便之處，敬請原諒
+      <br><br>
+      *郵寄時間若有調整，將會透過短訊或電郵通知學員!）
+      <br><br>
+    </div>
+  </div>
+
+  <div class="d-xs-block d-md-none">
+    <div id="mobilepopup_mailing" class="popupwindow_mobile " hidden>
+      <button onclick="closepopup('mobilepopup_mailing')"
+        style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 120px);  z-index: 999;">✕</button>
+      <br>（ 香港地區：採用順豐到付服務<br>
+      <br>
+      海外地區：由於疫情關係，國際運輸價格浮動不穩以及運送時間都要視乎海外學員地區情況而定。因此採用個別報價服務，好想學會在海外學員購買課程後透過電郵盡快提供運費資料，不便之處，敬請原諒
+      <br><br>
+      *郵寄時間若有調整，將會透過短訊或電郵通知學員!）
+      <br><br>
+    </div>
+  </div>
+
+
+
+
+
 
 
   <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden" class="" onclick="outfopopup()">
@@ -452,13 +482,13 @@
             · 油性水筆 x 1<br>
             · 開顏料膠杯 x 2<br>
             · 模版紙 x 1<br>
+            · 稀釋劑 x 1 <br>
+            · 獨家調製藍色墨水 x 1<br>
+            · 獨家調製紅色墨水 x 1<br>
             <br>
             (由於條例管制，顏料只能向香港地區提供；<br>
             其他地區學員會提供外間易於購買顏料之建議)<br>
             <br>
-            · 稀釋劑 x 1 <br>
-            · 獨家調製藍色墨水 x 1<br>
-            · 獨家調製紅色墨水 x 1<br>
 
           </div>
         </div>
@@ -516,13 +546,13 @@
             · 油性水筆 x 1<br>
             · 開顏料膠杯 x 2<br>
             · 模版紙 x 1<br>
+            · 稀釋劑 x 1 <br>
+            · 獨家調製藍色墨水 x 1<br>
+            · 獨家調製紅色墨水 x 1<br>
             <br>
             (由於條例管制，顏料只能向香港地區提供;<br>
             其他地區學員會提供外間易於購買顏料<br>之建議)<br>
             <br>
-            · 稀釋劑 x 1 <br>
-            · 獨家調製藍色墨水 x 1<br>
-            · 獨家調製紅色墨水 x 1<br>
           </div>
         </div>
 
@@ -648,12 +678,11 @@
         <div style="color: #fd5e34;">電郵地址 <span style="font-size: 12px;"></span></div>
         <input type="email" class=" p-2 h-10 mb-4 contactinput " name="email" required>
         <div style="color: #fd5e34; max-width: 500px;">郵寄地址
-          <br>（ 香港地區：採用順豐到付服務<br>
-          <br>
-          海外地區：由於疫情關係，國際運輸價格浮動不穩以及運送時間都要視乎海外學員地區情況而定。因此採用個別報價服務，好想學會在海外學員購買課程後透過電郵盡快提供運費資料，不便之處，敬請原諒
-          <br><br>
-          *郵寄時間若有調整，將會透過短訊或電郵通知學員!）
-          <br><br>
+          <div onclick="openmailingdetails()"
+            style="margin-left: 100px; margin-top: -25px; font-size: 18px; position: absolute;">
+            <span class="myclickable"
+              style="color: #007bff; font-size: 16px; border-bottom: 1px solid #007bff; ;">詳情請看</span>
+          </div>
         </div>
         <input type="text" placeholder="Address" class=" p-2 h-10 mb-4 contactinput " name="address" required>
         <div class="d-flex">
@@ -724,6 +753,15 @@
       document.getElementById("mobilepopup").style.display = "block"
       document.getElementById("desktoppopup").hidden = false
       document.getElementById("mobilepopup").hidden = false
+    }
+
+
+    function openmailingdetails() {
+      document.getElementById('alldiv').classList.add('blurbackground')
+      document.getElementById("desktoppopup_mailing").style.display = "block"
+      document.getElementById("mobilepopup_mailing").style.display = "block"
+      document.getElementById("desktoppopup_mailing").hidden = false
+      document.getElementById("mobilepopup_mailing").hidden = false
     }
 
 
