@@ -103,6 +103,7 @@
     }
 
 
+
     .upsellbutton {
       color: #fff;
       background-color: #007bff;
@@ -112,8 +113,8 @@
       border-radius: 10px;
       font-size: 20px;
       position: relative;
-      left: 50px;
-      margin-top: 10px;
+      left: calc(100% - 180px);
+      margin-top: 30px;
       margin-bottom: 10px;
     }
 
@@ -127,8 +128,8 @@
       border-radius: 10px;
       font-size: 20px;
       position: relative;
-      left: 20px;
-      margin-top: 10px;
+      /* left: 10px; */
+      /* margin-top: 10px; */
       margin-bottom: 10px;
       font-size: 16px;
     }
@@ -355,7 +356,7 @@
           </div>
 
 
-          <!-- <button onclick="addon()" class="upsellbutton">港式煲仔飯和一湯兩味 HKD $199</button> -->
+          <button onclick="clickcheck('desktop')" class="upsellbutton">追加</button>
 
         </div>
       </div>
@@ -423,7 +424,9 @@
 
 
 
-          <!-- <button style="margin-top: 20px;" onclick="addon()" class="upsellbutton_mobile">港式煲仔飯和一湯兩味 HKD $199</button> -->
+
+          <button style="margin-top: 10px;" onclick="clickcheck('mobile')" class="upsellbutton_mobile">追加</button>
+
 
         </div>
       </div>
@@ -523,7 +526,7 @@
       <div style="margin-left: 13px; margin-bottom: 20px; font-size: 22px;" class="bold">追加：</div>
       <div class="d-flex">
         <div class="p-2 bold" style="margin-top: 30px;">
-          <label class="container">
+          <label class="container" id="addoncheck">
             <input type="checkbox" onchange="checkaddon(this)">
             <span class="checkmark"></span>
           </label>
@@ -547,7 +550,7 @@
       <div style="margin-left: 0px; margin-bottom: 20px; font-size: 24px;" class="bold">追加：</div>
       <div class="row">
         <div class="col-5" style="margin-top: 30px;">
-          <label class="container">
+          <label class="container" id="addoncheck_mobile">
             <input type="checkbox" onchange="checkaddon(this)">
             <span class="checkmark"></span>
           </label>
@@ -707,6 +710,18 @@
       //   document.getElementById("mobilepopup").style.display = "none"
       // }
 
+    }
+
+
+    function clickcheck(x) {
+      if (x == 'desktop')
+        if (!document.getElementById("addoncheck").getElementsByTagName('input')[0].checked)
+          document.getElementById("addoncheck").click()
+      if (x == 'mobile')
+        if (!document.getElementById("addoncheck_mobile").getElementsByTagName('input')[0].checked)
+          document.getElementById("addoncheck_mobile").click()
+
+      closepopup(x + 'popup')
     }
 
 
