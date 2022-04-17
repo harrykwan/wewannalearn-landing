@@ -267,6 +267,58 @@
             overflow: hidden;
             background: white;
         }
+
+
+
+
+
+        .earlybird {
+            font-weight: bold;
+            margin-top: 88px;
+            margin-bottom: -128px;
+            width: 280px;
+            padding: 18px;
+            background: white;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            border: 0px solid white;
+            border-radius: 11px;
+            font-size: 17px;
+        }
+
+        .earlybirdmobile {
+            font-weight: bold;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            width: 280px;
+            padding: 15px;
+            background: white;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            border: 0px solid white;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+
+        .myProgress {
+            margin-top: 5px;
+            width: 100%;
+            background-color: #ddd;
+            border: 0px solid white;
+            border-radius: 11px;
+        }
+
+        .myBar {
+            /* width: 50%; */
+            height: 15px;
+            border: 0px solid white;
+            border-radius: 11px;
+            background-color: #2a6df5;
+        }
     </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
@@ -347,6 +399,19 @@
             <img class=" d-xs-block d-md-none "
                 style="width: calc(100% + 50px); margin-left: -25px;  margin-bottom: 50px;"
                 src="./img/doublestick/header1mobile.jpg">
+
+            <div class="earlybirdmobile">
+                <div class="d-flex">
+                    <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                    <div id="countdown_word_mobile" class="ml-auto" style="color: black; ">23<span
+                            style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
+                            style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
+                    </div>
+                </div>
+                <div class="myProgress">
+                    <div class="myBar" id="countdown_bar_mobile"></div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm" style="z-index: 100">
                     <h1 style="font-size: 25px; font-weight: bold;">「將雙節棍融入生活，<br>耍出靈活多變嘅香港人精神！成為一個Brand New Me!」
@@ -386,7 +451,23 @@
             </div>
         </div>
 
+        <div class="d-none d-md-block">
+            <div class="earlybird">
+                <div class="d-flex">
+                    <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                    <div id="countdown_word" class="ml-auto" style="color: black; ">23<span
+                            style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
+                            style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
+                    </div>
+                </div>
+                <div class="myProgress">
+                    <div class="myBar" id="countdown_bar"></div>
+                </div>
+            </div>
+        </div>
         <img style="width: 450px; position: absolute; left: -50px" class=" d-none d-md-block " src="img/bubble.png" />
+
+
 
         <div data-aos="fade-up" data-aos-duration="2000" class="container  d-none d-md-block "
             style="max-width: 1000px; margin-top: 50px; height: 650px;" data-aos="fade-up" data-aos-duration="2000">
@@ -1224,6 +1305,32 @@ margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
             }
         }
         checkurl()
+
+
+        const countdownstarttime = 1650211445451
+        const countdown = 1651276800000
+
+        setInterval(function () {
+            document.getElementById("countdown_word").innerHTML = daydifference(countdown - Date.now())
+            document.getElementById("countdown_word_mobile").innerHTML = daydifference(countdown - Date.now())
+            document.getElementById("countdown_bar").style.width = (countdown - Date.now()) / (countdown - countdownstarttime) + "%"
+            document.getElementById("countdown_bar_mobile").style.width = (countdown - Date.now()) / (countdown - countdownstarttime) + "%"
+        }, 1000)
+
+        function daydifference(difference_ms) {
+            difference_ms = difference_ms / 1000;
+            var seconds = Math.floor(difference_ms % 60);
+            difference_ms = difference_ms / 60;
+            var minutes = Math.floor(difference_ms % 60);
+            difference_ms = difference_ms / 60;
+            var hours = Math.floor(difference_ms % 24);
+            var days = Math.floor(difference_ms / 24);
+            // console.log(days, seconds, hours, minutes)
+            return `<div class="ml-auto" style="color: black; ">${days}<span style="font-size: 12px;">天</span>${hours}<span
+                    style="font-size: 12px;">時</span>${minutes}<span style="font-size: 12px;">分</span>${seconds}<span
+                    style="font-size: 12px;">秒</span>
+            </div>`
+        }
     </script>
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
