@@ -216,7 +216,7 @@
             font-size: 15px;
         }
 
-        #myProgress {
+        .myProgress {
             margin-top: 5px;
             width: 100%;
             background-color: #ddd;
@@ -224,8 +224,8 @@
             border-radius: 11px;
         }
 
-        #myBar {
-            width: 50%;
+        .myBar {
+            /* width: 50%; */
             height: 15px;
             border: 0px solid white;
             border-radius: 11px;
@@ -542,13 +542,13 @@
                     <div class="earlybird">
                         <div class="d-flex">
                             <div style="color: #2a6df5;">早鳥優惠倒數</div>
-                            <div class="ml-auto" style="color: black; ">23<span style="font-size: 12px;">天</span>8<span
-                                    style="font-size: 12px;">時</span>5<span style="font-size: 12px;">分</span>18<span
-                                    style="font-size: 12px;">秒</span>
+                            <div id="buscountdown_word" class="ml-auto" style="color: black; ">23<span
+                                    style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
+                                    style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
                             </div>
                         </div>
-                        <div id="myProgress">
-                            <div id="myBar"></div>
+                        <div class="myProgress">
+                            <div id="buscountdown_bar" class="myBar"></div>
                         </div>
                     </div>
 
@@ -565,13 +565,13 @@
                     <div class="earlybird">
                         <div class="d-flex">
                             <div style="color: #2a6df5;">早鳥優惠倒數</div>
-                            <div class="ml-auto" style="color: black; ">23<span style="font-size: 12px;">天</span>8<span
-                                    style="font-size: 12px;">時</span>5<span style="font-size: 12px;">分</span>18<span
-                                    style="font-size: 12px;">秒</span>
+                            <div id="doublestickcountdown_word" class="ml-auto" style="color: black; ">23<span
+                                    style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
+                                    style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
                             </div>
                         </div>
-                        <div id="myProgress">
-                            <div id="myBar"></div>
+                        <div class="myProgress">
+                            <div id="doublestickcountdown_bar" class="myBar"></div>
                         </div>
                     </div>
                 </div>
@@ -587,13 +587,13 @@
                     <div class="earlybird">
                         <div class="d-flex">
                             <div style="color: #2a6df5;">早鳥優惠倒數</div>
-                            <div class="ml-auto" style="color: black; ">23<span style="font-size: 12px;">天</span>8<span
-                                    style="font-size: 12px;">時</span>5<span style="font-size: 12px;">分</span>18<span
-                                    style="font-size: 12px;">秒</span>
+                            <div id="cookingcountdown_word" class="ml-auto" style="color: black; ">23<span
+                                    style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
+                                    style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
                             </div>
                         </div>
-                        <div id="myProgress">
-                            <div id="myBar"></div>
+                        <div class="myProgress">
+                            <div id="cookingcountdown_bar" class="myBar"></div>
                         </div>
                     </div>
                 </div>
@@ -625,13 +625,13 @@
                         <div class="earlybirdmobile">
                             <div class="d-flex">
                                 <div style="color: #2a6df5;">早鳥優惠倒數</div>
-                                <div class="ml-auto" style="color: black; ">23<span
+                                <div id="buscountdown_word_mobile" class="ml-auto" style="color: black; ">23<span
                                         style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
                                         style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
                                 </div>
                             </div>
-                            <div id="myProgress">
-                                <div id="myBar"></div>
+                            <div class="myProgress">
+                                <div class="myBar" id="buscountdown_bar_mobile"></div>
                             </div>
                         </div>
 
@@ -653,13 +653,14 @@
                         <div class="earlybirdmobile">
                             <div class="d-flex">
                                 <div style="color: #2a6df5;">早鳥優惠倒數</div>
-                                <div class="ml-auto" style="color: black; ">23<span
-                                        style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
-                                        style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
+                                <div id="doublestickcountdown_word_mobile" class="ml-auto" style="color: black; ">
+                                    23<span style="font-size: 12px;">天</span>8<span
+                                        style="font-size: 12px;">時</span>5<span style="font-size: 12px;">分</span>18<span
+                                        style="font-size: 12px;">秒</span>
                                 </div>
                             </div>
-                            <div id="myProgress">
-                                <div id="myBar"></div>
+                            <div class="myProgress">
+                                <div id="doublestickcountdown_bar_mobile" class="myBar"></div>
                             </div>
                         </div>
 
@@ -681,13 +682,13 @@
                         <div class="earlybirdmobile">
                             <div class="d-flex">
                                 <div style="color: #2a6df5;">早鳥優惠倒數</div>
-                                <div class="ml-auto" style="color: black; ">23<span
+                                <div id="cookingcountdown_word_mobile" class="ml-auto" style="color: black; ">23<span
                                         style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
                                         style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
                                 </div>
                             </div>
-                            <div id="myProgress">
-                                <div id="myBar"></div>
+                            <div class="myProgress">
+                                <div id="cookingcountdown_bar_mobile" class="myBar"></div>
                             </div>
                         </div>
 
@@ -932,6 +933,50 @@
 
         function closeblurbg() {
             document.getElementById("alldiv").classList.remove("blurbackground")
+        }
+
+
+
+        const countdownstarttime = 1650211445451
+        const buscountdown = 1651276800000
+        const doublestickcountdown = 1651276800000
+        const cookingcountdown = 1652572800000
+
+
+        setInterval(function () {
+
+            document.getElementById("buscountdown_word").innerHTML = daydifference(buscountdown - Date.now())
+            document.getElementById("buscountdown_word_mobile").innerHTML = daydifference(buscountdown - Date.now())
+            document.getElementById("buscountdown_bar").style.width = (buscountdown - Date.now()) / (buscountdown - countdownstarttime) + "%"
+            document.getElementById("buscountdown_bar_mobile").style.width = (buscountdown - Date.now()) / (buscountdown - countdownstarttime) + "%"
+
+
+
+            document.getElementById("doublestickcountdown_word").innerHTML = daydifference(doublestickcountdown - Date.now())
+            document.getElementById("doublestickcountdown_word_mobile").innerHTML = daydifference(doublestickcountdown - Date.now())
+            document.getElementById("doublestickcountdown_bar").style.width = (doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime) + "%"
+            document.getElementById("doublestickcountdown_bar_mobile").style.width = (doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime) + "%"
+
+
+            document.getElementById("cookingcountdown_word").innerHTML = daydifference(cookingcountdown - Date.now())
+            document.getElementById("cookingcountdown_word_mobile").innerHTML = daydifference(cookingcountdown - Date.now())
+            document.getElementById("cookingcountdown_bar").style.width = (cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime) + "%"
+            document.getElementById("cookingcountdown_bar_mobile").style.width = (cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime) + "%"
+        }, 1000)
+
+        function daydifference(difference_ms) {
+            difference_ms = difference_ms / 1000;
+            var seconds = Math.floor(difference_ms % 60);
+            difference_ms = difference_ms / 60;
+            var minutes = Math.floor(difference_ms % 60);
+            difference_ms = difference_ms / 60;
+            var hours = Math.floor(difference_ms % 24);
+            var days = Math.floor(difference_ms / 24);
+            // console.log(days, seconds, hours, minutes)
+            return `<div class="ml-auto" style="color: black; ">${days}<span style="font-size: 12px;">天</span>${hours}<span
+                    style="font-size: 12px;">時</span>${minutes}<span style="font-size: 12px;">分</span>${seconds}<span
+                    style="font-size: 12px;">秒</span>
+            </div>`
         }
     </script>
     <script src="https://player.vimeo.com/api/player.js"></script>
