@@ -947,21 +947,21 @@
 
             document.getElementById("buscountdown_word").innerHTML = daydifference(buscountdown - Date.now())
             document.getElementById("buscountdown_word_mobile").innerHTML = daydifference(buscountdown - Date.now())
-            document.getElementById("buscountdown_bar").style.width = ((buscountdown - Date.now()) / (buscountdown - countdownstarttime) * 0.5 + 50) + "%"
-            document.getElementById("buscountdown_bar_mobile").style.width = ((buscountdown - Date.now()) / (buscountdown - countdownstarttime) * 0.5 + 50) + "%"
+            document.getElementById("buscountdown_bar").style.width = ((Date.now() - countdownstarttime) / (buscountdown - countdownstarttime) * 0.5 * 100 + 50) + "%"
+            document.getElementById("buscountdown_bar_mobile").style.width = ((Date.now() - countdownstarttime) / (buscountdown - countdownstarttime) * 0.5 * 100 + 50) + "%"
 
 
 
             document.getElementById("doublestickcountdown_word").innerHTML = daydifference(doublestickcountdown - Date.now())
             document.getElementById("doublestickcountdown_word_mobile").innerHTML = daydifference(doublestickcountdown - Date.now())
-            document.getElementById("doublestickcountdown_bar").style.width = (((doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime)) * 0.5 + 50) + "%"
-            document.getElementById("doublestickcountdown_bar_mobile").style.width = (((doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime)) * 0.5 + 50) + "%"
+            document.getElementById("doublestickcountdown_bar").style.width = (((Date.now() - countdownstarttime) / (doublestickcountdown - countdownstarttime)) * 0.5 * 100 + 50) + "%"
+            document.getElementById("doublestickcountdown_bar_mobile").style.width = (((Date.now() - countdownstarttime) / (doublestickcountdown - countdownstarttime)) * 0.5 * 100 + 50) + "%"
 
 
             document.getElementById("cookingcountdown_word").innerHTML = daydifference(cookingcountdown - Date.now())
             document.getElementById("cookingcountdown_word_mobile").innerHTML = daydifference(cookingcountdown - Date.now())
-            document.getElementById("cookingcountdown_bar").style.width = (((cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime)) * 0.5 + 50) + "%"
-            document.getElementById("cookingcountdown_bar_mobile").style.width = (((cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime)) * 0.5 + 50) + "%"
+            document.getElementById("cookingcountdown_bar").style.width = (((Date.now() - countdownstarttime) / (cookingcountdown - countdownstarttime)) * 0.5 * 100 + 50) + "%"
+            document.getElementById("cookingcountdown_bar_mobile").style.width = (((Date.now() - countdownstarttime) / (cookingcountdown - countdownstarttime)) * 0.5 * 100 + 50) + "%"
         }, 1000)
 
         function daydifference(difference_ms) {
