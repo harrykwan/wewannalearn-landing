@@ -196,7 +196,7 @@
             margin-right: auto;
             border: 0px solid white;
             border-radius: 11px;
-            font-size: 17px;
+            font-size: 16px;
         }
 
         .earlybirdmobile {
@@ -541,7 +541,7 @@
                     <!-- <img src="img/homepage/busafter.png" style="width: 400px; position: absolute; left: auto; z-index:10;"> -->
                     <div class="earlybird">
                         <div class="d-flex">
-                            <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                            <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                             <div id="buscountdown_word" class="ml-auto" style="color: black; ">23<span
                                     style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
                                     style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
@@ -564,7 +564,7 @@
 
                     <div class="earlybird">
                         <div class="d-flex">
-                            <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                            <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                             <div id="doublestickcountdown_word" class="ml-auto" style="color: black; ">23<span
                                     style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
                                     style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
@@ -586,7 +586,7 @@
 
                     <div class="earlybird">
                         <div class="d-flex">
-                            <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                            <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                             <div id="cookingcountdown_word" class="ml-auto" style="color: black; ">23<span
                                     style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
                                     style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
@@ -624,7 +624,7 @@
 
                         <div class="earlybirdmobile">
                             <div class="d-flex">
-                                <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                                <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                                 <div id="buscountdown_word_mobile" class="ml-auto" style="color: black; ">23<span
                                         style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
                                         style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
@@ -652,7 +652,7 @@
 
                         <div class="earlybirdmobile">
                             <div class="d-flex">
-                                <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                                <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                                 <div id="doublestickcountdown_word_mobile" class="ml-auto" style="color: black; ">
                                     23<span style="font-size: 12px;">天</span>8<span
                                         style="font-size: 12px;">時</span>5<span style="font-size: 12px;">分</span>18<span
@@ -681,7 +681,7 @@
 
                         <div class="earlybirdmobile">
                             <div class="d-flex">
-                                <div style="color: #2a6df5;">早鳥優惠倒數</div>
+                                <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                                 <div id="cookingcountdown_word_mobile" class="ml-auto" style="color: black; ">23<span
                                         style="font-size: 12px;">天</span>8<span style="font-size: 12px;">時</span>5<span
                                         style="font-size: 12px;">分</span>18<span style="font-size: 12px;">秒</span>
@@ -947,21 +947,21 @@
 
             document.getElementById("buscountdown_word").innerHTML = daydifference(buscountdown - Date.now())
             document.getElementById("buscountdown_word_mobile").innerHTML = daydifference(buscountdown - Date.now())
-            document.getElementById("buscountdown_bar").style.width = (buscountdown - Date.now()) / (buscountdown - countdownstarttime) + "%"
-            document.getElementById("buscountdown_bar_mobile").style.width = (buscountdown - Date.now()) / (buscountdown - countdownstarttime) + "%"
+            document.getElementById("buscountdown_bar").style.width = ((buscountdown - Date.now()) / (buscountdown - countdownstarttime) * 0.5 + 50) + "%"
+            document.getElementById("buscountdown_bar_mobile").style.width = ((buscountdown - Date.now()) / (buscountdown - countdownstarttime) * 0.5 + 50) + "%"
 
 
 
             document.getElementById("doublestickcountdown_word").innerHTML = daydifference(doublestickcountdown - Date.now())
             document.getElementById("doublestickcountdown_word_mobile").innerHTML = daydifference(doublestickcountdown - Date.now())
-            document.getElementById("doublestickcountdown_bar").style.width = (doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime) + "%"
-            document.getElementById("doublestickcountdown_bar_mobile").style.width = (doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime) + "%"
+            document.getElementById("doublestickcountdown_bar").style.width = (((doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime)) * 0.5 + 50) + "%"
+            document.getElementById("doublestickcountdown_bar_mobile").style.width = (((doublestickcountdown - Date.now()) / (doublestickcountdown - countdownstarttime)) * 0.5 + 50) + "%"
 
 
             document.getElementById("cookingcountdown_word").innerHTML = daydifference(cookingcountdown - Date.now())
             document.getElementById("cookingcountdown_word_mobile").innerHTML = daydifference(cookingcountdown - Date.now())
-            document.getElementById("cookingcountdown_bar").style.width = (cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime) + "%"
-            document.getElementById("cookingcountdown_bar_mobile").style.width = (cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime) + "%"
+            document.getElementById("cookingcountdown_bar").style.width = (((cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime)) * 0.5 + 50) + "%"
+            document.getElementById("cookingcountdown_bar_mobile").style.width = (((cookingcountdown - Date.now()) / (cookingcountdown - countdownstarttime)) * 0.5 + 50) + "%"
         }, 1000)
 
         function daydifference(difference_ms) {
