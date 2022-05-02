@@ -70,10 +70,10 @@ app.get("/teach", (req, res, next) => {
 });
 
 app.get(
-  "/.well-known/acme-challenge/hHweofG2gEvExw2U8QIThkAiopM4fKZzC-dLCvnk_Ic",
+  "/.well-known/acme-challenge/lLBZNBchoXq0Q9XGrfw00PLVYRfpBzd0xmeb7ZOnEF4",
   (req, res, next) => {
     return res.send(
-      "hHweofG2gEvExw2U8QIThkAiopM4fKZzC-dLCvnk_Ic.WPopRAMiK7fq896tKu_f55uKd7J41QCJN1ZvAHsP6Gs"
+      "lLBZNBchoXq0Q9XGrfw00PLVYRfpBzd0xmeb7ZOnEF4.WPopRAMiK7fq896tKu_f55uKd7J41QCJN1ZvAHsP6Gs"
     );
   }
 );
