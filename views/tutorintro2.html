@@ -6,7 +6,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -418,7 +418,7 @@
                 style="width: calc(100% + 50px); margin-left: -25px;  margin-bottom: 50px;"
                 src="./img/doublestick/header1mobile.jpg">
 
-            <div class="earlybirdmobile">
+            <div class="earlybirdmobile" hidden>
                 <div class="d-flex">
                     <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                     <div id="countdown_word_mobile" class="ml-auto" style="color: black; ">23<span
@@ -470,7 +470,7 @@
         </div>
 
         <div class="d-none d-md-block">
-            <div class="earlybird">
+            <div class="earlybird" hidden>
                 <div class="d-flex">
                     <div style="color: #2a6df5;">超早鳥優惠倒數</div>
                     <div id="countdown_word" class="ml-auto" style="color: black; ">23<span
