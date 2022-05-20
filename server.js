@@ -69,6 +69,10 @@ app.get("/teach", (req, res, next) => {
   return res.render("./joinus.html", {});
 });
 
+app.get("/test_completed", (req, res, next) => {
+  return res.render("./completed_testing.html", {});
+});
+
 app.get(
   "/.well-known/acme-challenge/lLBZNBchoXq0Q9XGrfw00PLVYRfpBzd0xmeb7ZOnEF4",
   (req, res, next) => {
