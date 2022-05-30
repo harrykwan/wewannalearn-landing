@@ -1,6 +1,7 @@
 require("dotenv").config();
 const fs = require("fs");
 var https = require("https");
+var md5 = require("md5");
 // var http = require("http");
 // var privateKey = fs.readFileSync("./server.key", "utf8");
 // var certificate = fs.readFileSync("./server.cert", "utf8");
@@ -48,6 +49,25 @@ app.use(express.static(path.join(__dirname, "./views")));
 //     message: "Hello from root!",
 //   });
 // });
+
+function addboughtcourse(email, courseid) {
+  const userid = md5(email);
+  var options = {
+    method: "POST",
+    url: "https://0e1xi0dbje.execute-api.us-east-1.amazonaws.com/addcourse",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userid: userid,
+      courseid: courseid,
+    }),
+  };
+  request(options, function (error, response) {
+    if (error) throw new Error(error);
+    console.log(response.body);
+  });
+}
 
 app.get("/", (req, res, next) => {
   return res.render("./index.html");
@@ -262,6 +282,15 @@ app.post("/charge", (req, res) => {
     saurceaddon: 799 + 139,
   };
 
+  const coursetocourseid = {
+    minibus: "minibus_prod",
+    minibusaddon: "minibus_prod",
+    doublestick: "nanchaku_prod",
+    doublestickaddon: "nanchaku_prod",
+    saurce: "cooking_prod",
+    saurceaddon: "cooking_prod",
+  };
+
   const courseimglist = {
     minibus:
       "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/a90807cb-31a3-4adb-f6f4-99a9313c1d00/public",
@@ -365,6 +394,7 @@ app.post("/charge", (req, res) => {
                 if (error) throw new Error(error);
                 console.log(response.body);
               });
+              addboughtcourse(req.body.email, req.body.course);
             })
             .catch((err) => {
               console.log(err);
