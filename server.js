@@ -76,8 +76,7 @@ function addboughtcourse(email, courseid, name, phone) {
       "&email=" +
       encodeURIComponent(email) +
       "&phone=" +
-      encodeURIComponent(phone) +
-      "",
+      encodeURIComponent(phone),
     headers: {},
   };
   request(options, function (error, response) {
