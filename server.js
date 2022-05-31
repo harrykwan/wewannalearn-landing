@@ -50,7 +50,7 @@ app.use(express.static(path.join(__dirname, "./views")));
 //   });
 // });
 
-function addboughtcourse(email, courseid) {
+function addboughtcourse(email, courseid, name, phone) {
   const userid = md5(email);
   var options = {
     method: "POST",
@@ -62,6 +62,23 @@ function addboughtcourse(email, courseid) {
       userid: userid,
       courseid: courseid,
     }),
+  };
+  request(options, function (error, response) {
+    if (error) throw new Error(error);
+    console.log(response.body);
+  });
+
+  options = {
+    method: "GET",
+    url:
+      "https://app.wewannalearn.com/api/newaccount?name=" +
+      encodeURIComponent(name) +
+      "&email=" +
+      encodeURIComponent(email) +
+      "&phone=" +
+      encodeURIComponent(phone) +
+      "",
+    headers: {},
   };
   request(options, function (error, response) {
     if (error) throw new Error(error);
@@ -394,7 +411,12 @@ app.post("/charge", (req, res) => {
                 if (error) throw new Error(error);
                 console.log(response.body);
               });
-              addboughtcourse(req.body.email, req.body.course);
+              addboughtcourse(
+                req.body.email,
+                coursetocourseid[req.body.course],
+                req.body.name,
+                req.body.phone
+              );
             })
             .catch((err) => {
               console.log(err);
