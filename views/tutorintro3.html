@@ -6,7 +6,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -1201,8 +1201,8 @@ margin-top: 120px; position: absolute;" class=" d-xs-block d-md-none" />
         }
         checkurl()
 
-        const countdownstarttime = 1650211445451
-        const countdown = 1653955200000
+        const countdownstarttime = 1654496062880
+        const countdown = 1656547200000
 
         setInterval(function () {
             const percentage = (Date.now() - countdownstarttime) / (countdown - countdownstarttime) * 100 * 0.5 + 50
