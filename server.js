@@ -110,10 +110,10 @@ app.get("/test_completed", (req, res, next) => {
 });
 
 app.get(
-  "/.well-known/acme-challenge/lLBZNBchoXq0Q9XGrfw00PLVYRfpBzd0xmeb7ZOnEF4",
+  "/.well-known/acme-challenge/KEeTn_nJMa8VfFngJBEYyyfgQE3Eyiky5zfeUnmA6EU",
   (req, res, next) => {
     return res.send(
-      "lLBZNBchoXq0Q9XGrfw00PLVYRfpBzd0xmeb7ZOnEF4.WPopRAMiK7fq896tKu_f55uKd7J41QCJN1ZvAHsP6Gs"
+      "KEeTn_nJMa8VfFngJBEYyyfgQE3Eyiky5zfeUnmA6EU.WPopRAMiK7fq896tKu_f55uKd7J41QCJN1ZvAHsP6Gs"
     );
   }
 );
