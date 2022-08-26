@@ -320,7 +320,7 @@ app.post("/charge", (req, res) => {
               });
               addboughtcourse(
                 req.body.email,
-                coursetocourseid[req.body.course],
+                coursetocourseid[req.body.coursecode],
                 req.body.name,
                 req.body.phone
               );
@@ -347,6 +347,113 @@ app.post("/charge", (req, res) => {
     res.render("./charge_" + req.body.course + ".html", {
       warning: "Error",
     });
+  }
+});
+
+app.get("/paybycash", (req, res, next) => {
+  return res.render("./paybycash.html", {});
+});
+
+app.post("/paybycash", (req, res) => {
+  try {
+    const coursetocourseid = {
+      minibus: "minibus_prod",
+      minibusaddon: "minibus_prod",
+      doublestick: "nanchaku_prod",
+      doublestickaddon: "nanchaku_prod",
+      saurce: "cooking_prod",
+      saurceaddon: "cooking_prod",
+    };
+
+    const courseimglist = {
+      minibus:
+        "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/a90807cb-31a3-4adb-f6f4-99a9313c1d00/public",
+      minibusaddon:
+        "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/a90807cb-31a3-4adb-f6f4-99a9313c1d00/public",
+      doublestick:
+        "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/1398af81-3a30-4b9f-db9b-e41f9a310900/public",
+      doublestickaddon:
+        "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/1398af81-3a30-4b9f-db9b-e41f9a310900/public",
+      saurce:
+        "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/041df1e4-0825-4778-4a3b-703546b9c400/public",
+      saurceaddon:
+        "https://imagedelivery.net/F-3JVW4H1_xFj9Tfzrx6uA/041df1e4-0825-4778-4a3b-703546b9c400/public",
+    };
+
+    const emailtitlelist = {
+      minibus: "【匠人精神！手寫小巴牌網上課程】多謝你的訂購！",
+      minibusaddon: "【匠人精神！手寫小巴牌網上課程】多謝你的訂購！",
+      doublestick: "【型爆！雙節棍入門網上課程】多謝你的訂購！",
+      doublestickaddon: "【型爆！雙節棍入門網上課程】多謝你的訂購！",
+      saurce: "【快靚正！香港味道煮食網上課程】多謝你的訂購！",
+      saurceaddon: "【快靚正！香港味道煮食網上課程】多謝你的訂購！",
+    };
+
+    const emailtitle = emailtitlelist[req.body.coursecode]
+      ? emailtitlelist[req.body.coursecode]
+      : "多謝購買課程";
+
+    if (req.body.coursecode == "minibusaddon") {
+      db.push("/minibusaddon/list[]", req.body);
+    }
+
+    const address = req.body.address ? req.body.address : "";
+    const country = req.body.country ? req.body.country : "";
+    const city = req.body.city ? req.body.city : "";
+    const state = req.body.state ? req.body.state : "";
+    const postcode = req.body.postcode ? req.body.postcode : "";
+    var options = {
+      method: "POST",
+      url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScDpQR2gQ4EhmkOlFX6JXWSjwDCDYMUAfZvB4qRL7xyeXy3kQ/formResponse",
+      formData: {
+        "entry.1896806186": req.body.name ? req.body.name : "",
+        "entry.673454844": req.body.phone ? req.body.phone : "",
+        "entry.1920172636": req.body.email ? req.body.email : "",
+        "entry.1648267103": req.body.coursecode + " " + req.body.courseprice,
+        "entry.1337606191":
+          address +
+          " | " +
+          country +
+          " | " +
+          city +
+          " | " +
+          state +
+          " | " +
+          postcode,
+      },
+    };
+    request(options, function (error, response) {
+      if (error) console.log(error);
+      // console.log(response.body);
+    });
+
+    var options = {
+      method: "POST",
+      url: "https://irq3jumapc.execute-api.us-east-1.amazonaws.com/dev/paymentconfirm",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        subject: emailtitle,
+        to: req.body.email,
+        courseimg: courseimglist[req.body.coursecode],
+      }),
+    };
+    request(options, function (error, response) {
+      if (error) throw new Error(error);
+      console.log(response.body);
+    });
+    addboughtcourse(
+      req.body.email,
+      coursetocourseid[req.body.coursecode],
+      req.body.name,
+      req.body.phone
+    );
+
+    res.render("./completed_" + req.body.coursecode + ".html");
+  } catch (err) {
+    console.log(err);
+    res.send(err);
   }
 });
 
