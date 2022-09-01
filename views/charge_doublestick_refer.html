@@ -17,7 +17,7 @@
     fbq('init', '515766666807534');
     fbq('track', 'PageView');
 
-    fbq('track', 'Payment_Minibus');
+    fbq('track', 'Payment_Nunchaku');
   </script>
   <noscript>
     <img height="1" width="1" src="https://www.facebook.com/tr?id=515766666807534&ev=PageView
@@ -28,27 +28,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
-
+  <meta property="og:image"
+    content="https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/saurcevideopreview.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="1000" />
+  <meta property="og:title" content="【快靚正！香港味道煮食網上課程】" />
+  <meta property="og:description"
+    content="「無論去到邊度，您都可以快靚正煮出香港味道！」品嚐到美味的家常菜是我們一生其中最幸福窩心的事情。Keith秉承了80多年香港醬油世家的精粹，將對香港味道的一份愛融合於傳統加創新的獨門快靚正煮食系統，讓每個人都可以簡單快捷煮出回味無窮的香港味道！" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" rel="stylesheet" />
-  <meta property="og:image"
-    content="https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg" />
-  <meta property="og:image:width" content="1600" />
-  <meta property="og:image:height" content="1000" />
-  <meta property="og:title" content="【匠人精神！手寫小巴牌網上課程】" />
-  <meta property="og:description"
-    content="「每個人都應該有一塊屬於自己故事嘅小巴牌」紅藍色、繁體字，充滿香港特色的玩味潮語小巴牌近年成為風潮，更喚起大眾關注這一門獨有文化，但可惜手寫小巴牌正漸漸走向歷史盡頭。麥師傅在課程中會將40年來製作小巴牌的精粹傳授給大家，希望由您薪火相傳這一份香港人精神。" />
+
+
 
   <style>
     html {
       background: white;
       color: black;
     }
-
-
 
     body {
       background: white;
@@ -112,6 +110,13 @@
     }
 
 
+    .pricetag {
+      color: #fd5e34;
+    }
+
+    .bold {
+      font-weight: 800;
+    }
 
     .blurbackground {
       -webkit-filter: blur(2px) brightness(30%);
@@ -122,6 +127,7 @@
       overflow: hidden;
       background: white;
     }
+
 
 
     .upsellbutton {
@@ -198,14 +204,6 @@
       overflow: scroll;
     }
 
-    .pricetag {
-      color: #fd5e34;
-    }
-
-    .bold {
-      font-weight: 800;
-    }
-
     /* For Mobile */
     @media screen and (max-width: 540px) {
       .contactinput {
@@ -215,11 +213,6 @@
 
       .pricetag {
         width: 300px;
-      }
-
-      .bold {
-        font-weight: bold;
-        font-size: 18px;
       }
 
       .contactinputouter {
@@ -238,11 +231,6 @@
 
       .pricetag {
         width: 300px;
-      }
-
-      .bold {
-        font-weight: bold;
-        font-size: 20px;
       }
 
       .contactinputouter {
@@ -331,6 +319,7 @@
 
 <body class="">
 
+
   <div class="d-none d-md-block">
     <div id="desktoppopup" class="popupwindow " hidden>
       <button onclick="closepopup('desktoppopup')"
@@ -338,28 +327,22 @@
       <div class="row">
         <div class="col-6">
 
-          <img
-            style="width: 300px; margin-top: 60px; margin-bottom: 60px; border: 4px solid black; border-radius: 50%; left: 0; right: 0; margin-left: auto; margin-right: auto;"
-            src="img/bus/upsell/upsell.jpg" />
+          <video muted autoplay
+            style="width: 300px; height: 300px; object-fit: cover; object-position: center center; margin-top: 60px; margin-bottom: 60px; border: 4px solid black; border-radius: 50%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
+            <source src="/img/doublestick/upsell/upsell2.mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div class="col-6" style="margin-top: 30px;">
-          <div style="margin-right: 50px; margin-top: 0px;">
+
+          <div style="margin-right: 50px; margin-top: 100px;">
+            <h1 style="font-size: 22px;">限量LED螢光雙節棍</h1>
+            <br>
             <div style="margin-right: 50px">
-              現凡報讀手寫小巴牌網上課程，即享有機會追加購買精美限量版紅Van小巴模型一個，現時全球限量50套，每位學員只限買一套，售完即止！
+              發放一流視覺效果，USB充電，並且有五種顏色可轉換，無論影相、拍片，或收藏，都能耍出破格精神！
+
             </div>
-
-
-            <h1 style="font-size: 25px; margin-top: 20px;">
-              「前面有落！」
-            </h1>
-
-            <div style="margin-right: 50px; font-size: 18px; margin-top: 20px;"> 一句耳熟能詳的叫喊，能勾起你對紅van的甚麼回憶？</div>
-
-            <div style="margin-right: 50px; margin-top: 20px;">
-
-              由香港本地畫家精心設計的紙本紅Van小巴模型，是以香港70年代當年盛極一時的日產ECHO小巴為藍本，立體地展現出這款小巴的模樣與特色，更車頭更配上有本土色彩的手寫小巴地點牌及價錢牌，更附上特色土泵把隨意加上；此小巴並以香港最後一個手寫小巴牌師傅
-              - 麥錦生師傅作司機並與與他的愛寵們為乘客共你一起回到紅Van的黃金盛世年代！
-            </div>
+            <br>
 
           </div>
 
@@ -377,34 +360,28 @@
         style="font-size: 30px; position: fixed; top: 120px; left: calc(50% + 120px);  z-index: 999;">✕</button>
       <div class="row">
         <div class="col-12">
-          <img style="width: 100%; margin-bottom: 30px; margin-top: 50px; border: 4px solid black; border-radius: 50%;"
-            src="img/bus/upsell/upsell.jpg" />
+
+          <video muted autoplay
+            style="width: 300px; height: 300px; object-fit: cover; object-position: center center; margin-top: 60px; margin-bottom: 60px; border: 4px solid black; border-radius: 50%; left: 0; right: 0; margin-left: auto; margin-right: auto;">
+            <source src="/img/doublestick/upsell/upsell2.mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div class="col-12">
 
           <div style=" margin-bottom: 40px;">
-            <div style="margin-right: 50px">
-              現凡報讀手寫小巴牌網上課程，即享有機會追加購買精美限量版紅Van小巴模型一個，現時全球限量50套，每位學員只限買一套，售完即止！
-            </div>
-
-
-            <h1 style="font-size: 25px; margin-top: 20px;">
-              「前面有落！」
-            </h1>
-
-            <div style="margin-right: 50px; font-size: 18px; margin-top: 20px;"> 一句耳熟能詳的叫喊，能勾起你對紅van的甚麼回憶？</div>
-
-            <div style="margin-right: 50px; margin-top: 20px;">
-
-              由香港本地畫家精心設計的紙本紅Van小巴模型，是以香港70年代當年盛極一時的日產ECHO小巴為藍本，立體地展現出這款小巴的模樣與特色，更車頭更配上有本土色彩的手寫小巴地點牌及價錢牌，更附上特色土泵把隨意加上；此小巴並以香港最後一個手寫小巴牌師傅
-              - 麥錦生師傅作司機並與與他的愛寵們為乘客共你一起回到紅Van的黃金盛世年代！
-            </div>
+            限量版LED螢光雙節棍<br>
+            <br>
+            發放一流視覺效果，USB充電，並且有五種顏色可轉換，無論影相、拍片，或收藏，都能耍出破格精神！
+            <br>
 
           </div>
 
 
 
+
           <button style="margin-top: 10px;" onclick="clickcheck('mobile')" class="upsellbutton_mobile">追加</button>
+
 
         </div>
       </div>
@@ -442,28 +419,25 @@
 
 
 
-
-
-
   <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden" class="" onclick="outfopopup()">
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-md-block" style="margin-bottom: 50px; z-index: 999">
-      <a class="navbar-brand" href="/"><img src="./img/logo_orange.png" style="width: 250px;" /></a>
+      <a class="navbar-brand" href="/"><img src="/img/logo_orange.png" style="width: 250px;" /></a>
       <div>
-        <img src="./img/charge/bubble_oragnge.png" style="width: 200px; position: absolute; right: 200px; top: -20px;">
-        <img src="./img/charge/closetag_orange.png" style="width: 300px; top: 200px; position: absolute; left: 0px;">
-        <img src="./img/charge/slack_orange.png" style="width: 250px; position: absolute; right: 0px; top: 400px;">
+        <img src="/img/charge/bubble_oragnge.png" style="width: 200px; position: absolute; right: 200px; top: -20px;">
+        <img src="/img/charge/closetag_orange.png" style="width: 300px; top: 200px; position: absolute; left: 0px;">
+        <img src="/img/charge/slack_orange.png" style="width: 250px; position: absolute; right: 0px; top: 400px;">
       </div>
     </nav>
 
     <nav class="navbar navbar-expand-lg navbar-dark d-xs-block d-md-none" style="margin-bottom: 50px; z-index: 999">
-      <a class="navbar-brand" href="/"><img src="./img/logo_orange.png"
+      <a class="navbar-brand" href="/"><img src="/img/logo_orange.png"
           style="width: 180px; margin-top: 0px; margin-left: 0px;" /></a>
       <div>
-        <img src="./img/charge/bubble_oragnge.png"
+        <img src="/img/charge/bubble_oragnge.png"
           style="width: 130px; top: 300px; position: absolute; left: -70px; z-index: -999;">
-        <img src="./img/charge/opentag_orange.png" style="width: 200px; top: 80px; position: absolute; left: -40px;">
-        <img src="./img/charge/closetag_orange.png" style="width: 200px; top: 280px; position: absolute; right: -80px;">
-        <img src="./img/charge/slack_orange.png" style="width: 150px; position: absolute; right: -60px; top: 40px;">
+        <img src="/img/charge/opentag_orange.png" style="width: 200px; top: 80px; position: absolute; left: -40px;">
+        <img src="/img/charge/closetag_orange.png" style="width: 200px; top: 280px; position: absolute; right: -80px;">
+        <img src="/img/charge/slack_orange.png" style="width: 150px; position: absolute; right: -60px; top: 40px;">
       </div>
     </nav>
 
@@ -472,21 +446,20 @@
         <h1 style="color: #fd5e34;" class="text-4xl">您正在訂購</h1>
       </div>
       <div class="h-20 flex justify-center">
-        <h1 style="color: #fd5e34;" class="text-4xl"><span class="myunderline">匠人精神！手寫小巴牌網上課程</span></h1>
+        <h1 style="color: #fd5e34;" class="text-4xl"><span class="myunderline">型爆！雙節棍入門網上課程</span></h1>
       </div>
       <img
         style="width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto;  position: relative; z-index: 1000;"
-        src="img/homepage/busvideopreview.jpg" />
+        src="/img/homepage/doublestickvideopreview.jpg" />
       <div
         style="color: #fd5e34; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px; border-bottom: 3px solid #fd5e34; padding-bottom: 30px;">
         <div class="d-flex">
-          <div class="p-2 bold">1. 匠人精神！手寫小巴牌網上課程 [無限重温]</div>
-          <div class="ml-auto p-2 "><span style="font-size: 16px; font-weight: normal;">HKD</span> $999</div>
+          <div class="p-2 bold">1. 型爆！雙節棍入門網上課程 [無限重温]</div>
+          <div class="ml-auto p-2 "><span style="font-size: 16px; font-weight: normal;">HKD</span> $799</div>
         </div>
 
         <div class="d-flex">
-          <div class="p-2 bold">2. 手寫小巴牌製作工具盒
-            <div style="margin-left: 20px; font-weight: normal; font-size: 14px;">
+          <div class="p-2 bold">2. 海綿安全雙節棍一套 (黃色) <div style="margin-left: 20px; font-weight: normal; font-size: 14px;">
               (只限早鳥期間附送)</div>
           </div>
 
@@ -494,34 +467,20 @@
         </div>
 
         <div style="margin-top: 10px; ">
-          <div class="bold" style="padding-left: 30px;">內含所有材料：</div>
-          <div style="margin-top: 10px; padding-left: 50px; font-size: 14px;">
-            · 尺寸15cm X 23cm 紅VAN膠片 x 1<br>
-            · 白色小巴牌(亞架力) x 1<br>
-            · 大狼毫毛筆 x 2<br>
-            · 小圭筆 x 2<br>
-            · 油性水筆 x 1<br>
-            · 開顏料膠杯 x 2<br>
-            · 模版紙 x 1<br>
-            · 稀釋劑 x 1 <br>
-            · 獨家調製藍色墨水 x 1<br>
-            · 獨家調製紅色墨水 x 1<br>
-            <br>
-            (由於條例管制，顏料只能向香港地區提供；<br>
-            其他地區學員會提供外間易於購買顏料之建議)<br>
-            <br>
+          <div class="" style="padding-left: 30px; font-size: 14px;"> 每副雙節棍上印有香港雙節棍總會標誌及雙節棍袋<br>
+            (棍長28cm，重150克，繩子長16cm，符合國際測試)</div>
 
-          </div>
         </div>
 
         <div id="addondescription" hidden style="margin-top: 10px;">
           <div class="d-flex">
-            <div class="p-2 bold">3. 追加：限量版紅Van小巴模型</div>
-            <div class="ml-auto"><span style=" font-size: 16px; font-weight: normal;">HKD</span> $99</div>
+            <div class="p-2 bold">3. 追加：限量版LED螢光雙節棍</div>
+            <div class="ml-auto p-2 "><span style="font-size: 16px; font-weight: normal;">HKD</span> $299</div>
           </div>
         </div>
 
       </div>
+
     </div>
 
     <div class="d-xs-block d-md-none">
@@ -529,59 +488,43 @@
         <h1 style="color: #fd5e34; font-weight: bold; font-size: 28px;">您正在訂購</h1>
       </div>
       <div class="h-20 flex justify-center">
-        <h1 style="color: #fd5e34; font-weight: bold; font-size: 28px; text-align: center;"><span
-            class="myunderline">匠人精神！<br>手寫小巴牌網上課程</span>
+        <h1 style="color: #fd5e34; font-weight: bold; font-size: 28px;"><span class="myunderline">型爆！雙節棍入門網上課程</span>
         </h1>
       </div>
       <img
         style="width: 300px; left: 0; right: 0; margin-left: auto; margin-right: auto; position: relative; z-index: 1000;"
-        src="img/homepage/busvideopreview.jpg" />
+        src="/img/homepage/doublestickvideopreview.jpg" />
+
       <div
         style="color: #fd5e34; width: 100%; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px; border-bottom: 3px solid #fd5e34; padding-bottom: 30px;">
         <div class="" style="margin-left: 20px;">
-          <div class="p-2 bold">1. 匠人精神！手寫小巴牌網上課程 <div style="margin-left:20px">[無限重温]</div>
-          </div>
+          <div class="p-2 bold">1. 型爆！雙節棍入門網上課程 [無限重温]</div>
           <div class=" p-2 " style="margin-left: 20px; margin-top: -15px; margin-bottom: 20px;"><span
               style="font-size: 16px; font-weight: normal;">HKD</span>
-            $999</div>
+            $799</div>
         </div>
 
         <div class="" style="margin-left: 20px;">
-          <div class="p-2 bold">2. 手寫小巴牌製作工具盒
-            <div style="margin-left: 20px; font-weight: normal; font-size: 14px;">
+          <div class="p-2 bold">2. 海綿安全雙節棍一套 (黃色) <div style="margin-left: 20px; font-weight: normal; font-size: 14px;">
               (只限早鳥期間附送)</div>
           </div>
-          <div class="p-2 " style="margin-left: 20px; margin-top: -15px; margin-bottom: -10px;"><span
+          <div class=" p-2 " style="margin-left: 20px; margin-top: -15px; margin-bottom: 20px;"><span
               style="font-size: 16px; font-weight: normal;">HKD</span>
             $200</div>
         </div>
 
-        <div style="margin-top: 20px; ">
-          <div class="bold" style="padding-left: 50px;">內含所有材料：</div>
-          <div style="margin-top: 0px; padding-left: 60px; font-size: 16px;">
-            · 尺寸15cm X 23cm 紅VAN膠片 x 1<br>
-            · 白色小巴牌(亞架力) x 1<br>
-            · 大狼毫毛筆 x 2<br>
-            · 小圭筆 x 2<br>
-            · 油性水筆 x 1<br>
-            · 開顏料膠杯 x 2<br>
-            · 模版紙 x 1<br>
-            · 稀釋劑 x 1 <br>
-            · 獨家調製藍色墨水 x 1<br>
-            · 獨家調製紅色墨水 x 1<br>
-            <br>
-            (由於條例管制，顏料只能向香港地區提供;<br>
-            其他地區學員會提供外間易於購買顏料<br>之建議)<br>
-            <br>
-          </div>
+        <div style="margin-top: 10px; ">
+          <div class="" style="padding-left: 50px; padding-right: 30px; font-size: 13px;">每副雙節棍上印有香港雙節棍總會標誌及雙節棍袋<br>
+            (棍長28cm，重150克，繩子長16cm，符合國際測試)</div>
+
         </div>
 
 
         <div id="addondescription_mobile" hidden style="margin-top: 10px;">
           <div class="" style="margin-left: 20px;">
-            <div class="p-2 bold">3. 追加：限量版紅Van小巴模型</div>
+            <div class="p-2 bold">3. 追加：限量版LED螢光雙節棍</div>
             <div class=" p-2 " style="margin-left: 20px;"><span style="font-size: 16px; font-weight: normal;">HKD</span>
-              $99</div>
+              $299</div>
           </div>
         </div>
       </div>
@@ -591,33 +534,34 @@
 
     <div class="d-none d-md-block"
       style="color: #fd5e34; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px; ">
-
       <div style="margin-left: 13px; margin-bottom: 20px; font-size: 22px;" class="bold">追加：</div>
-
       <div class="d-flex">
         <div class="p-2 bold" style="margin-top: 30px;">
-          <label id="addoncheck" class="container">
+          <label class="container" id="addoncheck">
             <input type="checkbox" onchange="checkaddon(this)">
             <span class="checkmark"></span>
           </label>
-          <img
-            style="width: 100px; position: absolute; margin-left: 50px; margin-top: -40px; border: 2px solid #fd5e34; border-radius: 10px;"
-            src="img/bus/upsell/upsell.jpg">
-          <div onclick="openaddondetails()" style="margin-left: 170px; margin-top: -20px; font-size: 18px;">
 
-            <b> 限量版紅Van小巴模型 x 1</b><br><span class="myclickable"
-              style="color: #007bff; font-size: 16px; border-bottom: 1px solid #007bff;">詳情請看</span>
+
+          <video muted autoplay
+            style=" height: 100px; object-fit: cover; object-position: center center; width: 100px; position: absolute; margin-left: 50px; margin-top: -40px; border: 2px solid #fd5e34; border-radius: 10px;">
+            <source src="/img/doublestick/upsell/upsell2.mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div onclick="openaddondetails()" style="margin-left: 170px; margin-top: -20px; ;">
+            <b>限量版LED螢光雙節棍</b><br><span class="myclickable"
+              style="color: #007bff; font-size: 18px; border-bottom: 1px solid #007bff;">詳情請看</span>
           </div>
         </div>
         <div class="ml-auto p-2 " style="margin-top: 30px;"><span
-            style="font-size: 16px; font-weight: normal;">HKD</span>$99</div>
+            style="font-size: 16px; font-weight: normal;">HKD</span>$299</div>
       </div>
 
     </div>
 
 
     <div class="d-xs-block d-md-none"
-      style="left: 0; right: 0; margin-left: auto; margin-right: auto; width: 330px; color: fd5e34; font-size: 18px; margin-top: 20px;">
+      style="left: 0; right: 0; margin-left: auto; margin-right: auto; width: 330px; color: fd5e34; font-size: 20px; margin-top: 20px;">
       <div style="margin-left: 0px; margin-bottom: 20px; font-size: 24px;" class="bold">追加：</div>
       <div class="row">
         <div class="col-5" style="margin-top: 30px;">
@@ -625,16 +569,21 @@
             <input type="checkbox" onchange="checkaddon(this)">
             <span class="checkmark"></span>
           </label>
-          <img
-            style="width: 80px; position: absolute; margin-left: 50px; margin-top: -30px; border: 2px solid #fd5e34; border-radius: 10px;"
-            src="img/bus/upsell/upsell.jpg">
+
+          <video muted autoplay
+            style=" height: 80px; object-fit: cover; object-position: center center; width: 80px; position: absolute; margin-left: 50px; margin-top: -30px; border: 2px solid #fd5e34; border-radius: 10px;">
+            <source src="/img/doublestick/upsell/upsell2.mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div class="col-7" style="margin-top: 30px;">
-          <div onclick="openaddondetails()" style=" margin-top: -20px; ;">
-            <b>限量版小巴模型 x 1</b><br><span class="myclickable"
-              style="color: #007bff; font-size: 16px; border-bottom: 1px solid #007bff;">詳情請看</span>
+          <div onclick="openaddondetails()" style=" margin-top: -20px; ">
+            <b>限量版<br>LED螢光雙節棍</b><br>
+            <span
+              style="margin-bottom: 5px; color: #007bff; font-size: 16px; border-bottom: 1px solid #007bff; display: inline-block;"
+              class="myclickable">詳情請看</span>
           </div>
-          <span style="font-size: 15px; font-weight: normal;">HKD</span> $99
+          <span style="font-size: 15px; font-weight: normal;">HKD</span> $299
         </div>
       </div>
     </div>
@@ -646,35 +595,25 @@
     <div class="flex justify-center " style="margin-top: 20px;">
       <div class="pricetag" style="margin-right: -50px;">
         <div class="d-flex">
-          <div class="ml-auto p-2 " style="font-size: 25px; margin-right: 10px;"><span
+          <div class="ml-auto p-2 " style="font-size: 25px; margin-right: 20px;"><span
               style="font-size: 18px; font-weight: normal; margin-right: 20px;">合共價值</span><span
-              style="font-size: 20px; ">HKD</span> $<span id="originalpricetag">1199</span>
-            <div hidden
+              style="font-size: 20px; ">HKD</span> $<span id="originalpricetag">999</span>
+            <div
               style="margin-left: 80px; position: absolute; width: 130px; border-bottom: 3px solid #fd5e34; margin-top: -17px; transform: rotate(-8deg);">
             </div>
           </div>
         </div>
 
         <div class="d-flex">
-          <div hidden class="ml-auto p-2 bold" style="font-size: 28px;"><span
-              style="margin-right: 20px;">早鳥價</span><span style="font-size: 20px; ">HKD</span> $<span
-              id="pricetag">399</span>
+          <div class="ml-auto p-2 bold" style="font-size: 28px;"><span style="margin-right: 20px;">早鳥價</span><span
+              style="font-size: 20px; ">HKD</span> $<span id="pricetag">499</span>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="flex justify-center mt-12 ">
-      <div class="pricetag">
-        <h2 style="color: #fd5e34;" class="text-2xl">
-          <span class="">Total:</span>
-          <span class="" style="margin-left: calc(100% - 200px); font-size: 18px;">HKD
-            <b><span id="pricetag" class="text-2xl">499</span></b>
-          </span>
-        </h2>
-      </div>
-    </div> -->
 
-    <div style="color: black; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;"
+    <div
+      style="color: #fd5e34; width: 500px; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 20px;"
       hidden>
       把握時機！報讀課程不只是承傳香港獨門工藝，還可以支持香港最後的手寫小巴牌工業，製作屬於自己獨一無二故事的小巴牌。<br>
       <br>
@@ -691,7 +630,7 @@
 
       <form action="/charge" method="POST" class="flex flex-col ">
 
-        <h1 style="font-size: 25px; color: #fd5e34;">聯絡資料</h1>
+        <h1 style="font-size: 25px; color: #fd5e34; min-width: 300px;">聯絡資料</h1>
         <div style="color: #fd5e34; margin-top: 20px;">姓名</div>
         <input class=" p-2 h-10 mb-4 contactinput " type="text" name="name" required>
         <div style="color: #fd5e34;">手提電話</div>
@@ -718,8 +657,9 @@
           <input placeholder="Postal Code" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
             style="width: 28%;  display: inline-block;" name="postcode" required>
         </div>
-        <input id="formcoursecode" name="coursecode" value="minibus" hidden>
-        <input id="formcourse" name="course" value="minibus" hidden>
+        <input id="formcoursecode" name="coursecode" value="doublestick" hidden>
+        <input id="formcourse" name="course" value="doublestick" hidden>
+        <input hidden name="refer" value="<%- refer %>">
         <!-- <input class="bg-transparent p-2 h-10 mb-4" type="text" name="address" placeholder="Address"> -->
         <h1 style="font-size: 25px; color: #fd5e34; margin-top: 20px;">付款資料</h1>
         <div style="margin-top: 20px; margin-bottom: 50px;">
@@ -742,9 +682,11 @@
 
 
     <div style="height: 150px; overflow: hidden;" class="d-none d-md-block">
-      <img src="./img/charge/bubble_oragnge.png" style="width: 400px; position: absolute; left: -50px; bottom: -400px;">
-      <img src="./img/charge/opentag_orange.png" style="width: 500px; position: absolute; right: 50px; bottom: -700px;">
+      <img src="/img/charge/bubble_oragnge.png" style="width: 400px; position: absolute; left: -50px; bottom: -400px;">
+      <img src="/img/charge/opentag_orange.png" style="width: 500px; position: absolute; right: 50px; bottom: -700px;">
     </div>
+
+
 
 
 
@@ -754,10 +696,36 @@
 
 
   <script>
-    const addonlimit = 50
-    var totalprice = 399
-    var addonstillhave = false
-    var addoncount = -1;
+    var totalprice = 479
+
+
+    function closepopup(x) {
+      console.log(x)
+      document.getElementById(x).style.display = "none"
+      document.getElementById('alldiv').classList.remove('blurbackground')
+    }
+
+    function addon() {
+
+
+      totalprice = 798
+      document.getElementById("formcoursecode").value = "doublestickaddon"
+      document.getElementById("pricetag").innerHTML = totalprice
+      document.getElementById("originalpricetag").innerHTML = '1298'
+      document.getElementById('addondescription').hidden = false
+      document.getElementById('addondescription_mobile').hidden = false
+      outfopopup()
+    }
+    function clickcheck(x) {
+      if (x == 'desktop')
+        if (!document.getElementById("addoncheck").getElementsByTagName('input')[0].checked)
+          document.getElementById("addoncheck").click()
+      if (x == 'mobile')
+        if (!document.getElementById("addoncheck_mobile").getElementsByTagName('input')[0].checked)
+          document.getElementById("addoncheck_mobile").click()
+
+      closepopup(x + 'popup')
+    }
 
 
     function checkaddon(x) {
@@ -776,20 +744,12 @@
       document.getElementById("mobilepopup").hidden = false
     }
 
-
     function openmailingdetails() {
       document.getElementById('alldiv').classList.add('blurbackground')
       document.getElementById("desktoppopup_mailing").style.display = "block"
       document.getElementById("mobilepopup_mailing").style.display = "block"
       document.getElementById("desktoppopup_mailing").hidden = false
       document.getElementById("mobilepopup_mailing").hidden = false
-    }
-
-
-    function closepopup(x) {
-      console.log(x)
-      document.getElementById(x).style.display = "none"
-      document.getElementById('alldiv').classList.remove('blurbackground')
     }
 
     function outfopopup() {
@@ -801,83 +761,22 @@
 
     }
 
-    function clickcheck(x) {
-      if (x == 'desktop')
-        if (!document.getElementById("addoncheck").getElementsByTagName('input')[0].checked)
-          document.getElementById("addoncheck").click()
-      if (x == 'mobile')
-        if (!document.getElementById("addoncheck_mobile").getElementsByTagName('input')[0].checked)
-          document.getElementById("addoncheck_mobile").click()
-
-      closepopup(x + 'popup')
-    }
-
-    function addon() {
-      console.log(addoncount)
-      if (addoncount == -1) return
-      if (!addonstillhave) {
-        alert("Sorry, sold out " + addoncount + '/' + addonlimit)
-        return
-      }
-      totalprice = 498
-      document.getElementById("formcoursecode").value = "minibusaddon"
-      document.getElementById("pricetag").innerHTML = totalprice
-      document.getElementById("originalpricetag").innerHTML = '1298'
-      document.getElementById('addondescription').hidden = false
-      document.getElementById('addondescription_mobile').hidden = false
-      outfopopup()
-    }
 
     function addoff() {
-      totalprice = 399
-      document.getElementById("formcoursecode").value = "minibus"
+      totalprice = 499
+      document.getElementById("formcoursecode").value = "doublestick"
       document.getElementById("pricetag").innerHTML = totalprice
-      document.getElementById("originalpricetag").innerHTML = '1199'
+      document.getElementById("originalpricetag").innerHTML = '999'
       document.getElementById('addondescription').hidden = true
       document.getElementById('addondescription_mobile').hidden = true
       outfopopup()
     }
 
 
-
-    function getaddoncount() {
-      var xhr = new XMLHttpRequest();
-      xhr.withCredentials = true;
-
-      xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-          console.log(this.responseText);
-          addoncount = parseInt(this.responseText)
-          checkaddonlimit()
-        }
-      });
-
-      xhr.open("GET", "/getaddoncount");
-
-      xhr.send();
-    }
-
-
-
-    function checkaddonlimit() {
-      if (addoncount >= addonlimit) {
-        addonstillhave = false
-      } else {
-        addonstillhave = true
-      }
-
-    }
-
-
-    getaddoncount()
-
-
-
-
   </script>
 
   <script src="https://js.stripe.com/v3/" crossorigin="anonymous"></script>
-  <script src="card.js"></script>
+  <script src="/card.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 </body>
 
