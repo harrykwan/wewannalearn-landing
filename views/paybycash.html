@@ -1,0 +1,442 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" rel="stylesheet" />
+    <meta property="og:image"
+        content="https://harrykwan.github.io/wewannalearn-stripe-api/views/img/homepage/busvideopreview.jpg" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1000" />
+    <meta property="og:title" content="【匠人精神！手寫小巴牌網上課程】" />
+    <meta property="og:description"
+        content="「每個人都應該有一塊屬於自己故事嘅小巴牌」紅藍色、繁體字，充滿香港特色的玩味潮語小巴牌近年成為風潮，更喚起大眾關注這一門獨有文化，但可惜手寫小巴牌正漸漸走向歷史盡頭。麥師傅在課程中會將40年來製作小巴牌的精粹傳授給大家，希望由您薪火相傳這一份香港人精神。" />
+
+    <style>
+        html {
+            background: white;
+            color: black;
+        }
+
+
+
+        body {
+            background: white;
+            color: black;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+
+
+        .submitbutton {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            width: 100px;
+            padding: 10px 5px;
+            border-radius: 10px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myunderline {
+            border-bottom: 4px solid #fd5e34;
+            padding-bottom: 4px;
+            display: inline-block;
+            /* border-radius: 10px; */
+        }
+
+        .footerlink_mobile {
+            color: #fd5e34;
+            margin-right: 10px;
+            margin-top: 0px;
+        }
+
+
+        .footerlink {
+            color: #fd5e34;
+            margin-right: 50px;
+            margin-top: 50px;
+        }
+
+        .footerlinkicon {
+            margin-top: 50px;
+            width: 50px;
+        }
+
+        .footerlinkicon_mobile {
+            margin-top: 30px;
+            width: 30px;
+        }
+
+        .contactinput {
+            background: #EEE;
+            width: 500px;
+        }
+
+        .pricetag {
+            width: 500px;
+        }
+
+
+
+        .blurbackground {
+            -webkit-filter: blur(2px) brightness(30%);
+            -moz-filter: blur(2px) brightness(30%);
+            -o-filter: blur(2px) brightness(30%);
+            -ms-filter: blur(2px) brightness(30%);
+            filter: blur(2px) brightness(30%);
+            overflow: hidden;
+            background: white;
+        }
+
+
+        .upsellbutton {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            /* width: 100px; */
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            position: relative;
+            left: calc(100% - 180px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .upsellbutton_mobile {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            /* width: 100px; */
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            position: relative;
+            /* left: 10px; */
+            /* margin-top: 10px; */
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+
+        .myunderline {
+            border-bottom: 4px solid #fd5e34;
+            padding-bottom: 4px;
+            display: inline-block;
+            /* border-radius: 10px; */
+        }
+
+        .popupwindow {
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 100px;
+            width: 900px;
+            max-height: 80%;
+            background: #fd5e34;
+            color: white;
+            z-index: 999;
+            border: 6px solid white;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: scroll;
+        }
+
+        .popupwindow_mobile {
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 100px;
+            width: 350px;
+            max-height: 80%;
+            background: #fd5e34;
+            color: white;
+            z-index: 999;
+            border: 6px solid white;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: scroll;
+        }
+
+        .pricetag {
+            color: #fd5e34;
+        }
+
+        .bold {
+            font-weight: 800;
+        }
+
+        /* For Mobile */
+        @media screen and (max-width: 540px) {
+            .contactinput {
+                background: #EEE;
+                width: 100%;
+            }
+
+            .pricetag {
+                width: 300px;
+            }
+
+            .bold {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .contactinputouter {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* For Tablets */
+        @media screen and (min-width: 540px) and (max-width: 780px) {
+            .contactinput {
+                background: #EEE;
+                width: 100%;
+            }
+
+            .pricetag {
+                width: 300px;
+            }
+
+            .bold {
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            .contactinputouter {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: white;
+            border: 2px solid #fd5e34;
+            border-radius: 5px;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked~.checkmark {
+            background-color: #fd5e34;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .myclickable:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="">
+
+
+
+
+
+
+    <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden" class="" onclick="outfopopup()">
+        <nav class="navbar navbar-expand-lg navbar-dark d-none d-md-block" style="margin-bottom: 50px; z-index: 999">
+            <a class="navbar-brand" href="/"><img src="/img/logo_orange.png" style="width: 250px;" /></a>
+            <div>
+                <img src="/img/charge/bubble_oragnge.png"
+                    style="width: 200px; position: absolute; right: 200px; top: -20px;">
+                <img src="/img/charge/closetag_orange.png"
+                    style="width: 300px; top: 200px; position: absolute; left: 0px;">
+                <img src="/img/charge/slack_orange.png"
+                    style="width: 250px; position: absolute; right: 0px; top: 400px;">
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-dark d-xs-block d-md-none" style="margin-bottom: 50px; z-index: 999">
+            <a class="navbar-brand" href="/"><img src="/img/logo_orange.png"
+                    style="width: 180px; margin-top: 0px; margin-left: 0px;" /></a>
+            <div>
+                <img src="/img/charge/bubble_oragnge.png"
+                    style="width: 130px; top: 300px; position: absolute; left: -70px; z-index: -999;">
+                <img src="/img/charge/opentag_orange.png"
+                    style="width: 200px; top: 80px; position: absolute; left: -40px;">
+                <img src="/img/charge/closetag_orange.png"
+                    style="width: 200px; top: 280px; position: absolute; right: -80px;">
+                <img src="/img/charge/slack_orange.png"
+                    style="width: 150px; position: absolute; right: -60px; top: 40px;">
+            </div>
+        </nav>
+        <!-- 
+        <div
+            style="left:0; right:0; margin-left: auto; margin-right:auto; margin-top: 60px; width:500px; border-top: 3px solid #fd5e34;">
+        </div> -->
+
+
+        <!-- <div class="flex justify-center mt-12 ">
+      <div class="pricetag">
+        <h2 style="color: #fd5e34;" class="text-2xl">
+          <span class="">Total:</span>
+          <span class="" style="margin-left: calc(100% - 200px); font-size: 18px;">HKD
+            <b><span id="pricetag" class="text-2xl">499</span></b>
+          </span>
+        </h2>
+      </div>
+    </div> -->
+
+
+
+        <div class="flex justify-center mt-16 contactinputouter">
+
+            <form action="/paybycash" method="POST" class="flex flex-col ">
+
+
+                <h1 style="font-size: 25px; color: #fd5e34;">課程</h1>
+
+                <div style="color: #fd5e34; margin-top: 20px;">課程編號</div>
+
+                <select class=" p-2 h-10 mb-4 contactinput " name="coursecode">
+                    <option value="minibus"> minibus </option>
+                    <option value="doublestick"> nanchaku </option>
+                    <option value="saurce"> cooking </option>
+                </select>
+
+                <div style="color: #fd5e34; ">課程價錢</div>
+                <input class=" p-2 h-10 mb-4 contactinput " name="courseprice">
+
+
+                <div style="margin-bottom: 50px"> </div>
+
+                <h1 style="font-size: 25px; color: #fd5e34;">聯絡資料</h1>
+                <div style="color: #fd5e34; margin-top: 20px;">姓名</div>
+                <input class=" p-2 h-10 mb-4 contactinput " type="text" name="name" required>
+                <div style="color: #fd5e34;">手提電話</div>
+                <input class=" p-2 h-10 mb-4 contactinput " type="text" name="phone" required>
+                <div style="color: #fd5e34;">電郵地址 <span style="font-size: 12px;"></span></div>
+                <input type="email" class=" p-2 h-10 mb-4 contactinput " name="email" required>
+                <div style="color: #fd5e34; max-width: 500px;">郵寄地址
+                </div>
+                <input type="text" placeholder="Address" class=" p-2 h-10 mb-4 contactinput " name="address" required>
+                <div class="d-flex">
+                    <input placeholder="City" type="text" class=" p-2 h-10 mb-4 contactinput mr-auto"
+                        style="width: 48%; display: inline-block;" name="city" required>
+                    <input placeholder="State" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
+                        style="width: 50%;  display: inline-block;" name="state" required>
+                </div>
+                <div class="d-flex">
+                    <input placeholder="Country" type="text" class=" p-2 h-10 mb-4 contactinput mr-auto"
+                        style="width: 70%; display: inline-block;" name="country" required>
+                    <input placeholder="Postal Code" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
+                        style="width: 28%;  display: inline-block;" name="postcode" required>
+                </div>
+
+
+
+                <button class="submitbutton ">完成付款</button>
+
+            </form>
+
+        </div>
+
+
+
+        <div style="height: 150px; overflow: hidden;" class="d-none d-md-block">
+            <img src="/img/charge/bubble_oragnge.png"
+                style="width: 400px; position: absolute; left: -50px; bottom: -400px;">
+            <img src="/img/charge/opentag_orange.png"
+                style="width: 500px; position: absolute; right: 50px; bottom: -700px;">
+        </div>
+
+
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
+
+    <script>
+
+        document.body.hidden = true
+        if (prompt("HI") == "wewannalearn") {
+            document.body.hidden = false
+        }
+
+    </script>
+</body>
+
+
+</html>
