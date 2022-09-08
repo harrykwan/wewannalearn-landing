@@ -515,8 +515,8 @@ http.get("*", function (req, res) {
 
 // have it listen on 8080
 
-if (process.env.localhost) app.listen(80);
-else http.listen(80);
+if (process.env.localhost) app.listen(3000);
+else http.listen(3000);
 
 // httpServer.listen(80);
 httpsServer.listen(443);
