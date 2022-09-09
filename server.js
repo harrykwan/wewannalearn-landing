@@ -172,12 +172,12 @@ app.get("/refer/:refername", (req, res, next) => {
 
 app.post("/charge", (req, res) => {
   const coursepricelist = {
-    minibus: 1199,
-    minibusaddon: 1199 + 99,
-    doublestick: 999,
-    doublestickaddon: 999 + 299,
-    saurce: 799,
-    saurceaddon: 799 + 139,
+    minibus: 115,
+    minibusaddon: 115 + 20,
+    doublestick: 90,
+    doublestickaddon: 90 + 20,
+    saurce: 75,
+    saurceaddon: 75 + 20,
   };
 
   if (req.body.refer) {
@@ -196,12 +196,12 @@ app.post("/charge", (req, res) => {
   }
   if (req.body.refer) {
     coursepricelist = {
-      minibus: 499,
-      minibusaddon: 499 + 99,
-      doublestick: 499,
-      doublestickaddon: 499 + 299,
-      saurce: 499,
-      saurceaddon: 499 + 139,
+      minibus: 115,
+      minibusaddon: 115 + 20,
+      doublestick: 90,
+      doublestickaddon: 90 + 20,
+      saurce: 75,
+      saurceaddon: 75 + 20,
     };
   }
 
@@ -265,7 +265,7 @@ app.post("/charge", (req, res) => {
           stripe.charges
             .create({
               amount: courseprice,
-              currency: "hkd",
+              currency: "usd",
               customer: customer.id,
             })
             .then((x) => {
