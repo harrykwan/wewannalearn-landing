@@ -105,6 +105,10 @@ app.get("/teach", (req, res, next) => {
   return res.render("./joinus.html", {});
 });
 
+app.get("/store", (req, res, next) => {
+  return res.render("./store.html");
+});
+
 app.get("/test_completed", (req, res, next) => {
   return res.render("./completed_testing.html", {});
 });
