@@ -326,11 +326,13 @@
                 if (x.className === "topnav") {
                     x.className += " responsive";
                     document.getElementById("smallnavlogo").src = "img/logo_orange.png"
-                    document.getElementById("smallnavlogo").style.width = "250px"
+                    document.getElementById("smallnavlogo").style.width = "100%";
+                    document.getElementById("smallnavlogo").style.position = "";
                 } else {
                     x.className = "topnav";
                     document.getElementById("smallnavlogo").src = "logo.png"
                     document.getElementById("smallnavlogo").style.width = "180px"
+                    document.getElementById("smallnavlogo").style.position = "absolute";
                 }
             }
         </script>

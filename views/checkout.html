@@ -158,6 +158,267 @@
             }
         }
     </style>
+
+    <style>
+        .submitbutton {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            width: 100px;
+            padding: 10px 5px;
+            border-radius: 10px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myunderline {
+            border-bottom: 4px solid #fd5e34;
+            padding-bottom: 4px;
+            display: inline-block;
+            /* border-radius: 10px; */
+        }
+
+        .footerlink_mobile {
+            color: #fd5e34;
+            margin-right: 10px;
+            margin-top: 0px;
+        }
+
+
+        .footerlink {
+            color: #fd5e34;
+            margin-right: 50px;
+            margin-top: 50px;
+        }
+
+        .footerlinkicon {
+            margin-top: 50px;
+            width: 50px;
+        }
+
+        .footerlinkicon_mobile {
+            margin-top: 30px;
+            width: 30px;
+        }
+
+        .contactinput {
+            background: #EEE;
+            width: 500px;
+        }
+
+        .pricetag {
+            width: 500px;
+        }
+
+
+        .pricetag {
+            color: #fd5e34;
+        }
+
+        .bold {
+            font-weight: 800;
+        }
+
+        .blurbackground {
+            -webkit-filter: blur(2px) brightness(30%);
+            -moz-filter: blur(2px) brightness(30%);
+            -o-filter: blur(2px) brightness(30%);
+            -ms-filter: blur(2px) brightness(30%);
+            filter: blur(2px) brightness(30%);
+            overflow: hidden;
+            background: white;
+        }
+
+
+
+        .upsellbutton {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            /* width: 100px; */
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            position: relative;
+            left: calc(100% - 180px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .upsellbutton_mobile {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            /* width: 100px; */
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            position: relative;
+            /* left: 10px; */
+            /* margin-top: 10px; */
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+
+        .myunderline {
+            border-bottom: 4px solid #fd5e34;
+            padding-bottom: 4px;
+            display: inline-block;
+            /* border-radius: 10px; */
+        }
+
+        .popupwindow {
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 100px;
+            width: 900px;
+            max-height: 80%;
+            background: #fd5e34;
+            color: white;
+            z-index: 999;
+            border: 6px solid white;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: scroll;
+        }
+
+        .popupwindow_mobile {
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 100px;
+            width: 350px;
+            max-height: 80%;
+            background: #fd5e34;
+            color: white;
+            z-index: 999;
+            border: 6px solid white;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: scroll;
+        }
+
+        /* For Mobile */
+        @media screen and (max-width: 540px) {
+            .contactinput {
+                background: #EEE;
+                width: 100%;
+            }
+
+            .pricetag {
+                width: 300px;
+            }
+
+            .contactinputouter {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* For Tablets */
+        @media screen and (min-width: 540px) and (max-width: 780px) {
+            .contactinput {
+                background: #EEE;
+                width: 100%;
+            }
+
+            .pricetag {
+                width: 300px;
+            }
+
+            .contactinputouter {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: white;
+            border: 2px solid #fd5e34;
+            border-radius: 5px;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked~.checkmark {
+            background-color: #fd5e34;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .myclickable:hover {
+            cursor: pointer;
+        }
+    </style>
+
     <style>
         html {
             background: white;
@@ -214,10 +475,15 @@
         }
 
         .allproduct {
-            min-height: 100vh;
-            padding-left: 200px;
+            /* min-height: 100vh; */
+            /* padding-left: 200px; */
             margin-top: 50px;
-            width: calc(100vw - 50px);
+            /* width: calc(100vw - 50px); */
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
         }
 
         .product {
@@ -304,6 +570,7 @@
 <body class="">
 
     <div id="alldiv" style="position: relative; overflow-x: hidden; overflow-y: hidden" class="">
+
         <div id="cart" style="overflow: scroll;" hidden>
             <div class="cartbox">
                 <!-- <div v-for="productid in cart"> {{productdetails[productid]}}</div> -->
@@ -332,8 +599,8 @@
                         {{totalprice()}}
                     </div>
                 </div>
-                <a href="checkout"> <button class="addtocartbutton"
-                        style="width: 100%; border-radius: 10px; margin-top: 20px; font-size: 15px;">結賬</button></a>
+                <button class="addtocartbutton"
+                    style="width: 100%; border-radius: 10px; margin-top: 20px; font-size: 15px;">結賬</button>
 
             </div>
 
@@ -376,11 +643,13 @@
                 var x = document.getElementById("myTopnav");
                 if (x.className === "topnav") {
                     x.className += " responsive";
-                    document.getElementById("smallnavlogo").src = "img/logo_orange.png";
-                    document.getElementById("smallnavlogo").style.width = "250px";
+                    // document.getElementById("smallnavlogo").src = "img/logo_orange.png";
+                    document.getElementById("smallnavlogo").style.position = "";
+                    document.getElementById("smallnavlogo").style.width = "100%";
                 } else {
                     x.className = "topnav";
-                    document.getElementById("smallnavlogo").src = "logo.png";
+                    // document.getElementById("smallnavlogo").src = "logo.png";
+                    document.getElementById("smallnavlogo").style.position = "absolute";
                     document.getElementById("smallnavlogo").style.width = "180px";
                 }
             }
@@ -391,22 +660,91 @@
         </script>
 
         <div id="allproduct" class="allproduct" style="">
-            <div class="row">
-                <div v-for="product,ind in allproduct" class="col-sm-4">
-                    <div class="product">
-                        <img class="productimage" :src="product.image" />
-                        <div class="productwords">
-                            {{product.name}}<br />
-                            <span style="font-size: 10px">{{product.currency}}</span> {{product.price}}
-                        </div>
-                        <button v-on:click="addtocart(ind)" class="addtocartbutton">加到購物車<span
-                                v-if="cart[ind]">({{cart[ind]}})</span></button>
+            <div style="">
+                <h1 style="color: #fd5e34; font-weight: bold; font-size: 28px;">您正在訂購</h1>
+            </div>
+            <div style="border-bottom: 3px solid #fd5e34; margin-bottom: 20px; padding-bottom: 20px;">
+                <div style="margin-top: 12px" class="row" v-for="productid,ind in cart">
+                    <div class="col-3"> <img style="border-radius: 10px;" :src="allproduct[ind].image"></div>
+                    <div class="col-6">
+                        <div>{{allproduct[ind].name}}</div>
+                        <div style="font-size: 12px; margin-top: 5px">數量：{{cart[ind]}}</div>
                     </div>
+                    <div class="col-3"> <span style="font-size: 12;">{{allproduct[ind].currency}}</span>
+                        {{allproduct[ind].price}}
+
+                    </div>
+
                 </div>
 
             </div>
+            <div class="row">
+                <div class="col-9">
+                    小計
+                </div>
+                <div class="col-3">
+                    <span style="font-size: 12;">HKD</span>
+                    {{totalprice()}}
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-16 contactinputouter">
+
+            <form action="/charge" method="POST" class="flex flex-col ">
+
+                <h1 style="font-size: 25px; color: #fd5e34; min-width: 300px;">聯絡資料</h1>
+                <div style="color: #fd5e34; margin-top: 20px;">姓名</div>
+                <input class=" p-2 h-10 mb-4 contactinput " type="text" name="name" required>
+                <div style="color: #fd5e34;">手提電話</div>
+                <input class=" p-2 h-10 mb-4 contactinput " type="text" name="phone" required>
+                <div style="color: #fd5e34;">電郵地址 <span style="font-size: 12px;"></span></div>
+                <input type="email" class=" p-2 h-10 mb-4 contactinput " name="email" required>
+                <div style="color: #fd5e34; max-width: 500px;">郵寄地址
+                    <div onclick="openmailingdetails()"
+                        style="margin-left: 80px; margin-top: -23px; font-size: 18px; position: absolute;">
+                        <span class="myclickable"
+                            style="color: #007bff; font-size: 14px; border-bottom: 1px solid #007bff; ">郵寄方法</span>
+                    </div>
+                </div>
+                <input type="text" placeholder="Address" class=" p-2 h-10 mb-4 contactinput " name="address" required>
+                <div class="d-flex">
+                    <input placeholder="City" type="text" class=" p-2 h-10 mb-4 contactinput mr-auto"
+                        style="width: 48%; display: inline-block;" name="city" required>
+                    <input placeholder="State" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
+                        style="width: 50%;  display: inline-block;" name="state" required>
+                </div>
+                <div class="d-flex">
+                    <input placeholder="Country" type="text" class=" p-2 h-10 mb-4 contactinput mr-auto"
+                        style="width: 70%; display: inline-block;" name="country" required>
+                    <input placeholder="Postal Code" type="text" class=" p-2 h-10 mb-4 contactinput ml-auto"
+                        style="width: 28%;  display: inline-block;" name="postcode" required>
+                </div>
+                <input id="formcoursecode" name="coursecode" value="doublestick" hidden>
+                <input id="formcourse" name="course" value="doublestick" hidden>
+                <!-- <input class="bg-transparent p-2 h-10 mb-4" type="text" name="address" placeholder="Address"> -->
+                <h1 style="font-size: 25px; color: #fd5e34; margin-top: 20px;">付款資料</h1>
+                <div style="margin-top: 20px; margin-bottom: 50px;">
+                    <div style=" background: #EEE;">
+                        <div id="card-element" class="bg-transparent p-2 h-10 mb-4"></div>
+                    </div>
+
+                    <div id="card-errors" role="alert" class="contactinput " style="background: none; color: red;">
+                        <%- warning %>
+                    </div>
+
+                </div>
+
+                <button class="submitbutton ">完成付款</button>
+
+            </form>
+
         </div>
     </div>
+
+
+
+
     <div class="container  d-none d-md-block">
 
         <div class="d-flex justify-content-between">
@@ -550,9 +888,8 @@
 
         }).mount('#alldiv');
     </script>
-
     <script src="https://js.stripe.com/v3/" crossorigin="anonymous"></script>
-
+    <script src="card.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 </body>
 

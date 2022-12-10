@@ -109,6 +109,10 @@ app.get("/store", (req, res, next) => {
   return res.render("./store.html");
 });
 
+app.get("/checkout", (req, res, next) => {
+  return res.render("./checkout.html", { warning: "" });
+});
+
 app.get("/test_completed", (req, res, next) => {
   return res.render("./completed_testing.html", {});
 });
